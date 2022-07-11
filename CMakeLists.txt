@@ -14,7 +14,7 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(project main.cpp)
+add_executable(project main.cpp src/windows/Home.cpp src/windows/Home.h resources.qrc src/views/Lable.cpp src/views/Lable.h src/views/Button.cpp src/views/Button.h src/views/textField.cpp src/views/textField.h src/windows/Game.cpp src/windows/Game.h)
 target_link_libraries(project
         Qt::Core
         Qt::Gui

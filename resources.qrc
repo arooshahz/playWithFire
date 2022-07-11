@@ -1,0 +1,9 @@
+<RCC>
+
+    <qresource prefix="/images">
+        <file alias="textField">resources/images/textField.png</file>
+        <file alias="button">resources/images/startButton.png</file>
+    </qresource>
+
+
+</RCC>
