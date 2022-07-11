@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/project",
+	"BUILD_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2",
 	"CMAKE_EXECUTABLE" : "C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/Lenovo/Desktop/project/CMakeLists.txt",
-		"C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeSystem.cmake",
+		"C:/Users/Lenovo/Desktop/playWithFire2/CMakeLists.txt",
+		"C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeSystem.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake",
-		"C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeCCompiler.cmake",
-		"C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeCXXCompiler.cmake",
+		"C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeCCompiler.cmake",
+		"C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeCXXCompiler.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake",
@@ -23,7 +23,7 @@
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake",
-		"C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeRCCompiler.cmake",
+		"C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeRCCompiler.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake",
@@ -220,47 +220,65 @@
 		"C:/Qt/6.2.4/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"C:/Qt/6.2.4/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/CMakeParseArguments.cmake",
-		"C:/Users/Lenovo/Desktop/project/resources.qrc"
+		"C:/Users/Lenovo/Desktop/playWithFire2/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/project",
-	"DEP_FILE" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2",
+	"DEP_FILE" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "project_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Lenovo/Desktop/project/src/views/Button.h",
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Block.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Block.cpp",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Box.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Box.cpp",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Button.h",
 			"MU",
 			"Z3L7HTGYLD/moc_Button.cpp",
 			null
 		],
 		[
-			"C:/Users/Lenovo/Desktop/project/src/views/Lable.h",
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Lable.h",
 			"MU",
 			"Z3L7HTGYLD/moc_Lable.cpp",
 			null
 		],
 		[
-			"C:/Users/Lenovo/Desktop/project/src/views/textField.h",
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Wall.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Wall.cpp",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/textField.h",
 			"MU",
 			"Z3L7HTGYLD/moc_textField.cpp",
 			null
 		],
 		[
-			"C:/Users/Lenovo/Desktop/project/src/windows/Game.h",
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Game.h",
 			"MU",
 			"3LXPKN4LCA/moc_Game.cpp",
 			null
 		],
 		[
-			"C:/Users/Lenovo/Desktop/project/src/windows/Home.h",
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Home.h",
 			"MU",
 			"3LXPKN4LCA/moc_Home.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -308,25 +326,56 @@
 		"-c",
 		"C:/Program Files/JetBrains/CLion 2022.1.2/bin/cmake/win/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/project_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.2.4/mingw_64/./bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.2.4/mingw_64/./bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 2,
-	"SETTINGS_FILE" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/project_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "C:/Users/Lenovo/Desktop/project/main.cpp", "MU", null ],
-		[ "C:/Users/Lenovo/Desktop/project/src/views/Button.cpp", "MU", null ],
-		[ "C:/Users/Lenovo/Desktop/project/src/views/Lable.cpp", "MU", null ],
-		[ "C:/Users/Lenovo/Desktop/project/src/views/textField.cpp", "MU", null ],
-		[ "C:/Users/Lenovo/Desktop/project/src/windows/Game.cpp", "MU", null ],
-		[ "C:/Users/Lenovo/Desktop/project/src/windows/Home.cpp", "MU", null ]
+		[ "C:/Users/Lenovo/Desktop/playWithFire2/main.cpp", "MU", null ],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Block.cpp",
+			"MU",
+			null
+		],
+		[ "C:/Users/Lenovo/Desktop/playWithFire2/src/views/Box.cpp", "MU", null ],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Button.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Lable.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Wall.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/textField.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Game.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Home.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

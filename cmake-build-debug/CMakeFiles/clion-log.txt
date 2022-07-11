@@ -1,5 +1,5 @@
-"C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.1.2/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\Lenovo\Desktop\project -B C:\Users\Lenovo\Desktop\project\cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.1.2/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\Lenovo\Desktop\playWithFire2 -B C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug
 -- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Lenovo/Desktop/project/cmake-build-debug
+-- Build files have been written to: C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug

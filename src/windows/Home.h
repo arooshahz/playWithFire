@@ -3,6 +3,7 @@
 #include <QGraphicsView>
 #include "../views/textField.h"
 #include <QObject>
+
 class Home :public QGraphicsView{
 Q_OBJECT
 private:
@@ -10,6 +11,7 @@ private:
     textField* textfield2;
 public:
     Home();
+
 public slots:
     void onGAmeStart();
 };

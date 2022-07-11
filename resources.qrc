@@ -3,6 +3,8 @@
     <qresource prefix="/images">
         <file alias="textField">resources/images/textField.png</file>
         <file alias="button">resources/images/startButton.png</file>
+        <file alias="box">resources/images/box.png</file>
+        <file alias="wall">resources/images/wall.png</file>
     </qresource>
 
 

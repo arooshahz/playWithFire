@@ -46,8 +46,9 @@ Home::Home() {
     connect(button,&Button::onPress,this,&Home::onGAmeStart);
 }
 void Home::onGAmeStart() {
-    auto name=textfield1->toPlainText();
+    auto name1=textfield1->toPlainText();
+
+
     close();
-    auto game=new Game();
-    game->show();
+  (new Game())->show();
 }

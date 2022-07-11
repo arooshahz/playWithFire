@@ -1,5 +1,5 @@
-C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/3LXPKN4LCA/moc_Home.cpp: C:/Users/Lenovo/Desktop/project/src/windows/Home.h \
-  C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/moc_predefs.h \
+C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/3LXPKN4LCA/moc_Home.cpp: C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Home.h \
+  C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -330,4 +330,4 @@ C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/3LXPKN4LCA/moc
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/Lenovo/Desktop/project/src/views/textField.h
+  C:/Users/Lenovo/Desktop/playWithFire2/src/views/textField.h

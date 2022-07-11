@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/Lenovo/Desktop/project/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target project
 
@@ -49,67 +49,91 @@ cmake_ninja_workdir = C$:/Users/Lenovo/Desktop/project/cmake-build-debug/
 
 build cmake_object_order_depends_target_project: phony || project_autogen project_autogen/EWIEGA46WW/qrc_resources.cpp project_autogen/mocs_compilation.cpp project_autogen/timestamp project_autogen_timestamp_deps
 
-build CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\project_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir\project_autogen
 
-build CMakeFiles/project.dir/main.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/main.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/main.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/main.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\main.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir
 
-build CMakeFiles/project.dir/src/windows/Home.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/src/windows/Home.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/src/windows/Home.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/windows/Home.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\src\windows\Home.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir\src\windows
 
-build CMakeFiles/project.dir/src/views/Lable.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/src/views/Lable.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/src/views/Lable.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/views/Lable.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\src\views\Lable.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir\src\views
 
-build CMakeFiles/project.dir/src/views/Button.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/src/views/Button.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/src/views/Button.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/views/Button.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\src\views\Button.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir\src\views
 
-build CMakeFiles/project.dir/src/views/textField.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/src/views/textField.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/src/views/textField.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/views/textField.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\src\views\textField.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir\src\views
 
-build CMakeFiles/project.dir/src/windows/Game.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/src/windows/Game.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/src/windows/Game.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/windows/Game.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\src\windows\Game.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir\src\windows
 
-build CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/EWIEGA46WW/qrc_resources.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/src/views/Block.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/views/Block.cpp || cmake_object_order_depends_target_project
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\project.dir\src\views\Block.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\project.dir
+  OBJECT_FILE_DIR = CMakeFiles\project.dir\src\views
+
+build CMakeFiles/project.dir/src/views/Box.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/views/Box.cpp || cmake_object_order_depends_target_project
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\project.dir\src\views\Box.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\project.dir
+  OBJECT_FILE_DIR = CMakeFiles\project.dir\src\views
+
+build CMakeFiles/project.dir/src/views/Wall.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/src/views/Wall.cpp || cmake_object_order_depends_target_project
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\project.dir\src\views\Wall.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\project.dir
+  OBJECT_FILE_DIR = CMakeFiles\project.dir\src\views
+
+build CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CXX_COMPILER__project_Debug C$:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/EWIEGA46WW/qrc_resources.cpp || cmake_object_order_depends_target_project
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\project.dir\project_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d
   FLAGS = -g
-  INCLUDES = -IC:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include -isystem C:/Qt/6.2.4/mingw_64/include/QtCore -isystem C:/Qt/6.2.4/mingw_64/include -isystem C:/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.4/mingw_64/include/QtGui -isystem C:/Qt/6.2.4/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\project.dir
   OBJECT_FILE_DIR = CMakeFiles\project.dir\project_autogen\EWIEGA46WW
 
@@ -121,11 +145,11 @@ build CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: C
 #############################################
 # Link the executable project.exe
 
-build project.exe: CXX_EXECUTABLE_LINKER__project_Debug CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj CMakeFiles/project.dir/main.cpp.obj CMakeFiles/project.dir/src/windows/Home.cpp.obj CMakeFiles/project.dir/src/views/Lable.cpp.obj CMakeFiles/project.dir/src/views/Button.cpp.obj CMakeFiles/project.dir/src/views/textField.cpp.obj CMakeFiles/project.dir/src/windows/Game.cpp.obj CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj | C$:/Qt/6.2.4/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.2.4/mingw_64/lib/libQt6Gui.a C$:/Qt/6.2.4/mingw_64/lib/libQt6Core.a || project_autogen project_autogen_timestamp_deps
+build project.exe: CXX_EXECUTABLE_LINKER__project_Debug CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj CMakeFiles/project.dir/main.cpp.obj CMakeFiles/project.dir/src/windows/Home.cpp.obj CMakeFiles/project.dir/src/views/Lable.cpp.obj CMakeFiles/project.dir/src/views/Button.cpp.obj CMakeFiles/project.dir/src/views/textField.cpp.obj CMakeFiles/project.dir/src/windows/Game.cpp.obj CMakeFiles/project.dir/src/views/Block.cpp.obj CMakeFiles/project.dir/src/views/Box.cpp.obj CMakeFiles/project.dir/src/views/Wall.cpp.obj CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj | C$:/Qt/6.2.4/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.2.4/mingw_64/lib/libQt6Gui.a C$:/Qt/6.2.4/mingw_64/lib/libQt6Core.a || project_autogen project_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.2.4/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.2.4/mingw_64/lib/libQt6Gui.a  C:/Qt/6.2.4/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\project.dir
-  POST_BUILD = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E make_directory C:/Users/Lenovo/Desktop/project/cmake-build-debug/plugins/platforms/ && cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/plugins/platforms/qwindows.dll C:/Users/Lenovo/Desktop/project/cmake-build-debug/plugins/platforms/ && cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/bin/Qt6Core.dll C:/Users/Lenovo/Desktop/project/cmake-build-debug && cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/bin/Qt6Gui.dll C:/Users/Lenovo/Desktop/project/cmake-build-debug && cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/bin/Qt6Widgets.dll C:/Users/Lenovo/Desktop/project/cmake-build-debug"
+  POST_BUILD = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E make_directory C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/plugins/platforms/ && cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/plugins/platforms/qwindows.dll C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/plugins/platforms/ && cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/bin/Qt6Core.dll C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug && cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/bin/Qt6Gui.dll C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug && cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/bin/Qt6Widgets.dll C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug"
   PRE_LINK = cd .
   TARGET_FILE = project.exe
   TARGET_IMPLIB = libproject.dll.a
@@ -136,7 +160,7 @@ build project.exe: CXX_EXECUTABLE_LINKER__project_Debug CMakeFiles/project.dir/p
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -147,7 +171,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Lenovo\Desktop\project -BC:\Users\Lenovo\Desktop\project\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Lenovo\Desktop\playWithFire2 -BC:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -171,17 +195,17 @@ build project_autogen: phony CMakeFiles/project_autogen project_autogen/timestam
 # Custom command for project_autogen\timestamp
 
 build project_autogen/timestamp project_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}project_autogen/timestamp ${cmake_ninja_workdir}project_autogen/mocs_compilation.cpp: CUSTOM_COMMAND C$:/Qt/6.2.4/mingw_64/./bin/moc.exe C$:/Qt/6.2.4/mingw_64/./bin/uic.exe || project_autogen_timestamp_deps
-  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E cmake_autogen C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/project_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E touch C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/timestamp && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/Lenovo/Desktop/project C:/Users/Lenovo/Desktop/project C:/Users/Lenovo/Desktop/project/cmake-build-debug C:/Users/Lenovo/Desktop/project/cmake-build-debug C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/deps C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/d/22711a3c17dfe1d1b5b188442a9ea9ee35892dc2f090e303ba636291cd93f834.d"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E cmake_autogen C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E touch C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/timestamp && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/Lenovo/Desktop/playWithFire2 C:/Users/Lenovo/Desktop/playWithFire2 C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/deps C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/d/02871bbb7143e8ee520981c4b2e9406cd051a91c3a24382f5bdb3c9663434616.d"
   DESC = Automatic MOC and UIC for target project
-  depfile = C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/d/22711a3c17dfe1d1b5b188442a9ea9ee35892dc2f090e303ba636291cd93f834.d
+  depfile = C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/d/02871bbb7143e8ee520981c4b2e9406cd051a91c3a24382f5bdb3c9663434616.d
   restat = 1
 
 
 #############################################
 # Custom command for project_autogen\EWIEGA46WW\qrc_resources.cpp
 
-build project_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}project_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND ../resources.qrc CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json ../resources/images/textField.png ../resources/images/startButton.png C$:/Qt/6.2.4/mingw_64/./bin/rcc.exe || project_autogen project_autogen_timestamp_deps
-  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\project\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E cmake_autorcc C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug"
+build project_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}project_autogen/EWIEGA46WW/qrc_resources.cpp: CUSTOM_COMMAND ../resources.qrc CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json ../resources/images/wall.png ../resources/images/textField.png ../resources/images/startButton.png ../resources/images/box.png C$:/Qt/6.2.4/mingw_64/./bin/rcc.exe || project_autogen project_autogen_timestamp_deps
+  COMMAND = cmd.exe /C "cd /D C:\Users\Lenovo\Desktop\playWithFire2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E cmake_autorcc C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for resources.qrc
   restat = 1
 
@@ -189,7 +213,7 @@ build project_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}proje
 #############################################
 # Phony custom command for CMakeFiles\project_autogen_timestamp_deps
 
-build CMakeFiles/project_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/project_autogen_timestamp_deps: phony C$:/Qt/6.2.4/mingw_64/./bin/moc.exe C$:/Qt/6.2.4/mingw_64/./bin/uic.exe
+build CMakeFiles/project_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/project_autogen_timestamp_deps: phony C$:/Qt/6.2.4/mingw_64/./bin/uic.exe C$:/Qt/6.2.4/mingw_64/./bin/moc.exe
 
 
 #############################################
@@ -208,7 +232,7 @@ build project: phony project.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Lenovo/Desktop/project/cmake-build-debug
+# Folder: C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug
 
 build all: phony project.exe
 

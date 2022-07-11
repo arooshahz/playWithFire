@@ -1,23 +1,25 @@
 {
-	"BUILD_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/project",
-	"CMAKE_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/project",
-	"INCLUDE_DIR" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/include",
+	"BUILD_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2",
+	"INCLUDE_DIR" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/include",
 	"INPUTS" : 
 	[
-		"C:/Users/Lenovo/Desktop/project/resources/images/textField.png",
-		"C:/Users/Lenovo/Desktop/project/resources/images/startButton.png"
+		"C:/Users/Lenovo/Desktop/playWithFire2/resources/images/wall.png",
+		"C:/Users/Lenovo/Desktop/playWithFire2/resources/images/textField.png",
+		"C:/Users/Lenovo/Desktop/playWithFire2/resources/images/startButton.png",
+		"C:/Users/Lenovo/Desktop/playWithFire2/resources/images/box.png"
 	],
-	"LOCK_FILE" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"LOCK_FILE" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "-name", "resources" ],
 	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
 	"OUTPUT_NAME" : "qrc_resources.cpp",
 	"RCC_EXECUTABLE" : "C:/Qt/6.2.4/mingw_64/./bin/rcc.exe",
 	"RCC_LIST_OPTIONS" : [ "--list" ],
-	"SETTINGS_FILE" : "C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
-	"SOURCE" : "C:/Users/Lenovo/Desktop/project/resources.qrc",
+	"SETTINGS_FILE" : "C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/Lenovo/Desktop/playWithFire2/resources.qrc",
 	"VERBOSITY" : 0
 }

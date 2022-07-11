@@ -442,22 +442,28 @@ project_autogen/timestamp: \
 	C:/Qt/6.2.4/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake \
 	C:/Qt/6.2.4/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	C:/Qt/6.2.4/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
-	C:/Users/Lenovo/Desktop/project/CMakeLists.txt \
-	C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeCCompiler.cmake \
-	C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeCXXCompiler.cmake \
-	C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeRCCompiler.cmake \
-	C:/Users/Lenovo/Desktop/project/cmake-build-debug/CMakeFiles/3.22.3/CMakeSystem.cmake \
-	C:/Users/Lenovo/Desktop/project/cmake-build-debug/project_autogen/moc_predefs.h \
-	C:/Users/Lenovo/Desktop/project/main.cpp \
-	C:/Users/Lenovo/Desktop/project/resources.qrc \
-	C:/Users/Lenovo/Desktop/project/src/views/Button.cpp \
-	C:/Users/Lenovo/Desktop/project/src/views/Button.h \
-	C:/Users/Lenovo/Desktop/project/src/views/Lable.cpp \
-	C:/Users/Lenovo/Desktop/project/src/views/Lable.h \
-	C:/Users/Lenovo/Desktop/project/src/views/textField.cpp \
-	C:/Users/Lenovo/Desktop/project/src/views/textField.h \
-	C:/Users/Lenovo/Desktop/project/src/windows/Game.cpp \
-	C:/Users/Lenovo/Desktop/project/src/windows/Game.h \
-	C:/Users/Lenovo/Desktop/project/src/windows/Home.cpp \
-	C:/Users/Lenovo/Desktop/project/src/windows/Home.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/CMakeLists.txt \
+	C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeCCompiler.cmake \
+	C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeCXXCompiler.cmake \
+	C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeRCCompiler.cmake \
+	C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/3.22.3/CMakeSystem.cmake \
+	C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/moc_predefs.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/main.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/resources.qrc \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Block.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Block.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Box.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Box.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Button.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Button.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Lable.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Lable.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Wall.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/Wall.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/textField.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/views/textField.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Game.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Game.h \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Home.cpp \
+	C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Home.h \
 	C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/cmake/win/bin/cmake.exe
