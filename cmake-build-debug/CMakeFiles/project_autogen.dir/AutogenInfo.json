@@ -246,9 +246,21 @@
 			null
 		],
 		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Controller.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Controller.cpp",
+			null
+		],
+		[
 			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Lable.h",
 			"MU",
 			"Z3L7HTGYLD/moc_Lable.cpp",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Player.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Player.cpp",
 			null
 		],
 		[
@@ -352,7 +364,17 @@
 			null
 		],
 		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Controller.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Lable.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Desktop/playWithFire2/src/views/Player.cpp",
 			"MU",
 			null
 		],

@@ -5,6 +5,10 @@
         <file alias="button">resources/images/startButton.png</file>
         <file alias="box">resources/images/box.png</file>
         <file alias="wall">resources/images/wall.png</file>
+        <file alias="p11">resources/images/player11.png</file>
+        <file alias="p12">resources/images/player12.png</file>
+        <file alias="p13">resources/images/player13.png</file>
+        <file alias="p21">resources/images/player21.png</file>
     </qresource>
 
 

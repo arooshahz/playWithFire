@@ -1,5 +1,7 @@
 #include "Game.h"
 #include "../views/Box.h"
+#include "../views/Player.h"
+#include "../views/Controller.h"
 
 
 Game::Game() {
@@ -18,7 +20,7 @@ Game::Game() {
 
 
 
-    blockWidth=(width())/15;
+    blockWidth=(width()-200)/15;
     blockHeight=height()/15;
 
             for(int i=0;i<15;i++){
@@ -32,7 +34,7 @@ Game::Game() {
                              auto box = new class Box(blockWidth, blockHeight);
                              addBlock(box);
                              scene->addItem(box);
-                             box->setPos(i * blockWidth, j * blockHeight);
+                             box->setPos(i * blockWidth+200, j * blockHeight);
 
                      }
 
@@ -41,15 +43,58 @@ Game::Game() {
                        auto wall = new Wall(blockWidth, blockHeight);
                        addBlock(wall);
                        scene->addItem(wall);
-                       wall->setPos(i * blockWidth, j * blockHeight);
+                       wall->setPos(i * blockWidth+200, j * blockHeight);
                     }
 
                 }
             }
+
+
+
+            QList <QPixmap*>frames1;
+            auto pixmap1=new QPixmap(":/images/p11");
+            *pixmap1=pixmap1->scaled(blockWidth -10, blockHeight );
+             frames1.append(pixmap1);
+    pixmap1=new QPixmap(":/images/p12");
+            *pixmap1=pixmap1->scaled(blockWidth -10, blockHeight );
+             frames1.append(pixmap1);pixmap1=new QPixmap(":/images/p13");
+             *pixmap1=pixmap1->scaled(blockWidth -10, blockHeight );
+              frames1.append(pixmap1);
+
+
+        auto player1=new Player(width(),height(),frames1);
+        this->players.append(player1);
+        scene->addItem(player1);
+        player1->setPos(blockWidth+200,blockHeight);
+
+
+
+
+
+
+    QList <QPixmap*>frames2;
+    auto pixmap2=new QPixmap(":/images/p21");
+    *pixmap2=pixmap2->scaled(blockWidth -10, blockHeight );
+    frames2.append(pixmap2);
+
+    auto player2=new Player(width(),height(),frames2);
+    this->players.append(player2);
+    scene->addItem(player2);
+    player2->setPos((blockWidth*13)+200,blockHeight*13);
+
+
+    auto controller=new Controller(this);
+scene->addItem(controller);
+scene->setFocus();
+
 
 }
 void Game::addBlock(Block *block) {
 
 
     this->blocks.append(block);
+}
+QList<Player*> Game::getPlayers() {
+
+    return players;
 }

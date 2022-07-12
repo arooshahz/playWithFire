@@ -3,18 +3,22 @@
 #include <QGraphicsView>
 #include "../views/Block.h"
 #include "../views/Wall.h"
+#include "../views/Player.h"
 
 class Game :public QGraphicsView{
 private:
 
-    QList<Block*>blocks;
-    int blockWidth;
-    int blockHeight;
+    QList<Block*>blocks{};
+    QList<Player*>players{};
+    int blockWidth{};
+    int blockHeight{};
+
 
 
 public :
     Game();
      void addBlock(Block * block);
+     QList<Player*> getPlayers();
 };
 
 
