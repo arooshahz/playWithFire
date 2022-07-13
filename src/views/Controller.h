@@ -11,6 +11,7 @@
 class Controller : public QGraphicsItem{
 private:
     Game* game{};
+
 public:
     Controller(Game* game);
 

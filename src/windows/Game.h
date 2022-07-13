@@ -19,6 +19,7 @@ public :
     Game();
      void addBlock(Block * block);
      QList<Player*> getPlayers();
+    QList<Block*> getBlocks();
 };
 
 

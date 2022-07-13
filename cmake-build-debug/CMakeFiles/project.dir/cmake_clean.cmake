@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/project_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/project_autogen.dir/ParseCache.txt"
+  "project_autogen"
+  "CMakeFiles/project.dir/main.cpp.obj"
+  "CMakeFiles/project.dir/main.cpp.obj.d"
+  "CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
+  "CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj.d"
+  "CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj"
+  "CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Block.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Block.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Box.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Box.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Button.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Button.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Controller.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Controller.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Lable.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Lable.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Player.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Player.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Wall.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Wall.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/textField.cpp.obj"
+  "CMakeFiles/project.dir/src/views/textField.cpp.obj.d"
+  "CMakeFiles/project.dir/src/windows/Game.cpp.obj"
+  "CMakeFiles/project.dir/src/windows/Game.cpp.obj.d"
+  "CMakeFiles/project.dir/src/windows/Home.cpp.obj"
+  "CMakeFiles/project.dir/src/windows/Home.cpp.obj.d"
+  "libproject.dll.a"
+  "project.exe"
+  "project.exe.manifest"
+  "project.pdb"
+  "project_autogen/EWIEGA46WW/qrc_resources.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/project.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

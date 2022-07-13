@@ -1,5 +1,5 @@
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/Z3L7HTGYLD/moc_Button.cpp: C:/Users/Lenovo/Desktop/playWithFire2/src/views/Button.h \
-  C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/moc_predefs.h \
+C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/project_autogen/Z3L7HTGYLD/moc_Button.cpp: C:/Users/Lenovo/Desktop/playWithFire/src/views/Button.h \
+  C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/project_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \

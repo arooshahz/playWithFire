@@ -1,6 +1,8 @@
 #ifndef TESTPRO_HOME_H
 #define TESTPRO_HOME_H
 #include <QGraphicsView>
+#include <QGraphicsItem>
+#include <QGraphicsPixmapItem>
 #include "../views/textField.h"
 #include <QObject>
 

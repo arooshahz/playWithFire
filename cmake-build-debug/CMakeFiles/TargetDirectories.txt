@@ -1,5 +1,4 @@
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project.dir
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen_timestamp_deps.dir
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/CMakeFiles/project_autogen.dir
+C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/CMakeFiles/project.dir
+C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/CMakeFiles/project_autogen.dir

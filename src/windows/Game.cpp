@@ -20,7 +20,7 @@ Game::Game() {
 
 
 
-    blockWidth=(width()-200)/15;
+    blockWidth=(width())/15;
     blockHeight=height()/15;
 
             for(int i=0;i<15;i++){
@@ -34,7 +34,7 @@ Game::Game() {
                              auto box = new class Box(blockWidth, blockHeight);
                              addBlock(box);
                              scene->addItem(box);
-                             box->setPos(i * blockWidth+200, j * blockHeight);
+                             box->setPos(i * blockWidth, j * blockHeight);
 
                      }
 
@@ -43,7 +43,7 @@ Game::Game() {
                        auto wall = new Wall(blockWidth, blockHeight);
                        addBlock(wall);
                        scene->addItem(wall);
-                       wall->setPos(i * blockWidth+200, j * blockHeight);
+                       wall->setPos(i * blockWidth, j * blockHeight);
                     }
 
                 }
@@ -65,7 +65,7 @@ Game::Game() {
         auto player1=new Player(width(),height(),frames1);
         this->players.append(player1);
         scene->addItem(player1);
-        player1->setPos(blockWidth+200,blockHeight);
+        player1->setPos(blockWidth,blockHeight);
 
 
 
@@ -76,11 +76,16 @@ Game::Game() {
     auto pixmap2=new QPixmap(":/images/p21");
     *pixmap2=pixmap2->scaled(blockWidth -10, blockHeight );
     frames2.append(pixmap2);
-
+    pixmap2=new QPixmap(":/images/p22");
+    *pixmap2=pixmap2->scaled(blockWidth -10, blockHeight );
+    frames2.append(pixmap2);
+    pixmap2=new QPixmap(":/images/p23");
+    *pixmap2=pixmap2->scaled(blockWidth -10, blockHeight );
+    frames2.append(pixmap2);
     auto player2=new Player(width(),height(),frames2);
     this->players.append(player2);
     scene->addItem(player2);
-    player2->setPos((blockWidth*13)+200,blockHeight*13);
+    player2->setPos((blockWidth*13),blockHeight*13);
 
 
     auto controller=new Controller(this);
@@ -97,4 +102,8 @@ void Game::addBlock(Block *block) {
 QList<Player*> Game::getPlayers() {
 
     return players;
+}
+QList<Block*> Game::getBlocks() {
+
+    return blocks;
 }

@@ -1,5 +1,5 @@
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/Z3L7HTGYLD/moc_Player.cpp: C:/Users/Lenovo/Desktop/playWithFire2/src/views/Player.h \
-  C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/moc_predefs.h \
+C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/project_autogen/Z3L7HTGYLD/moc_Player.cpp: C:/Users/Lenovo/Desktop/playWithFire/src/views/Player.h \
+  C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/project_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -219,6 +219,7 @@ C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/Z3L7HTGY
   C:/Qt/6.2.4/mingw_64/include/QtCore/QRect \
   C:/Qt/6.2.4/mingw_64/include/QtCore/QSize \
   C:/Qt/6.2.4/mingw_64/include/QtCore/QSizeF \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qabstractanimation.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qanystringview.h \
@@ -228,6 +229,7 @@ C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/Z3L7HTGY
   C:/Qt/6.2.4/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -298,6 +300,7 @@ C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/Z3L7HTGY
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtaggedpointer.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtcore-config.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \

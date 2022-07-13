@@ -1,5 +1,5 @@
-C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/3LXPKN4LCA/moc_Home.cpp: C:/Users/Lenovo/Desktop/playWithFire2/src/windows/Home.h \
-  C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/moc_predefs.h \
+C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/project_autogen/3LXPKN4LCA/moc_Home.cpp: C:/Users/Lenovo/Desktop/playWithFire/src/windows/Home.h \
+  C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/project_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -318,6 +318,8 @@ C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/3LXPKN4L
   C:/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsItem \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsTextItem \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsView \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -330,4 +332,4 @@ C:/Users/Lenovo/Desktop/playWithFire2/cmake-build-debug/project_autogen/3LXPKN4L
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/Lenovo/Desktop/playWithFire2/src/views/textField.h
+  C:/Users/Lenovo/Desktop/playWithFire/src/views/textField.h
