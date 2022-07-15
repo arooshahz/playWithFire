@@ -2,9 +2,9 @@
 #define TESTPRO_WALL_H
 #include "Block.h"
 
-class Wall : public Block{
+class Wall  : public Block{
 public:
-    Wall(int width,int height);
+    Wall(int X,int y);
 };
 
 

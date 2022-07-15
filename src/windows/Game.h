@@ -10,16 +10,18 @@ private:
 
     QList<Block*>blocks{};
     QList<Player*>players{};
-    int blockWidth{};
-    int blockHeight{};
+      int blockWidth;
+      int blockHeight;
 
 
 
 public :
     Game();
-     void addBlock(Block * block);
      QList<Player*> getPlayers();
     QList<Block*> getBlocks();
+    friend class Block;
+
+
 };
 
 

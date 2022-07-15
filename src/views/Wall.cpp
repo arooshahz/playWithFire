@@ -1,8 +1,8 @@
 #include "Wall.h"
-Wall::Wall(int width, int height) : Block(width,height){
+Wall::Wall(int X, int Y) : Block(X,Y){
 
     QPixmap pixmap(":/images/wall");
-    pixmap=pixmap.scaled(width,height);
+    pixmap=pixmap.scaled(blockWidth,blockHeight);
     setPixmap(pixmap);
 
 

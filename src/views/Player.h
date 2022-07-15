@@ -21,12 +21,13 @@ private:
     QTimer* walkingTimer;
 
 public:
-    Player(int sceneWidth,int sceneHeight, QList <QPixmap*>frames,QGraphicsPathItem* parent= nullptr);
-    void walkingDown();
-    void walkingUp();
-    void walkingLeft();
-    void walkingRight();
+    Player(int X,int Y, QList <QPixmap*>frames,QGraphicsPathItem* parent= nullptr);
+
+
     void walking();
+    void movement(int newX,int newY);
+    int getX();
+    int getY();
 
 
 

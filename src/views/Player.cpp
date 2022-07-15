@@ -1,7 +1,7 @@
 #include "Player.h"
 #include "Block.h"
 
-Player::Player(int sceneWidth, int sceneHeight,QList<QPixmap*> frames, QGraphicsPathItem *parent):frames(frames),QGraphicsPixmapItem(parent) {
+Player::Player(int X, int Y,QList<QPixmap*> frames, QGraphicsPathItem *parent):X(X),Y(Y),frames(frames),QGraphicsPixmapItem(parent) {
 
     setPixmap(*frames.at(0));
 
@@ -16,48 +16,33 @@ Player::Player(int sceneWidth, int sceneHeight,QList<QPixmap*> frames, QGraphics
 
 }
 
-void Player::walkingDown(){
-
-    heightAnimator->stop();
-    heightAnimator->setStartValue(y());
-    heightAnimator->setEndValue(y() + 15);
-    heightAnimator->setDuration(30);
-    heightAnimator->start();
 
 
-}
-void Player::walkingUp() {
 
-        heightAnimator->stop();
-        heightAnimator->setStartValue(y());
-        heightAnimator->setEndValue(y() -15);
-        heightAnimator->setDuration(30);
-        heightAnimator->start();
-
-}
-void Player::walkingLeft() {
-
-        widthAnimator->stop();
-        widthAnimator->setStartValue(x());
-        widthAnimator->setEndValue(x() - 15);
-        widthAnimator->setDuration(30);
-        widthAnimator->start();
-
-}
-void Player::walkingRight() {
-
-        widthAnimator->stop();
-        widthAnimator->setStartValue(x());
-        widthAnimator->setEndValue(x() + 15);
-        widthAnimator->setDuration(30);
-        widthAnimator->start();
-
-
-}
 void Player::walking(){
     setPixmap(*frames.at(frame));
     frame=(frame+1)%3;
 }
+void Player::movement(int newX, int newY) {
+
+    heightAnimator->stop();
+    heightAnimator->setStartValue(y());
+    heightAnimator->setEndValue(newY);
+    heightAnimator->setDuration(5);
+    heightAnimator->start();
+
+    widthAnimator->stop();
+    widthAnimator->setStartValue(x());
+    widthAnimator->setEndValue(newX);
+    widthAnimator->setDuration(5);
+    widthAnimator->start();
 
 
+}
+int Player::getX() {
+    return X;
+}
+int Player::getY() {
+    return Y;
+}
 

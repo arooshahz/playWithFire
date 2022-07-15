@@ -1,3 +1,0 @@
-//    scene->addRect(QRect(0,0,200,height()),QPen(),QBrush("#995129"));
-//    auto info1Pixmap=scene->addPixmap(QPixmap(":/images/player1"));
-//    info1Pixmap->setPos(15,20);

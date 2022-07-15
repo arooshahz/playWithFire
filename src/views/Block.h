@@ -3,12 +3,23 @@
 #include <QGraphicsPixmapItem>
 
 class Block :public QGraphicsPixmapItem{
-private:
-    int width;
-    int height;
+protected:
+    int X{};
+    int Y{};
+    static int blockWidth;
+    static int blockHeight;
+
+
+
 public:
 
-    Block(int width,int height);
+    Block(int X,int Y);
+    int getX();
+    int getY();
+    static void setBlockWidth(int width);
+    static void setBlockHeight(int height);
+    static int getBlockWidth();
+    static int getBlockHeight();
 };
 
 

@@ -4,7 +4,7 @@
 
 class Box : public Block{
 public:
-    Box(int width,int height);
+    Box(int X,int Y);
 };
 
 
