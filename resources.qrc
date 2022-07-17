@@ -13,6 +13,8 @@
         <file alias="p23">resources/images/player23.png</file>
         <file alias="playWithFire">resources/images/playingWithFire2.png</file>
         <file alias="bomb1">resources/images/bomb1.png</file>
+        <file alias="bomb2">resources/images/bomb2.png</file>
+        <file alias="bomb3">resources/images/bomb3.png</file>
 
 
     </qresource>
