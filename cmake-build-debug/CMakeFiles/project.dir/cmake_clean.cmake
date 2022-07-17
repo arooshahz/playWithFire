@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj.d"
   "CMakeFiles/project.dir/src/views/Block.cpp.obj"
   "CMakeFiles/project.dir/src/views/Block.cpp.obj.d"
+  "CMakeFiles/project.dir/src/views/Bomb.cpp.obj"
+  "CMakeFiles/project.dir/src/views/Bomb.cpp.obj.d"
   "CMakeFiles/project.dir/src/views/Box.cpp.obj"
   "CMakeFiles/project.dir/src/views/Box.cpp.obj.d"
   "CMakeFiles/project.dir/src/views/Button.cpp.obj"

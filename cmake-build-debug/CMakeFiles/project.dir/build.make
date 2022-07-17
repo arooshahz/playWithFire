@@ -72,6 +72,7 @@ project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources.qrc
 project_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/project_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/player21.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/player22.png
+project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/bomb1.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/box.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/playingWithFire2.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/wall.png
@@ -265,11 +266,26 @@ CMakeFiles/project.dir/src/views/Controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/src/views/Controller.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Lenovo\Desktop\playWithFire\src\views\Controller.cpp -o CMakeFiles\project.dir\src\views\Controller.cpp.s
 
+CMakeFiles/project.dir/src/views/Bomb.cpp.obj: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/src/views/Bomb.cpp.obj: CMakeFiles/project.dir/includes_CXX.rsp
+CMakeFiles/project.dir/src/views/Bomb.cpp.obj: ../src/views/Bomb.cpp
+CMakeFiles/project.dir/src/views/Bomb.cpp.obj: CMakeFiles/project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Lenovo\Desktop\playWithFire\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project.dir/src/views/Bomb.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/src/views/Bomb.cpp.obj -MF CMakeFiles\project.dir\src\views\Bomb.cpp.obj.d -o CMakeFiles\project.dir\src\views\Bomb.cpp.obj -c C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.cpp
+
+CMakeFiles/project.dir/src/views/Bomb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/src/views/Bomb.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.cpp > CMakeFiles\project.dir\src\views\Bomb.cpp.i
+
+CMakeFiles/project.dir/src/views/Bomb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/src/views/Bomb.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.cpp -o CMakeFiles\project.dir\src\views\Bomb.cpp.s
+
 CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/project.dir/includes_CXX.rsp
 CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: project_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Lenovo\Desktop\playWithFire\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Lenovo\Desktop\playWithFire\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj -MF CMakeFiles\project.dir\project_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d -o CMakeFiles\project.dir\project_autogen\EWIEGA46WW\qrc_resources.cpp.obj -c C:\Users\Lenovo\Desktop\playWithFire\cmake-build-debug\project_autogen\EWIEGA46WW\qrc_resources.cpp
 
 CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
@@ -294,6 +310,7 @@ project_OBJECTS = \
 "CMakeFiles/project.dir/src/views/Wall.cpp.obj" \
 "CMakeFiles/project.dir/src/views/Player.cpp.obj" \
 "CMakeFiles/project.dir/src/views/Controller.cpp.obj" \
+"CMakeFiles/project.dir/src/views/Bomb.cpp.obj" \
 "CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
 
 # External object files for target project
@@ -311,6 +328,7 @@ project.exe: CMakeFiles/project.dir/src/views/Box.cpp.obj
 project.exe: CMakeFiles/project.dir/src/views/Wall.cpp.obj
 project.exe: CMakeFiles/project.dir/src/views/Player.cpp.obj
 project.exe: CMakeFiles/project.dir/src/views/Controller.cpp.obj
+project.exe: CMakeFiles/project.dir/src/views/Bomb.cpp.obj
 project.exe: CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj
 project.exe: CMakeFiles/project.dir/build.make
 project.exe: C:/Qt/6.2.4/mingw_64/lib/libQt6Widgets.a
@@ -319,7 +337,7 @@ project.exe: C:/Qt/6.2.4/mingw_64/lib/libQt6Core.a
 project.exe: CMakeFiles/project.dir/linklibs.rsp
 project.exe: CMakeFiles/project.dir/objects1.rsp
 project.exe: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Lenovo\Desktop\playWithFire\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Lenovo\Desktop\playWithFire\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\project.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E make_directory C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/plugins/platforms/
 	"C:\Program Files\JetBrains\CLion 2022.1.2\bin\cmake\win\bin\cmake.exe" -E copy C:/Qt/6.2.4/mingw_64/plugins/platforms/qwindows.dll C:/Users/Lenovo/Desktop/playWithFire/cmake-build-debug/plugins/platforms/

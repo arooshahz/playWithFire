@@ -237,6 +237,30 @@ src/views/Block.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/src/views/Block.cpp.s
 .PHONY : src/views/Block.cpp.s
 
+src/views/Bomb.obj: src/views/Bomb.cpp.obj
+.PHONY : src/views/Bomb.obj
+
+# target to build an object file
+src/views/Bomb.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/src/views/Bomb.cpp.obj
+.PHONY : src/views/Bomb.cpp.obj
+
+src/views/Bomb.i: src/views/Bomb.cpp.i
+.PHONY : src/views/Bomb.i
+
+# target to preprocess a source file
+src/views/Bomb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/src/views/Bomb.cpp.i
+.PHONY : src/views/Bomb.cpp.i
+
+src/views/Bomb.s: src/views/Bomb.cpp.s
+.PHONY : src/views/Bomb.s
+
+# target to generate assembly for a file
+src/views/Bomb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/src/views/Bomb.cpp.s
+.PHONY : src/views/Bomb.cpp.s
+
 src/views/Box.obj: src/views/Box.cpp.obj
 .PHONY : src/views/Box.obj
 
@@ -475,6 +499,9 @@ help:
 	@echo ... src/views/Block.obj
 	@echo ... src/views/Block.i
 	@echo ... src/views/Block.s
+	@echo ... src/views/Bomb.obj
+	@echo ... src/views/Bomb.i
+	@echo ... src/views/Bomb.s
 	@echo ... src/views/Box.obj
 	@echo ... src/views/Box.i
 	@echo ... src/views/Box.s

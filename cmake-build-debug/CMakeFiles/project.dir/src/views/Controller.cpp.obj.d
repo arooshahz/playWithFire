@@ -363,4 +363,5 @@ CMakeFiles/project.dir/src/views/Controller.cpp.obj: \
  C:/Qt/6.2.4/mingw_64/include/QtCore/QObject \
  C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
- C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
+ C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.h

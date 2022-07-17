@@ -237,6 +237,12 @@
 			null
 		],
 		[
+			"C:/Users/Lenovo/Desktop/playWithFire/src/views/Bomb.h",
+			"MU",
+			"Z3L7HTGYLD/moc_Bomb.cpp",
+			null
+		],
+		[
 			"C:/Users/Lenovo/Desktop/playWithFire/src/views/Box.h",
 			"MU",
 			"Z3L7HTGYLD/moc_Box.cpp",
@@ -360,6 +366,7 @@
 			"MU",
 			null
 		],
+		[ "C:/Users/Lenovo/Desktop/playWithFire/src/views/Bomb.cpp", "MU", null ],
 		[ "C:/Users/Lenovo/Desktop/playWithFire/src/views/Box.cpp", "MU", null ],
 		[
 			"C:/Users/Lenovo/Desktop/playWithFire/src/views/Button.cpp",

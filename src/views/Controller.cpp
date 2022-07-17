@@ -1,4 +1,6 @@
 #include "Controller.h"
+#include "Bomb.h"
+
 Controller::Controller(Game* game) : game(game){
     setFlags(GraphicsItemFlag::ItemIsFocusable);
     setFocus();
@@ -32,10 +34,19 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
     if(event->key()==Qt::Key::Key_Right){
         newXPlayer1=game->getPlayers().at(0)->x()+15;
     }
+    if(event->key()==Qt::Key::Key_Return){
+        auto bomb=new Bomb(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y());
+        game->scene()->addItem(bomb);
+        bomb->setPos(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y());
+    }
+
+
+
 
     if(event->key()==Qt::Key::Key_S){
         newYPlayer2=game->getPlayers().at(1)->y()+15;
     }
+
     if(event->key()==Qt::Key::Key_W){
         newYPlayer2=game->getPlayers().at(1)->y()-15;
     }
@@ -47,7 +58,11 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
     if(event->key()==Qt::Key::Key_D){
         newXPlayer2=game->getPlayers().at(1)->x()+15;
     }
-
+    if(event->key()==Qt::Key::Key_Space){
+        auto bomb=new Bomb(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y());
+        game->scene()->addItem(bomb);
+        bomb->setPos(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y());
+    }
 
 
         for (const auto block: game->getBlocks()) {
@@ -73,7 +88,6 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
 
 
 
-
         for (const auto block: game->getBlocks()) {
             if (block->x() < newXPlayer2 && block->x() + block->boundingRect().width() > newXPlayer2
                 && block->y() < newYPlayer2 && block->y() + block->boundingRect().height() > newYPlayer2)
@@ -93,19 +107,6 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
                 return;
         }
         game->getPlayers().at(1)->movement(newXPlayer2, newYPlayer2);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

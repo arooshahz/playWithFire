@@ -147,6 +147,12 @@
 		<Unit filename="C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/playWithFire/src/views/Bomb.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="C:/Users/Lenovo/Desktop/playWithFire/src/views/Bomb.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="C:/Users/Lenovo/Desktop/playWithFire/src/views/Box.cpp">
 			<Option target="project"/>
 		</Unit>
