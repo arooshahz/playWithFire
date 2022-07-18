@@ -78,7 +78,9 @@ project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/playingWithFir
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/wall.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/player13.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/player23.png
+project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/bomb3.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/textField.png
+project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/bomb2.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/startButton.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/player11.png
 project_autogen/EWIEGA46WW/qrc_resources.cpp: ../resources/images/player12.png

@@ -1,10 +1,10 @@
 CMakeFiles/project.dir/src/views/Bomb.cpp.obj: \
  C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.cpp \
  C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.h \
- C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
- C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
- C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
- C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qglobal.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -142,11 +142,6 @@ CMakeFiles/project.dir/src/views/Bomb.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/poly_laguerre.tcc \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/riemann_zeta.tcc \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
- C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
- C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
- C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
- C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
- C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qstring.h \
@@ -276,6 +271,13 @@ CMakeFiles/project.dir/src/views/Bomb.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
@@ -305,4 +307,61 @@ CMakeFiles/project.dir/src/views/Bomb.cpp.obj: \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qrgb.h \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qrgba64.h \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qimage.h \
- C:/Qt/6.2.4/mingw_64/include/QtGui/qpixelformat.h
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qpixelformat.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
+ C:\Users\Lenovo\Desktop\playWithFire\src\views\Box.h \
+ C:\Users\Lenovo\Desktop\playWithFire\src\views\Block.h \
+ C:/Users/Lenovo/Desktop/playWithFire/src/windows/Game.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsView \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsview.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qpainter.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qbrush.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qpalette.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qcursor.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Users/Lenovo/Desktop/playWithFire/src/views/Wall.h \
+ C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h \
+ C:/Users/Lenovo/Desktop/playWithFire/src/views/Player.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qpropertyanimation.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qvariantanimation.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qabstractanimation.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qeasingcurve.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/QKeyEvent \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qevent.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qcoreevent.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qpointer.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qeventpoint.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qvector2d.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qvectornd.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qpointingdevice.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qinputdevice.h \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qscreen.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QList \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QRect \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qrect.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QSize \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qsize.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/QSizeF \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/QTransform \
+ C:/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qnativeinterface.h \
+ C:/Users/Lenovo/Desktop/playWithFire/src/views/Box.h

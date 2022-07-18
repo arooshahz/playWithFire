@@ -351,7 +351,7 @@ CMakeFiles/project.dir/main.cpp.obj: ../main.cpp \
 CMakeFiles/project.dir/project_autogen/EWIEGA46WW/qrc_resources.cpp.obj: project_autogen/EWIEGA46WW/qrc_resources.cpp
 
 CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: project_autogen/mocs_compilation.cpp \
-  project_autogen/Z3L7HTGYLD/moc_Button.cpp \
+  project_autogen/Z3L7HTGYLD/moc_Bomb.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algobase.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -461,11 +461,11 @@ CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: project_autogen
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward/auto_ptr.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
-  ../src/views/Button.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsTextItem \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+  ../src/views/Bomb.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qglobal.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstddef \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdint \
@@ -533,11 +533,6 @@ CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: project_autogen
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/poly_laguerre.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/riemann_zeta.tcc \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qstring.h \
@@ -628,6 +623,13 @@ CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: project_autogen
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
@@ -658,11 +660,33 @@ CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: project_autogen
   C:/Qt/6.2.4/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qpixelformat.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/QObject \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
-  project_autogen/Z3L7HTGYLD/moc_Player.cpp \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
+  ../src/views/Box.h \
+  ../src/views/Block.h \
+  ../src/windows/Game.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpainter.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qtextoption.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qbrush.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qscrollarea.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qcursor.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  ../src/views/Wall.h \
   ../src/views/Player.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qpropertyanimation.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qvariantanimation.h \
@@ -691,30 +715,14 @@ CMakeFiles/project.dir/project_autogen/mocs_compilation.cpp.obj: project_autogen
   C:/Qt/6.2.4/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qnativeinterface.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
+  ../src/views/Box.h \
+  project_autogen/Z3L7HTGYLD/moc_Button.cpp \
+  ../src/views/Button.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsTextItem \
+  project_autogen/Z3L7HTGYLD/moc_Player.cpp \
+  ../src/views/Player.h \
   project_autogen/3LXPKN4LCA/moc_Home.cpp \
   ../src/windows/Home.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsView \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsview.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qpainter.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qtextoption.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qpen.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qbrush.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qscrollarea.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qpalette.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qcursor.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsItem \
   ../src/views/textField.h
 
@@ -1028,10 +1036,10 @@ CMakeFiles/project.dir/src/views/Block.cpp.obj: ../src/views/Block.cpp \
 
 CMakeFiles/project.dir/src/views/Bomb.cpp.obj: ../src/views/Bomb.cpp \
   ../src/views/Bomb.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qglobal.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -1169,11 +1177,6 @@ CMakeFiles/project.dir/src/views/Bomb.cpp.obj: ../src/views/Bomb.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/poly_laguerre.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/riemann_zeta.tcc \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qnamespace.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qobjectdefs_impl.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qstring.h \
@@ -1303,6 +1306,13 @@ CMakeFiles/project.dir/src/views/Bomb.cpp.obj: ../src/views/Bomb.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qshareddata.h \
@@ -1332,7 +1342,64 @@ CMakeFiles/project.dir/src/views/Bomb.cpp.obj: ../src/views/Bomb.cpp \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qimage.h \
-  C:/Qt/6.2.4/mingw_64/include/QtGui/qpixelformat.h
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpixelformat.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
+  ../src/views/Box.h \
+  ../src/views/Block.h \
+  ../src/windows/Game.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpainter.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qtextoption.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qbrush.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qscrollarea.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qcursor.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  ../src/views/Wall.h \
+  ../src/views/Block.h \
+  ../src/views/Player.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qpropertyanimation.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qvariantanimation.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qabstractanimation.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qeasingcurve.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/QKeyEvent \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qevent.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qcoreevent.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qpointer.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qurl.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qeventpoint.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qvector2d.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qvectornd.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qpointingdevice.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qinputdevice.h \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qscreen.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QList \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QRect \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qrect.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QSize \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qsize.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/QSizeF \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qnativeinterface.h \
+  ../src/views/Box.h
 
 CMakeFiles/project.dir/src/views/Box.cpp.obj: ../src/views/Box.cpp \
   ../src/views/Box.h \
@@ -2317,10 +2384,9 @@ CMakeFiles/project.dir/src/views/Controller.cpp.obj: ../src/views/Controller.cpp
   C:/Qt/6.2.4/mingw_64/include/QtGui/qcursor.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
-  ../src/views/Block.h \
-  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   ../src/views/Wall.h \
   ../src/views/Block.h \
+  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   ../src/views/Player.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qpropertyanimation.h \
@@ -2331,7 +2397,9 @@ CMakeFiles/project.dir/src/views/Controller.cpp.obj: ../src/views/Controller.cpp
   C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
-  ../src/views/Bomb.h
+  ../src/views/Box.h \
+  ../src/views/Bomb.h \
+  ../src/views/Box.h
 
 CMakeFiles/project.dir/src/views/Lable.cpp.obj: ../src/views/Lable.cpp \
   C:/Qt/6.2.4/mingw_64/include/QtGui/QFont \
@@ -3955,6 +4023,7 @@ CMakeFiles/project.dir/src/windows/Game.cpp.obj: ../src/windows/Game.cpp \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  ../src/views/Wall.h \
   ../src/views/Block.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
@@ -3968,8 +4037,6 @@ CMakeFiles/project.dir/src/windows/Game.cpp.obj: ../src/windows/Game.cpp \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.2.4/mingw_64/include/QtGui/qpainterpath.h \
-  ../src/views/Wall.h \
-  ../src/views/Block.h \
   ../src/views/Player.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qpropertyanimation.h \
@@ -4343,7 +4410,6 @@ CMakeFiles/project.dir/src/windows/Home.cpp.obj: ../src/windows/Home.cpp \
   ../src/views/Lable.h \
   ../src/views/Button.h \
   ../src/windows/Game.h \
-  ../src/views/Block.h \
   ../src/views/Wall.h \
   ../src/views/Block.h \
   ../src/views/Player.h \
@@ -4377,7 +4443,8 @@ CMakeFiles/project.dir/src/windows/Home.cpp.obj: ../src/windows/Home.cpp \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
-  C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h
+  C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
+  ../src/views/Box.h
 
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwchar:
@@ -4604,9 +4671,9 @@ C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_defines.h:
 
-../src/views/Box.h:
-
 ../src/views/Block.h:
+
+../src/views/Box.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator_base_types.h:
 
@@ -5136,9 +5203,15 @@ C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsTextItem:
 
 C:/Qt/6.2.4/mingw_64/include/QtCore/QObject:
 
-../src/views/Button.h:
+project_autogen/Z3L7HTGYLD/moc_Bomb.cpp:
 
-project_autogen/Z3L7HTGYLD/moc_Player.cpp:
+C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtabwidget.h:
+
+../src/views/Bomb.h:
+
+C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer:
+
+C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h:
 
 C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation:
 
@@ -5168,15 +5241,11 @@ C:/Qt/6.2.4/mingw_64/include/QtCore/QSize:
 
 C:/Qt/6.2.4/mingw_64/include/QtGui/QTransform:
 
-C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer:
+../src/views/Button.h:
 
-C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h:
+project_autogen/Z3L7HTGYLD/moc_Player.cpp:
 
 project_autogen/3LXPKN4LCA/moc_Home.cpp:
-
-C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtabwidget.h:
-
-../src/views/Bomb.h:
 
 ../src/views/Button.cpp:
 

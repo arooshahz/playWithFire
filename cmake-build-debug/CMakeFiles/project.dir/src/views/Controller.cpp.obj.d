@@ -350,10 +350,9 @@ CMakeFiles/project.dir/src/views/Controller.cpp.obj: \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
- C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h \
- C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Wall.h \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h \
+ C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Player.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qpropertyanimation.h \
@@ -364,4 +363,6 @@ CMakeFiles/project.dir/src/views/Controller.cpp.obj: \
  C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
- C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.h
+ C:/Users/Lenovo/Desktop/playWithFire/src/views/Box.h \
+ C:\Users\Lenovo\Desktop\playWithFire\src\views\Bomb.h \
+ C:\Users\Lenovo\Desktop\playWithFire\src\views\Box.h

@@ -5,6 +5,7 @@
 class Wall  : public Block{
 public:
     Wall(int X,int y);
+    void remove();
 };
 
 
