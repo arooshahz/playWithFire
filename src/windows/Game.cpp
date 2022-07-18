@@ -1,6 +1,4 @@
 #include "Game.h"
-#include "../views/Box.h"
-#include "../views/Player.h"
 #include "../views/Controller.h"
 
 
@@ -101,7 +99,7 @@ QList<Player*> Game::getPlayers() {
 
     return players;
 }
-QList<Block*> Game::getBlocks() {
+QList<Block*>* Game::getBlocks() {
 
-    return blocks;
+    return &blocks;
 }

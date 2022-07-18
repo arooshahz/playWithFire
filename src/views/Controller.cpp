@@ -35,7 +35,7 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
         newXPlayer1=game->getPlayers().at(0)->x()+15;
     }
     if(event->key()==Qt::Key::Key_Return){
-        auto bomb=new Bomb(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y());
+        auto bomb=new Bomb(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y(),game);
         game->scene()->addItem(bomb);
         bomb->setPos(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y());
     }
@@ -59,13 +59,13 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
         newXPlayer2=game->getPlayers().at(1)->x()+15;
     }
     if(event->key()==Qt::Key::Key_Space){
-        auto bomb=new Bomb(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y());
+        auto bomb=new Bomb(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y(),game);
         game->scene()->addItem(bomb);
         bomb->setPos(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y());
     }
 
 
-        for (const auto block: game->getBlocks()) {
+        for (const auto block: *game->getBlocks()) {
             if (block->x() < newXPlayer1 && block->x() + block->boundingRect().width() > newXPlayer1
                 && block->y() < newYPlayer1 && block->y() + block->boundingRect().height() > newYPlayer1)
                 return;
@@ -88,7 +88,7 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
 
 
 
-        for (const auto block: game->getBlocks()) {
+        for (const auto block: *game->getBlocks()) {
             if (block->x() < newXPlayer2 && block->x() + block->boundingRect().width() > newXPlayer2
                 && block->y() < newYPlayer2 && block->y() + block->boundingRect().height() > newYPlayer2)
                 return;

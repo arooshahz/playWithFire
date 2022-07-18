@@ -333,7 +333,6 @@ CMakeFiles/project.dir/src/windows/Home.cpp.obj: \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Lable.h \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Button.h \
  C:\Users\Lenovo\Desktop\playWithFire\src\windows\Game.h \
- C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Wall.h \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Player.h \
@@ -367,4 +366,5 @@ CMakeFiles/project.dir/src/windows/Home.cpp.obj: \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qnativeinterface.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/QTimer \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qtimer.h \
- C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h
+ C:/Qt/6.2.4/mingw_64/include/QtCore/qbasictimer.h \
+ C:/Users/Lenovo/Desktop/playWithFire/src/views/Box.h

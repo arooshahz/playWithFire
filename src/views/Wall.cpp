@@ -7,3 +7,6 @@ Wall::Wall(int X, int Y) : Block(X,Y){
 
 
 }
+void Wall::remove() {
+
+}

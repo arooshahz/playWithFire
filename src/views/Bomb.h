@@ -3,22 +3,28 @@
 #include<QObject>
 #include <QGraphicsPixmapItem>
 #include <QTimer>
+#include "Box.h"
+#include "../windows/Game.h"
+
 class Bomb :public QObject,public QGraphicsPixmapItem{
 Q_OBJECT
 
 
 
 public:
-    Bomb(int X, int Y, QGraphicsPathItem *parent= nullptr);
+    Bomb(int X, int Y,Game* game, QGraphicsPathItem *parent= nullptr);
+    void removeBoxes();
+
 
 public slots:
-    void removeBomb();
+    void explode();
     void animateBomb();
 private:
     int frame={};
     int X{};
     int Y{};
     int explodeTime;
+    Game* game;
     QList<QPixmap*>frames{};
     QTimer *animateBombTimer;
     QTimer *removeBombTimer;

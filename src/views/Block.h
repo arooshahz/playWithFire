@@ -20,6 +20,7 @@ public:
     static void setBlockHeight(int height);
     static int getBlockWidth();
     static int getBlockHeight();
+    virtual void remove()=0;
 };
 
 

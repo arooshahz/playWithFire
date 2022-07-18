@@ -1,9 +1,9 @@
 #ifndef TESTPRO_GAME_H
 #define TESTPRO_GAME_H
 #include <QGraphicsView>
-#include "../views/Block.h"
 #include "../views/Wall.h"
 #include "../views/Player.h"
+#include "../views/Box.h"
 
 class Game :public QGraphicsView{
 private:
@@ -18,7 +18,7 @@ private:
 public :
     Game();
      QList<Player*> getPlayers();
-    QList<Block*> getBlocks();
+    QList<Block*>* getBlocks();
     friend class Block;
 
 

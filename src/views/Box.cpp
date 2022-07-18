@@ -6,3 +6,6 @@ Box::Box(int X, int Y) : Block(X,Y){
     pixmap=pixmap.scaled(blockWidth,blockHeight);
     setPixmap(pixmap);
 }
+void Box::remove(){
+    delete this;
+}

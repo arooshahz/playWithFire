@@ -313,6 +313,7 @@ CMakeFiles/project.dir/src/windows/Game.cpp.obj: \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Users/Lenovo/Desktop/playWithFire/src/views/Wall.h \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h \
  C:/Qt/6.2.4/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  C:/Qt/6.2.4/mingw_64/include/QtWidgets/qgraphicsitem.h \
@@ -326,8 +327,6 @@ CMakeFiles/project.dir/src/windows/Game.cpp.obj: \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qcontiguouscache.h \
  C:/Qt/6.2.4/mingw_64/include/QtGui/qpainterpath.h \
- C:/Users/Lenovo/Desktop/playWithFire/src/views/Wall.h \
- C:/Users/Lenovo/Desktop/playWithFire/src/views/Block.h \
  C:/Users/Lenovo/Desktop/playWithFire/src/views/Player.h \
  C:/Qt/6.2.4/mingw_64/include/QtCore/QPropertyAnimation \
  C:/Qt/6.2.4/mingw_64/include/QtCore/qpropertyanimation.h \

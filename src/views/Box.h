@@ -5,6 +5,7 @@
 class Box : public Block{
 public:
     Box(int X,int Y);
+    void remove();
 };
 
 

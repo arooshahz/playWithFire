@@ -15,6 +15,7 @@ private:
     int X{};
     int Y{};
     int frame{};
+    int lifeCount{};
     QList<QPixmap*>frames{};
     QPropertyAnimation *heightAnimator;
     QPropertyAnimation *widthAnimator;
