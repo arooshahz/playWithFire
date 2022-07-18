@@ -35,7 +35,7 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
         newXPlayer1=game->getPlayers().at(0)->x()+15;
     }
     if(event->key()==Qt::Key::Key_Return){
-        auto bomb=new Bomb(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y(),game);
+        auto bomb=new Bomb(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y(),0,game);
         game->scene()->addItem(bomb);
         bomb->setPos(game->getPlayers().at(0)->x(),game->getPlayers().at(0)->y());
     }
@@ -59,7 +59,7 @@ newYPlayer1=game->getPlayers().at(0)->y()-15;
         newXPlayer2=game->getPlayers().at(1)->x()+15;
     }
     if(event->key()==Qt::Key::Key_Space){
-        auto bomb=new Bomb(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y(),game);
+        auto bomb=new Bomb(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y(),1,game);
         game->scene()->addItem(bomb);
         bomb->setPos(game->getPlayers().at(1)->x(),game->getPlayers().at(1)->y());
     }

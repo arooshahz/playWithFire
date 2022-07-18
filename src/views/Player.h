@@ -16,6 +16,7 @@ private:
     int Y{};
     int frame{};
     int lifeCount{};
+    int score{};
     QList<QPixmap*>frames{};
     QPropertyAnimation *heightAnimator;
     QPropertyAnimation *widthAnimator;
@@ -29,6 +30,9 @@ public:
     void movement(int newX,int newY);
     int getX();
     int getY();
+    int* getScore();
+    int* getLifeCount();
+
 
 
 

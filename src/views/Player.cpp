@@ -4,6 +4,7 @@
 Player::Player(int X, int Y,QList<QPixmap*> frames, QGraphicsPathItem *parent):X(X),Y(Y),frames(frames),QGraphicsPixmapItem(parent) {
 
     lifeCount=3;
+    score=0;
     setPixmap(*frames.at(0));
 
     heightAnimator=new QPropertyAnimation(this,"height",this);
@@ -46,4 +47,10 @@ int Player::getX() {
 int Player::getY() {
     return Y;
 }
+int* Player::getScore() {
 
+    return &score;
+}
+int* Player::getLifeCount() {
+    return &lifeCount;
+}

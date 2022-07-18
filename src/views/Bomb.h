@@ -12,8 +12,9 @@ Q_OBJECT
 
 
 public:
-    Bomb(int X, int Y,Game* game, QGraphicsPathItem *parent= nullptr);
+    Bomb(int X, int Y,int indexOfPlayer,Game* game, QGraphicsPathItem *parent= nullptr);
     void removeBoxes();
+    void damagePlayer();
 
 
 public slots:
@@ -23,6 +24,7 @@ private:
     int frame={};
     int X{};
     int Y{};
+    int indexOfPlayer;
     int explodeTime;
     Game* game;
     QList<QPixmap*>frames{};
