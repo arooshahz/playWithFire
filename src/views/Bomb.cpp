@@ -48,17 +48,39 @@ int i=0;
 
     for (const auto block: *game->getBlocks()) {
 
+<<<<<<< HEAD
     if ((block->y() > this->y()-15 && block->y()+block->boundingRect().height() < this->y()+this->boundingRect().height()+15
     &&  this->x()- 2*block->boundingRect().width()<= block->x()+block->boundingRect().width() && block->x()+block->boundingRect().width() <= this->x()+this->boundingRect().width()+ 3*block->boundingRect().width())
     || ( block->x() > this->x()-15 && block->x()+block->boundingRect().width() < this->x()+this->boundingRect().width()+15
             &&  this->y()- 3*block->boundingRect().height()<= block->y() && block->y()+block->boundingRect().height() <= this->y()+this->boundingRect().height()+ 3*block->boundingRect().height()))
     {
             auto *box=dynamic_cast<Box*>(block);
+=======
+    if (block->y() > this->y()-15 && block->y()+block->boundingRect().height() < this->y()+this->boundingRect().height()+15
+    &&  this->x()- 2*block->boundingRect().width()<= block->x()+block->boundingRect().width() && block->x()+block->boundingRect().width() <= this->x()+this->boundingRect().width()+ 3*block->boundingRect().width())
+    {
+        auto *box=dynamic_cast<Box*>(block);
+>>>>>>> da40c1babc17387cb9c74fb8b4ca1a794c7ed2f8
 if(box!=nullptr){
     game->getBlocks()->removeAt(i);
 delete block;
 }
     }
 
+<<<<<<< HEAD
+=======
+
+
+//        if (block->x() > this->x()-15 && block->x()+block->boundingRect().width() < this->x()+this->boundingRect().width()+15
+//            &&  this->y()- (3*block->boundingRect().height())<= block->y() && block->y()+block->boundingRect().height() <= this->y()+this->boundingRect().height()+ (3*block->boundingRect().height()))
+//        {
+//            auto *box=dynamic_cast<Box*>(block);
+//            if(box!=nullptr){
+//                game->getBlocks()->removeAt(i);
+//                delete block;}
+//        }
+
+
+>>>>>>> da40c1babc17387cb9c74fb8b4ca1a794c7ed2f8
 ++i;
 }}
