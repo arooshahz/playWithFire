@@ -1,8 +1,6 @@
 #include "Block.h"
 
 Block::Block(int X, int Y) : X(X), Y(Y) {
-
-
 }
 
 int Block::blockWidth{};

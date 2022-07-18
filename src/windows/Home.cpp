@@ -38,7 +38,7 @@ Home::Home() {
     textfield1->setPos(width() / 2 - 100, height() / 2 + 100);
 
 
-    auto label1 = new label();
+    auto label1 = new Label();
     label1->setPlainText("player1 :");
     scene->addItem(label1);
     label1->setPos(width() / 2 - 100, height() / 2 - label1->boundingRect().height() + 100);
@@ -49,7 +49,7 @@ Home::Home() {
     textfield2->setPos(width() / 2 - 100, height() / 2 + 200);
 
 
-    auto label2 = new label();
+    auto label2 = new Label();
     label2->setPlainText("player2 :");
     scene->addItem(label2);
     label2->setPos(width() / 2 - 100, height() / 2 - label2->boundingRect().height() + 200);
@@ -64,6 +64,7 @@ Home::Home() {
 }
 
 void Home::onGAmeStart() {
+
     auto name1 = textfield1->toPlainText();
     auto name2 = textfield2->toPlainText();
     QFile file("names.txt");
