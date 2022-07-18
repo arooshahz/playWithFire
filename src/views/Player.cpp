@@ -1,30 +1,30 @@
 #include "Player.h"
 #include "Block.h"
 
-Player::Player(int X, int Y,QList<QPixmap*> frames, QGraphicsPathItem *parent):X(X),Y(Y),frames(frames),QGraphicsPixmapItem(parent) {
+Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent) : X(X), Y(Y), frames(frames),
+                                                                                   QGraphicsPixmapItem(parent) {
 
-    lifeCount=3;
-    score=0;
+    lifeCount = 3;
+    score = 0;
     setPixmap(*frames.at(0));
 
-    heightAnimator=new QPropertyAnimation(this,"height",this);
-    widthAnimator=new QPropertyAnimation(this,"width",this);
+    heightAnimator = new QPropertyAnimation(this, "height", this);
+    widthAnimator = new QPropertyAnimation(this, "width", this);
 
 
-    walkingTimer=new QTimer();
+    walkingTimer = new QTimer();
     walkingTimer->setInterval(100);
-    connect(walkingTimer,&QTimer::timeout,this,&Player::walking);
+    connect(walkingTimer, &QTimer::timeout, this, &Player::walking);
     walkingTimer->start();
 
 }
 
 
-
-
-void Player::walking(){
+void Player::walking() {
     setPixmap(*frames.at(frame));
-    frame=(frame+1)%3;
+    frame = (frame + 1) % 3;
 }
+
 void Player::movement(int newX, int newY) {
 
     heightAnimator->stop();
@@ -41,16 +41,20 @@ void Player::movement(int newX, int newY) {
 
 
 }
+
 int Player::getX() {
     return X;
 }
+
 int Player::getY() {
     return Y;
 }
-int* Player::getScore() {
+
+int *Player::getScore() {
 
     return &score;
 }
-int* Player::getLifeCount() {
+
+int *Player::getLifeCount() {
     return &lifeCount;
 }

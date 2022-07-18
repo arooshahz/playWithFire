@@ -1,8 +1,9 @@
 #ifndef TESTPRO_BLOCK_H
 #define TESTPRO_BLOCK_H
+
 #include <QGraphicsPixmapItem>
 
-class Block :public QGraphicsPixmapItem{
+class Block : public QGraphicsPixmapItem {
 protected:
     int X{};
     int Y{};
@@ -10,17 +11,23 @@ protected:
     static int blockHeight;
 
 
-
 public:
 
-    Block(int X,int Y);
+    Block(int X, int Y);
+
     int getX();
+
     int getY();
+
     static void setBlockWidth(int width);
+
     static void setBlockHeight(int height);
+
     static int getBlockWidth();
+
     static int getBlockHeight();
-    virtual void remove()=0;
+
+    virtual void remove() = 0;
 };
 
 

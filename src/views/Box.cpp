@@ -1,11 +1,12 @@
 #include "Box.h"
 
-Box::Box(int X, int Y) : Block(X,Y){
+Box::Box(int X, int Y) : Block(X, Y) {
 
     QPixmap pixmap(":/images/box");
-    pixmap=pixmap.scaled(blockWidth,blockHeight);
+    pixmap = pixmap.scaled(blockWidth, blockHeight);
     setPixmap(pixmap);
 }
-void Box::remove(){
+
+void Box::remove() {
     delete this;
 }

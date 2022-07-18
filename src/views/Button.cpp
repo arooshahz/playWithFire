@@ -4,7 +4,7 @@
 
 #include "Button.h"
 
-Button::Button(int width, int height):width(width),height(height), QGraphicsTextItem() {
+Button::Button(int width, int height) : width(width), height(height), QGraphicsTextItem() {
 
     setDefaultTextColor(QColor("black"));
     QFont font;
@@ -18,12 +18,11 @@ Button::Button(int width, int height):width(width),height(height), QGraphicsText
     document()->setDocumentMargin(10);
 }
 
-void Button::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
+void Button::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
     QPixmap pixmap(":/images/button");
-    pixmap=pixmap.scaled(width,height);
+    pixmap = pixmap.scaled(width, height);
     painter->setBrush(pixmap);
     painter->drawRect(boundingRect());
-
 
 
     QGraphicsTextItem::paint(painter, option, widget);

@@ -7,10 +7,9 @@
 #include "../windows/Game.h"
 
 
-
-class Controller : public QGraphicsItem{
+class Controller : public QGraphicsItem {
 private:
-    Game* game{};
+    Game *game{};
     int newXPlayer1;
     int newYPlayer1;
     int newXPlayer2;
@@ -19,9 +18,8 @@ private:
     int playerHeight;
 
 
-
 public:
-    Controller(Game* game);
+    Controller(Game *game);
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 

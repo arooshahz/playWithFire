@@ -1,6 +1,6 @@
 #include <QFile>
 #include "Home.h"
-#include "../views/Lable.h"
+#include "../views/label.h"
 #include "../views/Button.h"
 #include "Game.h"
 
@@ -24,11 +24,11 @@ Home::Home() {
 
 
     QFile file("names.txt");
-    QString names[2] = {"",""};
+    QString names[2] = {"", ""};
     int cnt = 0;
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QTextStream in(&file);
-        while (!in.atEnd()){
+        while (!in.atEnd()) {
             names[cnt++] = in.readLine();
         }
     }
@@ -38,10 +38,10 @@ Home::Home() {
     textfield1->setPos(width() / 2 - 100, height() / 2 + 100);
 
 
-    auto lable1 = new Lable();
-    lable1->setPlainText("player1 :");
-    scene->addItem(lable1);
-    lable1->setPos(width() / 2 - 100, height() / 2 - lable1->boundingRect().height() + 100);
+    auto label1 = new label();
+    label1->setPlainText("player1 :");
+    scene->addItem(label1);
+    label1->setPos(width() / 2 - 100, height() / 2 - label1->boundingRect().height() + 100);
 
     textfield2 = new textField(250, 50);
     textfield2->setPlainText(names[1]);
@@ -49,10 +49,10 @@ Home::Home() {
     textfield2->setPos(width() / 2 - 100, height() / 2 + 200);
 
 
-    auto lable2 = new Lable();
-    lable2->setPlainText("player2 :");
-    scene->addItem(lable2);
-    lable2->setPos(width() / 2 - 100, height() / 2 - lable2->boundingRect().height() + 200);
+    auto label2 = new label();
+    label2->setPlainText("player2 :");
+    scene->addItem(label2);
+    label2->setPos(width() / 2 - 100, height() / 2 - label2->boundingRect().height() + 200);
 
 
     auto button = new Button(200, 50);
