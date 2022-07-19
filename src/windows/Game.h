@@ -9,6 +9,8 @@
 class Game : public QGraphicsView {
 private:
 
+    bool isValid (int, int);
+    Block* Blocks[15][15];
     QList<Block *> blocks{};
     QList<Player *> players{};
     int blockWidth;
@@ -19,8 +21,11 @@ public :
     Game();
     QList<Player *> getPlayers();
     QList<Block *> *getBlocks();
+    Block* getBlock (int, int);
     friend class Block;
     void stopGame();
+
+    void setBlock(int i, int j, Block *block);
 };
 
 

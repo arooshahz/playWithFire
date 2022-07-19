@@ -43,63 +43,35 @@ void Bomb::explode() {
 }
 
 void Bomb::removeBoxes() {
-//    int i = 0;
-//
-//    for (const auto block: *game->getBlocks()) {
-//
-//        if ((block->y() > this->y() - 15 &&
-//             block->y() + block->boundingRect().height() < this->y() + this->boundingRect().height() + 15
-//             && this->x() - 2 * block->boundingRect().width() <= block->x() + block->boundingRect().width() &&
-//             block->x() + block->boundingRect().width() <=
-//             this->x() + this->boundingRect().width() + 3 * block->boundingRect().width())
-//            || (block->x() > this->x() - 15 &&
-//                block->x() + block->boundingRect().width() < this->x() + this->boundingRect().width() + 15
-//                && this->y() - 3 * block->boundingRect().height() <= block->y() &&
-//                block->y() + block->boundingRect().height() <=
-//                this->y() + this->boundingRect().height() + 3 * block->boundingRect().height())) {
-//            auto *box = dynamic_cast<Box *>(block);
-//
-//            if (box != nullptr) {
-//                game->getBlocks()->removeAt(i);
-//                delete block;
-//                *game->getPlayers().at(indexOfPlayer)->getScore() = +5;
-//            }
-//        }
-//
-//
-//        ++i;
-//    }
-    int width = Block::getBlockWidth() + 10, height = Block::getBlockHeight() + 10;
-    int dx[4] = {width, -width, 0, 0}, dy[4] = {0, 0, height, -height};
-    for (int i = 0; i < 4; i++) {
-        int j = 0;
-        bool F = false;
-        for (int j = 1; j <= 3; j++){
-            if (F)
-                break;
-            int k = 0;
-            for (const auto block : *game -> getBlocks()){
-                if (F)
-                    break;
-                auto disty = this -> y() + j * dy[i] - block->y(), distx = this->x() + j * dx[i] - block->x();
-                if (0 <= disty and disty <= height and 0 <= distx and distx <= width){
-                    auto *box = dynamic_cast<Box *>(block);
-                    if (box != nullptr) {
-                        game->getBlocks()->removeAt(k);
-                        delete block;
-                        *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
-                    }
-                    F = true;
+    pii temp = findPos();
+    int x = temp.first, y = temp.second;
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
+    for (int i = 0; i < 4; i++){
+        for (int j = 1; j <= 3; j++) {
+            int a = x + j * dx[i], b = y + j * dy[i];
+            Block *temp = (*game).getBlock(a, b);
+            if (temp != nullptr){
+                auto *wall = dynamic_cast<Wall *>(temp);
+                if (wall != nullptr){
+                    qInfo() << a << " " << b << " was wall";
+                    j = 10;
                 }
-                k++;
+                auto *box = dynamic_cast<Box *>(temp);
+                if (box != nullptr){
+                    qInfo() << a << " " << b << " was box";
+                    *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
+                    game->setBlock(a, b, nullptr);
+                    delete temp;
+                    j = 10;
+                }
             }
         }
     }
+    qInfo() << "function finished";
 }
 
 void Bomb::damagePlayer() {
     auto player = game->getPlayers().at(indexOfPlayer);
-
 
     if ((player->y() > this->y() - 15 &&
          player->y() + player->boundingRect().height() < this->y() + this->boundingRect().height() + 15
@@ -119,6 +91,18 @@ void Bomb::damagePlayer() {
         }
 
     }
+}
 
+pii Bomb::findPos(){
+    int x = this->x();
+    int y = this->y();
+    pii pos;
+    pos.first = x / Block::getBlockWidth();
+    pos.second = y / Block::getBlockHeight();
+    qInfo() << pos;
+    return pos;
+}
 
+bool Bomb::isValid(int x, int y) {
+    return 0 <= x and x < 15 and 0 <= y and y < 15;
 }

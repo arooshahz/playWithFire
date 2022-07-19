@@ -27,20 +27,24 @@ Game::Game() {
                                    {13, 12}};
     for (int i = 0; i < 15; i++) {
         for (int j = 0; j < 15; j++) {
-            if (temp.contains({i, j}))
+            if (temp.contains({i, j})) {
+                Blocks[i][j] = NULL;
                 continue;
+            }
             if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
                 int num = (rand() % (2));
                 if (num == 1) {
-                    auto box = new class Box(blockWidth, blockHeight);
-                    this->blocks.append(box);
+                    auto box = new class Box(i, j);
+                    Blocks[i][j] = box;
+                    blocks.append(box);
                     scene->addItem(box);
                     box->setPos(i * blockWidth, j * blockHeight);
                 }
 
             } else {
-                auto wall = new Wall(blockWidth, blockHeight);
-                this->blocks.append(wall);
+                auto wall = new Wall(i, j);
+                Blocks[i][j] = wall;
+                blocks.append(wall);
                 scene->addItem(wall);
                 wall->setPos(i * blockWidth, j * blockHeight);
             }
@@ -89,9 +93,18 @@ QList<Player *> Game::getPlayers() {
     return players;
 }
 
+Block* Game::getBlock (int i, int j){
+    return Blocks[i][j];
+}
+
+void Game::setBlock(int i, int j, Block* block){
+    Blocks[i][j] = block;
+}
+
 QList<Block *> *Game::getBlocks() {
     return &blocks;
 }
+
 void Game::stopGame(){
 
 

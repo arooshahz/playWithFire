@@ -7,6 +7,8 @@
 #include "Box.h"
 #include "../windows/Game.h"
 
+typedef std::pair<int,int> pii;
+
 class Bomb : public QObject, public QGraphicsPixmapItem {
 Q_OBJECT
 
@@ -35,6 +37,9 @@ private:
     QList<QPixmap *> frames{};
     QTimer *animateBombTimer;
     QTimer *removeBombTimer;
+    pii findPos();
+
+    bool isValid(int a, int i);
 };
 
 
