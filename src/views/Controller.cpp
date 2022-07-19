@@ -62,7 +62,20 @@ void Controller::keyPressEvent(QKeyEvent *event) {
         bomb->setPos(game->getPlayers().at(1)->x(), game->getPlayers().at(1)->y());
     }
 
+    movementPlayer1();
+    movementPlayer2();
 
+}
+
+void Controller::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+
+}
+
+QRectF Controller::boundingRect() const {
+    return QRectF();
+}
+
+void Controller::movementPlayer1() {
     for (const auto block: *game->getBlocks()) {
         if (block->x() < newXPlayer1 && block->x() + block->boundingRect().width() > newXPlayer1
             && block->y() < newYPlayer1 && block->y() + block->boundingRect().height() > newYPlayer1)
@@ -82,8 +95,9 @@ void Controller::keyPressEvent(QKeyEvent *event) {
             return;
     }
     game->getPlayers().at(0)->movement(newXPlayer1, newYPlayer1);
+}
 
-
+void Controller::movementPlayer2() {
     for (const auto block: *game->getBlocks()) {
         if (block->x() < newXPlayer2 && block->x() + block->boundingRect().width() > newXPlayer2
             && block->y() < newYPlayer2 && block->y() + block->boundingRect().height() > newYPlayer2)
@@ -103,14 +117,4 @@ void Controller::keyPressEvent(QKeyEvent *event) {
             return;
     }
     game->getPlayers().at(1)->movement(newXPlayer2, newYPlayer2);
-
-
-}
-
-void Controller::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
-
-}
-
-QRectF Controller::boundingRect() const {
-    return QRectF();
 }

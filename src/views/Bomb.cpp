@@ -43,8 +43,8 @@ void Bomb::explode() {
 }
 
 void Bomb::removeBoxes() {
-    pii temp = findPos();
-    int x = temp.first, y = temp.second;
+    pii temp1 = findPos();
+    int x = temp1.first, y = temp1.second;
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
     for (int i = 0; i < 4; i++){
         for (int j = 1; j <= 3; j++) {
@@ -62,6 +62,7 @@ void Bomb::removeBoxes() {
                     *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
                     game->setBlock(a, b, nullptr);
                     delete temp;
+
                     j = 10;
                 }
             }
@@ -103,6 +104,6 @@ pii Bomb::findPos(){
     return pos;
 }
 
-bool Bomb::isValid(int x, int y) {
-    return 0 <= x and x < 15 and 0 <= y and y < 15;
-}
+//bool Bomb::isValid(int x, int y) {
+//    return 0 <= x and x < 15 and 0 <= y and y < 15;
+//}

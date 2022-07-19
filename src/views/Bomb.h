@@ -39,7 +39,7 @@ private:
     QTimer *removeBombTimer;
     pii findPos();
 
-    bool isValid(int a, int i);
+//    bool isValid(int x, int y);
 };
 
 

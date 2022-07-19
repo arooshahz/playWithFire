@@ -8,6 +8,7 @@ Home::Home() {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     showFullScreen();
+    setFrameShape(NoFrame);
 
     auto scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, width(), height());
@@ -75,5 +76,6 @@ void Home::onGameStart() {
     }
 
     close();
-    (new Game())->show();
+    auto game=new Game();
+    game->show();
 }

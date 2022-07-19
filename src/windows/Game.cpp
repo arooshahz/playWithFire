@@ -1,20 +1,25 @@
 #include "Game.h"
 #include "../views/Controller.h"
 #include "Result.h"
+#include "../views/Label.h"
 
 
 Game::Game() {
 
+
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     showFullScreen();
+    setFrameShape(NoFrame);
 
-    auto scene = new QGraphicsScene();
-    scene->setSceneRect(0, 0, width(), height());
+    playBackgroundScene = new QGraphicsScene(this);
+    playBackgroundScene->setSceneRect(-200, 0, width(), height());
     setBackgroundBrush(QColor("#2c2721"));
-    setScene(scene);
+    setScene(playBackgroundScene);
 
-    Block::setBlockWidth((width()) / 15);
+
+
+    Block::setBlockWidth((width() - 190) / 15);
     Block::setBlockHeight(height() / 15);
     blockWidth = Block::getBlockWidth();
     blockHeight = Block::getBlockHeight();
@@ -28,7 +33,7 @@ Game::Game() {
     for (int i = 0; i < 15; i++) {
         for (int j = 0; j < 15; j++) {
             if (temp.contains({i, j})) {
-                Blocks[i][j] = NULL;
+                Blocks[i][j] = nullptr;
                 continue;
             }
             if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
@@ -37,7 +42,7 @@ Game::Game() {
                     auto box = new class Box(i, j);
                     Blocks[i][j] = box;
                     blocks.append(box);
-                    scene->addItem(box);
+                    playBackgroundScene->addItem(box);
                     box->setPos(i * blockWidth, j * blockHeight);
                 }
 
@@ -45,7 +50,7 @@ Game::Game() {
                 auto wall = new Wall(i, j);
                 Blocks[i][j] = wall;
                 blocks.append(wall);
-                scene->addItem(wall);
+                playBackgroundScene->addItem(wall);
                 wall->setPos(i * blockWidth, j * blockHeight);
             }
 
@@ -65,7 +70,7 @@ Game::Game() {
 
     auto player1 = new Player(blockWidth, blockHeight, frames1);
     this->players.append(player1);
-    scene->addItem(player1);
+    playBackgroundScene->addItem(player1);
     player1->setPos(blockWidth, blockHeight);
 
     QList<QPixmap *> frames2;
@@ -80,12 +85,65 @@ Game::Game() {
     frames2.append(pixmap2);
     auto player2 = new Player((blockWidth * 13), blockHeight * 13, frames2);
     this->players.append(player2);
-    scene->addItem(player2);
+    playBackgroundScene->addItem(player2);
     player2->setPos((blockWidth * 13), blockHeight * 13);
 
+
+    QPixmap pixmapPlayer1(":/images/player1");
+    pixmapPlayer1 = pixmapPlayer1.scaled(200, 150);
+    playBackgroundScene->addRect(QRect(-150, 0, 150, 150),
+                                 QPen(Qt::NoPen), QPixmap(pixmapPlayer1));
+    auto labelPlayerName1 = new Label();
+    labelPlayerName1->setPlainText("player1");
+    playBackgroundScene->addItem(labelPlayerName1);
+    labelPlayerName1->setPos(-150, 150);
+
+    QString scores1 = QString::number(*players.at(0)->getScore());
+    auto labelPlayerScores1 = new Label();
+    labelPlayerScores1->setPlainText("score: " + scores1);
+    playBackgroundScene->addItem(labelPlayerScores1);
+    labelPlayerScores1->setPos(-150, 180);
+
+
+    QString lifeCount1 = QString::number(*players.at(0)->getLifeCount());
+    auto labelPlayerLifeCount1 = new Label();
+    labelPlayerLifeCount1->setPlainText("life count: " + lifeCount1);
+    playBackgroundScene->addItem(labelPlayerLifeCount1);
+    labelPlayerLifeCount1->setPos(-150, 210);
+
+
+    QPixmap pixmapPlayer2(":/images/player2");
+    pixmapPlayer2 = pixmapPlayer2.scaled(200, 150);
+    playBackgroundScene->addRect(QRect(-150, 300, 150, 150),
+                                 QPen(Qt::NoPen), QPixmap(pixmapPlayer2));
+
+
+    auto labelPlayerName2 = new Label();
+    labelPlayerName2->setPlainText("player2");
+    playBackgroundScene->addItem(labelPlayerName2);
+    labelPlayerName2->setPos(-150, 450);
+
+
+    QString scores2 = QString::number(*players.at(1)->getScore());
+    auto labelPlayerScores2 = new Label();
+    labelPlayerScores2->setPlainText("score: " + scores2);
+    playBackgroundScene->addItem(labelPlayerScores2);
+    labelPlayerScores2->setPos(-150, 480);
+
+
+    QString lifeCount2 = QString::number(*players.at(1)->getLifeCount());
+    auto labelPlayerLifeCount2 = new Label();
+    labelPlayerLifeCount2->setPlainText("life count: " + lifeCount2);
+    playBackgroundScene->addItem(labelPlayerLifeCount2);
+    labelPlayerLifeCount2->setPos(-150, 510);
+
+
     auto controller = new Controller(this);
-    scene->addItem(controller);
-    scene->setFocus();
+    playBackgroundScene->addItem(controller);
+//    scene->setFocus();
+
+
+
 
 }
 
@@ -93,11 +151,11 @@ QList<Player *> Game::getPlayers() {
     return players;
 }
 
-Block* Game::getBlock (int i, int j){
+Block *Game::getBlock(int i, int j) {
     return Blocks[i][j];
 }
 
-void Game::setBlock(int i, int j, Block* block){
+void Game::setBlock(int i, int j, Block *block) {
     Blocks[i][j] = block;
 }
 
@@ -105,8 +163,7 @@ QList<Block *> *Game::getBlocks() {
     return &blocks;
 }
 
-void Game::stopGame(){
-
+void Game::stopGame() {
 
 
     close();

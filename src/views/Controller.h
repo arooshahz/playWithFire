@@ -21,9 +21,17 @@ private:
 public:
     Controller(Game *game);
 
+    void movementPlayer1();
+
+    void movementPlayer2();
+
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
     QRectF boundingRect() const override;
+
+
+
+
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;
