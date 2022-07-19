@@ -60,10 +60,10 @@ Home::Home() {
     scene->addItem(button);
     button->setPos((width() / 2) - 75, height() / 2 + button->boundingRect().height() + 225);
 
-    connect(button, &Button::onPress, this, &Home::onGAmeStart);
+    connect(button, &Button::onPress, this, &Home::onGameStart);
 }
 
-void Home::onGAmeStart() {
+void Home::onGameStart() {
 
     auto name1 = textfield1->toPlainText();
     auto name2 = textfield2->toPlainText();

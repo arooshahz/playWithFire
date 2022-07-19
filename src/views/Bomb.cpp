@@ -113,6 +113,10 @@ void Bomb::damagePlayer() {
             this->y() + this->boundingRect().height() + 3 * player->boundingRect().height())) {
 
         --(*game->getPlayers().at(indexOfPlayer)->getLifeCount());
+        if(*game->getPlayers().at(indexOfPlayer)->getLifeCount()==0){
+            *game->getPlayers().at((indexOfPlayer+1)%2)->getScore() +=50;
+            game->stopGame();
+        }
 
     }
 

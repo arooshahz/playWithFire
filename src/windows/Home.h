@@ -17,7 +17,7 @@ public:
 
 public slots:
 
-    void onGAmeStart();
+    void onGameStart();
 };
 
 

@@ -17,14 +17,10 @@ private:
 
 public :
     Game();
-
     QList<Player *> getPlayers();
-
     QList<Block *> *getBlocks();
-
     friend class Block;
-
-
+    void stopGame();
 };
 
 

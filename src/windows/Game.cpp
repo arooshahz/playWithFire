@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "../views/Controller.h"
+#include "Result.h"
 
 
 Game::Game() {
@@ -90,4 +91,12 @@ QList<Player *> Game::getPlayers() {
 
 QList<Block *> *Game::getBlocks() {
     return &blocks;
+}
+void Game::stopGame(){
+
+
+
+    close();
+    (new Result(this))->show();
+
 }
