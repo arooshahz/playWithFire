@@ -1,7 +1,18 @@
+#include <QFile>
 #include "Result.h"
 #include "../views/Label.h"
 
-Result::Result(Game* game):game(game){
+Result::Result(Game *game) : game(game) {
+
+    QFile file("names.txt");
+    QString names[2] = {"", ""};
+    int cnt = 0;
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            names[cnt++] = in.readLine();
+        }
+    }
 
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -15,10 +26,8 @@ Result::Result(Game* game):game(game){
     chooseWinner();
 
 
-
-
     auto label1 = new Label();
-    label1->setPlainText("player1 scores:");
+    label1->setPlainText(names[0] + " score:");
     scene->addItem(label1);
     label1->setPos(width() / 2 - 100, height() / 2 - label1->boundingRect().height() + 100);
 
@@ -27,12 +36,12 @@ Result::Result(Game* game):game(game){
     auto labelScores1 = new Label();
     labelScores1->setPlainText(scores1);
     scene->addItem(labelScores1);
-    labelScores1->setPos(width() / 2 - 100+label1->boundingRect().width(), height() / 2 - label1->boundingRect().height() + 100);
-
+    labelScores1->setPos(width() / 2 - 100 + label1->boundingRect().width(),
+                         height() / 2 - label1->boundingRect().height() + 100);
 
 
     auto label2 = new Label();
-    label2->setPlainText("player2 scores:");
+    label2->setPlainText(names[1] + " score:");
     scene->addItem(label2);
     label2->setPos(width() / 2 - 100, height() / 2 - label2->boundingRect().height() + 200);
 
@@ -41,35 +50,43 @@ Result::Result(Game* game):game(game){
     auto labelScores2 = new Label();
     labelScores2->setPlainText(scores2);
     scene->addItem(labelScores2);
-    labelScores2->setPos(width() / 2 - 100+label2->boundingRect().width(), height() / 2 - label2->boundingRect().height() + 200);
+    labelScores2->setPos(width() / 2 - 100 + label2->boundingRect().width(),
+                         height() / 2 - label2->boundingRect().height() + 200);
 }
+
 void Result::chooseWinner() {
 
-    if(*game->getPlayers().at(1)->getScore() > *game->getPlayers().at(0)->getScore()){
-        indexOfWinnerPlayer=1;
+    QFile file("names.txt");
+    QString names[2] = {"", ""};
+    int cnt = 0;
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            names[cnt++] = in.readLine();
+        }
     }
-    else if(*game->getPlayers().at(1)->getScore() < *game->getPlayers().at(0)->getScore()){
-        indexOfWinnerPlayer=0;
-    }
-    else{indexOfWinnerPlayer=-1;}
+
+    if (*game->getPlayers().at(1)->getScore() > *game->getPlayers().at(0)->getScore()) {
+        indexOfWinnerPlayer = 1;
+    } else if (*game->getPlayers().at(1)->getScore() < *game->getPlayers().at(0)->getScore()) {
+        indexOfWinnerPlayer = 0;
+    } else { indexOfWinnerPlayer = -1; }
 
     auto winnerLabel = new Label();
     winnerLabel->setPlainText("Winner:");
     this->scene()->addItem(winnerLabel);
-    winnerLabel->setPos(width() / 2 - 100, height() / 2 -300);
+    winnerLabel->setPos(width() / 2 - 100, height() / 2 - 300);
 
-    if(indexOfWinnerPlayer==0){
+    if (indexOfWinnerPlayer == 0) {
         auto label = new Label();
-        label->setPlainText("player1");
+        label->setPlainText(names[0]);
         this->scene()->addItem(label);
-        label->setPos(width() / 2 - 100 +winnerLabel->boundingRect().width(), height() / 2 -300);
-    }
-
-    else if(indexOfWinnerPlayer==1){
+        label->setPos(width() / 2 - 100 + winnerLabel->boundingRect().width(), height() / 2 - 300);
+    } else if (indexOfWinnerPlayer == 1) {
         auto label = new Label();
-        label->setPlainText("player2");
+        label->setPlainText(names[1]);
         this->scene()->addItem(label);
-        label->setPos(width() / 2 - 100 +winnerLabel->boundingRect().width(), height() / 2 -300);
+        label->setPos(width() / 2 - 100 + winnerLabel->boundingRect().width(), height() / 2 - 300);
     }
 
 }

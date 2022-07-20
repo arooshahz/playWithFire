@@ -1,3 +1,4 @@
+#include <QFile>
 #include "Game.h"
 #include "../views/Controller.h"
 #include "Result.h"
@@ -93,8 +94,19 @@ Game::Game() {
     pixmapPlayer1 = pixmapPlayer1.scaled(200, 150);
     playBackgroundScene->addRect(QRect(-150, 0, 150, 150),
                                  QPen(Qt::NoPen), QPixmap(pixmapPlayer1));
+
+    QFile file("names.txt");
+    QString names[2] = {"", ""};
+    int cnt = 0;
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            names[cnt++] = in.readLine();
+        }
+    }
+
     auto labelPlayerName1 = new Label();
-    labelPlayerName1->setPlainText("player1");
+    labelPlayerName1->setPlainText(names[0]);
     playBackgroundScene->addItem(labelPlayerName1);
     labelPlayerName1->setPos(-150, 150);
 
@@ -119,7 +131,7 @@ Game::Game() {
 
 
     auto labelPlayerName2 = new Label();
-    labelPlayerName2->setPlainText("player2");
+    labelPlayerName2->setPlainText(names[1]);
     playBackgroundScene->addItem(labelPlayerName2);
     labelPlayerName2->setPos(-150, 450);
 
