@@ -48,7 +48,7 @@ Game::Game() {
 
             } else {
                 auto wall = new Wall(i, j);
-                Blocks[i][j] = wall;
+                Blocks[i][j] = NULL;
                 blocks.append(wall);
                 playBackgroundScene->addItem(wall);
                 wall->setPos(i * blockWidth, j * blockHeight);
@@ -141,9 +141,6 @@ Game::Game() {
     auto controller = new Controller(this);
     playBackgroundScene->addItem(controller);
 //    scene->setFocus();
-
-
-
 
 }
 

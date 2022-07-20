@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "Simplify"
 #include "Bomb.h"
 
 Bomb::Bomb(int X, int Y, int indexOfPlayer, Game *game, QGraphicsPathItem *parent) : X(X), Y(Y),
@@ -43,32 +45,25 @@ void Bomb::explode() {
 }
 
 void Bomb::removeBoxes() {
-    pii temp1 = findPos();
-    int x = temp1.first, y = temp1.second;
+    pii temp = findPos();
+    int x = temp.first, y = temp.second;
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
-    for (int i = 0; i < 4; i++){
+    for (int i = 0; i < 4; i++) {
         for (int j = 1; j <= 3; j++) {
             int a = x + j * dx[i], b = y + j * dy[i];
             Block *temp = (*game).getBlock(a, b);
-            if (temp != nullptr){
-                auto *wall = dynamic_cast<Wall *>(temp);
-                if (wall != nullptr){
-                    qInfo() << a << " " << b << " was wall";
-                    j = 10;
-                }
-                auto *box = dynamic_cast<Box *>(temp);
-                if (box != nullptr){
-                    qInfo() << a << " " << b << " was box";
-                    *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
-                    game->setBlock(a, b, nullptr);
-                    delete temp;
-
-                    j = 10;
-                }
+            if (temp != NULL) {
+                *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
+                game->setBlock(a, b, nullptr);
+                delete temp;
+                break;
+            }
+            else if (~(a != 0 && a != 14 && b != 0 && b != 14 && (a % 2 != 0 || b % 2 != 0))){
+                break;
             }
         }
     }
-    qInfo() << "function finished";
+    qInfo() << "remove Boxes finished";
 }
 
 void Bomb::damagePlayer() {
@@ -104,6 +99,4 @@ pii Bomb::findPos(){
     return pos;
 }
 
-//bool Bomb::isValid(int x, int y) {
-//    return 0 <= x and x < 15 and 0 <= y and y < 15;
-//}
+#pragma clang diagnostic pop
