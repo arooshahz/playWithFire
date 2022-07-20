@@ -10,10 +10,8 @@
 class Controller : public QGraphicsItem {
 private:
     Game *game{};
-    int newXPlayer1;
-    int newYPlayer1;
-    int newXPlayer2;
-    int newYPlayer2;
+    int newXPlayer[2];
+    int newYPlayer[2];
     int playerWidth;
     int playerHeight;
 
@@ -21,9 +19,7 @@ private:
 public:
     Controller(Game *game);
 
-    void movementPlayer1();
-
-    void movementPlayer2();
+    void movementPlayer(int, int);
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
@@ -37,6 +33,7 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
 
 
+    std::pair<int, int> findPlayerPos(int x, int y);
 };
 
 

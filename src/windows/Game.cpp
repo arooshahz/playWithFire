@@ -35,12 +35,14 @@ Game::Game() {
         for (int j = 0; j < 15; j++) {
             if (temp.contains({i, j})) {
                 boxes[i][j] = nullptr;
+                isBlocked[i][j] = false;
                 continue;
             }
             if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
                 int num = (rand() % (2));
                 if (num == 1) {
                     auto box = new class Box(i, j);
+                    isBlocked[i][j] = true;
                     boxes[i][j] = box;
                     blocks.append(box);
                     playBackgroundScene->addItem(box);
@@ -49,12 +51,12 @@ Game::Game() {
 
             } else {
                 auto wall = new Wall(i, j);
-                boxes[i][j] = NULL;
+                isBlocked[i][j] = true;
+                boxes[i][j] = nullptr;
                 blocks.append(wall);
                 playBackgroundScene->addItem(wall);
                 wall->setPos(i * blockWidth, j * blockHeight);
             }
-
         }
     }
 
@@ -161,11 +163,25 @@ QList<Player *> Game::getPlayers() {
 }
 
 Box *Game::getBox(int i, int j) {
+    if (i < 0 or 14 < i or j < 0 or 14 < j)
+        return nullptr;
     return boxes[i][j];
 }
 
-void Game::setBox(int i, int j, class Box *box) {
-    boxes[i][j] = box;
+void Game::deleteBox (int i, int j){
+    if (i < 0 or 14 < i or j < 0 or 14 < j)
+        return;
+    boxes[i][j] = nullptr;
+}
+
+bool Game::getBlocked(int i, int j){
+    if (i < 0 or 14 < i or j < 0 or 14 < j)
+        return true;
+    return isBlocked[i][j];
+}
+
+void Game::unblock (int i, int j){
+    isBlocked[i][j] = false;
 }
 
 QList<Block *> *Game::getBlocks() {

@@ -1,5 +1,6 @@
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "Simplify"
+
 #include "Bomb.h"
 
 Bomb::Bomb(int X, int Y, int indexOfPlayer, Game *game, QGraphicsPathItem *parent) : X(X), Y(Y),
@@ -45,22 +46,23 @@ void Bomb::explode() {
 }
 
 void Bomb::removeBoxes() {
-    pii temp = findPos();
-    int x = temp.first, y = temp.second;
+    pii pos = findPos();
+    int x = pos.first, y = pos.second;
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
     for (int i = 0; i < 4; i++) {
         for (int j = 1; j <= 3; j++) {
             int a = x + j * dx[i], b = y + j * dy[i];
+            if (!game->getBlocked(a, b)){
+                continue;
+            }
             Box *temp = (*game).getBox(a, b);
             if (temp != NULL) {
                 *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
-                game->setBox(a, b, nullptr);
-                delete temp;
-                break;
+                game->deleteBox(a, b);
+                game->unblock(a, b);
+                temp->remove();
             }
-            else if (~(a != 0 && a != 14 && b != 0 && b != 14 && (a % 2 != 0 || b % 2 != 0))){
-                break;
-            }
+            break;
         }
     }
     qInfo() << "remove Boxes finished";
@@ -81,15 +83,15 @@ void Bomb::damagePlayer() {
             this->y() + this->boundingRect().height() + 3 * player->boundingRect().height())) {
 
         --(*game->getPlayers().at(indexOfPlayer)->getLifeCount());
-        if(*game->getPlayers().at(indexOfPlayer)->getLifeCount()==0){
-            *game->getPlayers().at((indexOfPlayer+1)%2)->getScore() +=50;
+        if (*game->getPlayers().at(indexOfPlayer)->getLifeCount() == 0) {
+            *game->getPlayers().at((indexOfPlayer + 1) % 2)->getScore() += 50;
             game->stopGame();
         }
 
     }
 }
 
-pii Bomb::findPos(){
+pii Bomb::findPos() {
     int x = this->x();
     int y = this->y();
     pii pos;
