@@ -51,10 +51,10 @@ void Bomb::removeBoxes() {
     for (int i = 0; i < 4; i++) {
         for (int j = 1; j <= 3; j++) {
             int a = x + j * dx[i], b = y + j * dy[i];
-            Block *temp = (*game).getBlock(a, b);
+            Box *temp = (*game).getBox(a, b);
             if (temp != NULL) {
                 *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
-                game->setBlock(a, b, nullptr);
+                game->setBox(a, b, nullptr);
                 delete temp;
                 break;
             }
