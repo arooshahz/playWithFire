@@ -43,6 +43,7 @@ void Bomb::animateBomb() {
 void Bomb::explode() {
     damagePlayer();
     removeBoxes();
+    game->getPlayers().at(indexOfPlayer)->setBombLimitation(0);
     delete this;
 }
 
@@ -80,9 +81,7 @@ void Bomb::damagePlayer() {
         int px = pPos.first, py = pPos.second;
         if (bx == px and by == py)
             decreaseLifeCount(index);
-        auto damagedPlayer1 = new DamagedPlayer(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
-        game->scene()->addItem(damagedPlayer1);
-        damagedPlayer1->setPos(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+
 
         for (int i = 0; i < 4; i++){
             for (int j = 1; j <= bombRadius; j++){
@@ -91,9 +90,6 @@ void Bomb::damagePlayer() {
                     break;
                 if (x == bx and y == by){
                     decreaseLifeCount(index);
-                    auto damagedPlayer2 = new DamagedPlayer(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
-                    game->scene()->addItem(damagedPlayer2);
-                    damagedPlayer2->setPos(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
                     break;
                 }}
 
@@ -104,6 +100,9 @@ void Bomb::damagePlayer() {
 void Bomb::decreaseLifeCount (int index){
     auto player = game->getPlayers().at(index);
     (*player->getLifeCount())--;
+    auto damagedPlayer1 = new DamagedPlayer(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+    game->scene()->addItem(damagedPlayer1);
+    damagedPlayer1->setPos(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
     if (*player->getLifeCount() == 0){
         *game->getPlayers().at(1 - index)->getScore() += 50;
         game->stopGame();

@@ -19,6 +19,10 @@
         <file alias="player1">resources/images/player1.png</file>
         <file alias="deadPlayer">resources/images/deadPlayer.png</file>
         <file alias="Player">resources/images/Player.png</file>
+        <file alias="bg">resources/images/Sans titreA.png</file>
+        <file alias="heart1">resources/images/heart1.png</file>
+        <file alias="heart2">resources/images/heart2.png</file>
+        <file alias="heart3">resources/images/heart3.png</file>
 
 
     </qresource>

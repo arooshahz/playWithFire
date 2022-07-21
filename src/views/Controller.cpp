@@ -50,9 +50,14 @@ void Controller::keyPressEvent(QKeyEvent *event) {
             movementPlayer(0);
         }
         if (pressedKeys.contains(Qt::Key_Return)) {
-            auto bomb = new Bomb(game->getPlayers().at(0)->x(), game->getPlayers().at(0)->y(), 0, game);
-            game->scene()->addItem(bomb);
-            bomb->setPos(game->getPlayers().at(0)->x(), game->getPlayers().at(0)->y());
+            int bombCount=game->getPlayers().at(0)->getBombCount();
+            if(bombCount > 0 && game->getPlayers().at(0)->getBombLimitation()== 0) {
+                auto bomb = new Bomb(game->getPlayers().at(0)->x(), game->getPlayers().at(0)->y(), 0, game);
+                game->scene()->addItem(bomb);
+                bomb->setPos(game->getPlayers().at(0)->x(), game->getPlayers().at(0)->y());
+                game->getPlayers().at(0)->setBombLimitation(1);
+                game->getPlayers().at(0)->setBomCount(--bombCount);
+            }
 
         }
 
@@ -81,9 +86,14 @@ void Controller::keyPressEvent(QKeyEvent *event) {
             movementPlayer(1);
         }
         if (pressedKeys.contains(Qt::Key_Space)) {
-            auto bomb = new Bomb(game->getPlayers().at(1)->x(), game->getPlayers().at(1)->y(), 1, game);
-            game->scene()->addItem(bomb);
-            bomb->setPos(game->getPlayers().at(1)->x(), game->getPlayers().at(1)->y());
+            int bombCount=game->getPlayers().at(1)->getBombCount();
+            if(bombCount > 0 && game->getPlayers().at(1)->getBombLimitation()==0) {
+                auto bomb = new Bomb(game->getPlayers().at(1)->x(), game->getPlayers().at(1)->y(), 1, game);
+                game->scene()->addItem(bomb);
+                bomb->setPos(game->getPlayers().at(1)->x(), game->getPlayers().at(1)->y());
+                game->getPlayers().at(1)->setBombLimitation(1);
+                game->getPlayers().at(1)->setBomCount(--bombCount);
+            }
         }
     }
 

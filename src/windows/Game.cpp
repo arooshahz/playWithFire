@@ -19,7 +19,6 @@ Game::Game() {
     setScene(playBackgroundScene);
 
 
-
     Block::setBlockWidth((width() - 190) / 15);
     Block::setBlockHeight(height() / 15);
     blockWidth = Block::getBlockWidth();
@@ -38,6 +37,7 @@ Game::Game() {
         for (int j = 0; j < 15; j++) {
             if (temp.contains({i, j})) {
                 boxes[i][j] = nullptr;
+
                 continue;
             }
             if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
@@ -56,6 +56,17 @@ Game::Game() {
                 boxes[i][j] = nullptr;
                 playBackgroundScene->addItem(wall);
                 wall->setPos(i * blockWidth, j * blockHeight);
+            }
+        }
+    }
+
+    for (int i = 0; i < 15; i++) {
+        for (int j = 0; j < 15; j++) {
+            if (!getBlocked(i,j)) {
+                QPixmap backgroundPixmap(":/images/bg");
+                backgroundPixmap = backgroundPixmap.scaled(blockWidth, blockHeight);
+                playBackgroundScene->addRect(QRect(i * blockWidth, j * blockHeight, blockWidth, blockHeight),
+                                             QPen(Qt::NoPen), QPixmap(backgroundPixmap));
             }
         }
     }
@@ -98,7 +109,7 @@ Game::Game() {
                                  QPen(Qt::NoPen), QPixmap(pixmapPlayer1));
 
     QFile file("names.txt");
-    names= {"", ""};
+    names = {"", ""};
     int cnt = 0;
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QTextStream in(&file);
@@ -107,11 +118,12 @@ Game::Game() {
         }
     }
 
-   showPlayersInformation();
+
+    showPlayersInformation();
 
     auto controller = new Controller(this);
     playBackgroundScene->addItem(controller);
-//    scene->setFocus();
+
 
 }
 
@@ -125,7 +137,7 @@ Box *Game::getBox(int i, int j) {
     return boxes[i][j];
 }
 
-void Game::deleteBox (int i, int j){
+void Game::deleteBox(int i, int j) {
     if (i < 0 or 14 < i or j < 0 or 14 < j)
         return;
     boxes[i][j]->remove();
@@ -133,13 +145,13 @@ void Game::deleteBox (int i, int j){
     unblock(i, j);
 }
 
-bool Game::getBlocked(int i, int j){
+bool Game::getBlocked(int i, int j) {
     if (i < 0 or 14 < i or j < 0 or 14 < j)
         return true;
     return isBlocked[i][j];
 }
 
-void Game::unblock (int i, int j){
+void Game::unblock(int i, int j) {
     qInfo() << i << j << "unblocked";
     isBlocked[i][j] = false;
 }
@@ -153,7 +165,7 @@ void Game::stopGame() {
 }
 
 void Game::showPlayersInformation() {
-    if(count>0) {
+    if (count > 0) {
         delete labelPlayerName1;
         delete labelPlayerScores1;
         delete labelPlayerLifeCount1;
@@ -203,12 +215,16 @@ void Game::showPlayersInformation() {
 
     QString lifeCount2 = QString::number(*players.at(1)->getLifeCount());
     labelPlayerLifeCount2 = new Label();
-    labelPlayerLifeCount2->setPlainText("life count: " + lifeCount2);
+    labelPlayerLifeCount2->setPlainText(lifeCount2);
     playBackgroundScene->addItem(labelPlayerLifeCount2);
-    labelPlayerLifeCount2->setPos(-150, 510);
+    labelPlayerLifeCount2->setPos(-100, 510);
 
+    QPixmap lifeCountPixmap(":/images/heart3");
+    lifeCountPixmap = lifeCountPixmap.scaled(50, 50);
+    playBackgroundScene->addRect(QRect(-150, 500, 50, 50),
+                                 QPen(Qt::NoPen), QPixmap(lifeCountPixmap));
 
-count++;
+    count++;
 }
 
 pii Game::findPos(int x, int y) {

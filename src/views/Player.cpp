@@ -4,6 +4,7 @@
 Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent) : X(X), Y(Y), frames(frames),
                                                                                    QGraphicsPixmapItem(parent) {
 
+    bombCount=10;
     speed=60;
     bombRadius=3;
     lifeCount = 3;
@@ -64,4 +65,20 @@ int Player::getBombRadius() {
 }
 void Player::setBombRadius(int bombRadius) {
     this->bombRadius=bombRadius;
+}
+
+int Player::getBombCount() {
+    return bombCount;
+
+}
+void Player::setBomCount(int bombCount) {
+    this->bombCount=bombCount;
+}
+
+bool Player::getBombLimitation() {
+    return bombLimitation;
+}
+
+void Player::setBombLimitation(bool bombLimitation) {
+  this->bombLimitation=bombLimitation;
 }

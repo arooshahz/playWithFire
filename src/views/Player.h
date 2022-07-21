@@ -20,11 +20,13 @@ private:
     int lifeCount{};
     int score{};
     QList<QPixmap *> frames{};
-    QPropertyAnimation *heightAnimator;
-    QPropertyAnimation *widthAnimator;
-    QTimer *walkingTimer;
-    int speed;
-    int bombRadius;
+    QPropertyAnimation *heightAnimator{};
+    QPropertyAnimation *widthAnimator{};
+    QTimer *walkingTimer{};
+    int speed{};
+    int bombRadius{};
+    int bombCount{};
+    bool bombLimitation{false};
 
 public:
     Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent = nullptr);
@@ -45,6 +47,13 @@ public:
 
     void setBombRadius(int bombRadius);
 
+    int getBombCount();
+
+    void setBomCount(int bombCount);
+
+    bool getBombLimitation();
+
+    void setBombLimitation(bool bombLimitation);
 
 };
 
