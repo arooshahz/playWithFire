@@ -61,6 +61,7 @@ void Bomb::removeBoxes() {
                 game->deleteBox(a, b);
                 game->unblock(a, b);
                 temp->remove();
+                game->showPlayersInformation();
             }
             break;
         }

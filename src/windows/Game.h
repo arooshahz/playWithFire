@@ -6,6 +6,7 @@
 #include "../views/Wall.h"
 #include "../views/Player.h"
 #include "../views/Box.h"
+#include "../views/Label.h"
 
 class Game : public QGraphicsView {
 private:
@@ -18,6 +19,15 @@ private:
     int blockWidth;
     int blockHeight;
     QGraphicsScene *playBackgroundScene;
+    QList<QString> names;
+    Label* labelPlayerName1;
+    Label* labelPlayerScores1;
+    Label* labelPlayerLifeCount1;
+    Label* labelPlayerName2;
+    Label* labelPlayerScores2;
+    Label* labelPlayerLifeCount2;
+    int count=0;
+
 
 
 public :
@@ -38,6 +48,8 @@ public :
     void unblock (int i, int j);
 
     bool getBlocked(int i, int j);
+
+    void showPlayersInformation();
 };
 
 

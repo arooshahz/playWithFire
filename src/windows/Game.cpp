@@ -98,7 +98,7 @@ Game::Game() {
                                  QPen(Qt::NoPen), QPixmap(pixmapPlayer1));
 
     QFile file("names.txt");
-    QString names[2] = {"", ""};
+    names= {"", ""};
     int cnt = 0;
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QTextStream in(&file);
@@ -107,50 +107,7 @@ Game::Game() {
         }
     }
 
-    auto labelPlayerName1 = new Label();
-    labelPlayerName1->setPlainText(names[0]);
-    playBackgroundScene->addItem(labelPlayerName1);
-    labelPlayerName1->setPos(-150, 150);
-
-    QString scores1 = QString::number(*players.at(0)->getScore());
-    auto labelPlayerScores1 = new Label();
-    labelPlayerScores1->setPlainText("score: " + scores1);
-    playBackgroundScene->addItem(labelPlayerScores1);
-    labelPlayerScores1->setPos(-150, 180);
-
-
-    QString lifeCount1 = QString::number(*players.at(0)->getLifeCount());
-    auto labelPlayerLifeCount1 = new Label();
-    labelPlayerLifeCount1->setPlainText("life count: " + lifeCount1);
-    playBackgroundScene->addItem(labelPlayerLifeCount1);
-    labelPlayerLifeCount1->setPos(-150, 210);
-
-
-    QPixmap pixmapPlayer2(":/images/player2");
-    pixmapPlayer2 = pixmapPlayer2.scaled(200, 150);
-    playBackgroundScene->addRect(QRect(-150, 300, 150, 150),
-                                 QPen(Qt::NoPen), QPixmap(pixmapPlayer2));
-
-
-    auto labelPlayerName2 = new Label();
-    labelPlayerName2->setPlainText(names[1]);
-    playBackgroundScene->addItem(labelPlayerName2);
-    labelPlayerName2->setPos(-150, 450);
-
-
-    QString scores2 = QString::number(*players.at(1)->getScore());
-    auto labelPlayerScores2 = new Label();
-    labelPlayerScores2->setPlainText("score: " + scores2);
-    playBackgroundScene->addItem(labelPlayerScores2);
-    labelPlayerScores2->setPos(-150, 480);
-
-
-    QString lifeCount2 = QString::number(*players.at(1)->getLifeCount());
-    auto labelPlayerLifeCount2 = new Label();
-    labelPlayerLifeCount2->setPlainText("life count: " + lifeCount2);
-    playBackgroundScene->addItem(labelPlayerLifeCount2);
-    labelPlayerLifeCount2->setPos(-150, 510);
-
+   showPlayersInformation();
 
     auto controller = new Controller(this);
     playBackgroundScene->addItem(controller);
@@ -194,4 +151,63 @@ void Game::stopGame() {
     close();
     (new Result(this))->show();
 
+}
+
+void Game::showPlayersInformation() {
+    if(count>0) {
+        delete labelPlayerName1;
+        delete labelPlayerScores1;
+        delete labelPlayerLifeCount1;
+        delete labelPlayerName2;
+        delete labelPlayerScores2;
+        delete labelPlayerLifeCount2;
+    }
+
+
+    labelPlayerName1 = new Label();
+    labelPlayerName1->setPlainText(names[0]);
+    playBackgroundScene->addItem(labelPlayerName1);
+    labelPlayerName1->setPos(-150, 150);
+
+    QString scores1 = QString::number(*players.at(0)->getScore());
+    labelPlayerScores1 = new Label();
+    labelPlayerScores1->setPlainText("score: " + scores1);
+    playBackgroundScene->addItem(labelPlayerScores1);
+    labelPlayerScores1->setPos(-150, 180);
+
+
+    QString lifeCount1 = QString::number(*players.at(0)->getLifeCount());
+    labelPlayerLifeCount1 = new Label();
+    labelPlayerLifeCount1->setPlainText("life count: " + lifeCount1);
+    playBackgroundScene->addItem(labelPlayerLifeCount1);
+    labelPlayerLifeCount1->setPos(-150, 210);
+
+
+    QPixmap pixmapPlayer2(":/images/player2");
+    pixmapPlayer2 = pixmapPlayer2.scaled(200, 150);
+    playBackgroundScene->addRect(QRect(-150, 300, 150, 150),
+                                 QPen(Qt::NoPen), QPixmap(pixmapPlayer2));
+
+
+    labelPlayerName2 = new Label();
+    labelPlayerName2->setPlainText(names[1]);
+    playBackgroundScene->addItem(labelPlayerName2);
+    labelPlayerName2->setPos(-150, 450);
+
+
+    QString scores2 = QString::number(*players.at(1)->getScore());
+    labelPlayerScores2 = new Label();
+    labelPlayerScores2->setPlainText("score: " + scores2);
+    playBackgroundScene->addItem(labelPlayerScores2);
+    labelPlayerScores2->setPos(-150, 480);
+
+
+    QString lifeCount2 = QString::number(*players.at(1)->getLifeCount());
+    labelPlayerLifeCount2 = new Label();
+    labelPlayerLifeCount2->setPlainText("life count: " + lifeCount2);
+    playBackgroundScene->addItem(labelPlayerLifeCount2);
+    labelPlayerLifeCount2->setPos(-150, 510);
+
+
+count++;
 }
