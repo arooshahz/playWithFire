@@ -31,11 +31,13 @@ Game::Game() {
                                    {2,  1},
                                    {12, 13},
                                    {13, 12}};
+    for (int i = 0; i < 15; i++)
+        for (int j = 0; j < 15; j++)
+            isBlocked[i][j] = false;
     for (int i = 0; i < 15; i++) {
         for (int j = 0; j < 15; j++) {
             if (temp.contains({i, j})) {
                 boxes[i][j] = nullptr;
-                isBlocked[i][j] = false;
                 continue;
             }
             if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
@@ -126,7 +128,9 @@ Box *Game::getBox(int i, int j) {
 void Game::deleteBox (int i, int j){
     if (i < 0 or 14 < i or j < 0 or 14 < j)
         return;
+    boxes[i][j]->remove();
     boxes[i][j] = nullptr;
+    unblock(i, j);
 }
 
 bool Game::getBlocked(int i, int j){
@@ -136,6 +140,7 @@ bool Game::getBlocked(int i, int j){
 }
 
 void Game::unblock (int i, int j){
+    qInfo() << i << j << "unblocked";
     isBlocked[i][j] = false;
 }
 

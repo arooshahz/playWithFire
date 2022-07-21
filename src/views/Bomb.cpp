@@ -60,8 +60,6 @@ void Bomb::removeBoxes() {
             if (temp != NULL) {
                 *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
                 game->deleteBox(a, b);
-                game->unblock(a, b);
-                temp->remove();
                 game->showPlayersInformation();
             }
             break;

@@ -29,18 +29,11 @@ private:
 public:
     Controller(Game *game);
 
-    void movementPlayer(int, int);
+    void movementPlayer(int);
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
     QRectF boundingRect() const override;
-
-
-
-
-
-protected:
-    std::pair<int, int> findPlayerPos(int x, int y);
 };
 
 

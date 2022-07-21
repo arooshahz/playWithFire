@@ -53,7 +53,6 @@ int Player::getY() {
 }
 
 int *Player::getScore() {
-
     return &score;
 }
 
