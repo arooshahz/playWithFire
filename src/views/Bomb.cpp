@@ -46,11 +46,12 @@ void Bomb::explode() {
 }
 
 void Bomb::removeBoxes() {
-    pii pos = findPos();
+    pii pos = game->findPos(this->x(), this->y());
     int x = pos.first, y = pos.second;
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
     for (int i = 0; i < 4; i++) {
-        for (int j = 1; j <= game->getPlayers().at(indexOfPlayer)->getBombRadius(); j++) {
+        int bombRadius = game->getPlayers().at(indexOfPlayer)->getBombRadius();
+        for (int j = 1; j <= bombRadius; j++) {
             int a = x + j * dx[i], b = y + j * dy[i];
             if (!game->getBlocked(a, b)){
                 continue;
@@ -66,40 +67,40 @@ void Bomb::removeBoxes() {
             break;
         }
     }
-    qInfo() << "remove Boxes finished";
 }
 
 void Bomb::damagePlayer() {
-    auto player = game->getPlayers().at(indexOfPlayer);
-
-    if ((player->y() > this->y() - 15 &&
-         player->y() + player->boundingRect().height() < this->y() + this->boundingRect().height() + 15
-         && this->x() - 2 * player->boundingRect().width() <= player->x() + player->boundingRect().width() &&
-         player->x() + player->boundingRect().width() <=
-         this->x() + this->boundingRect().width() + 3 * player->boundingRect().width())
-        || (player->x() > this->x() - 15 &&
-            player->x() + player->boundingRect().width() < this->x() + this->boundingRect().width() + 15
-            && this->y() - 3 * player->boundingRect().height() <= player->y() &&
-            player->y() + player->boundingRect().height() <=
-            this->y() + this->boundingRect().height() + 3 * player->boundingRect().height())) {
-
-        --(*game->getPlayers().at(indexOfPlayer)->getLifeCount());
-        if (*game->getPlayers().at(indexOfPlayer)->getLifeCount() == 0) {
-            *game->getPlayers().at((indexOfPlayer + 1) % 2)->getScore() += 50;
-            game->stopGame();
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
+    pii bPos = game->findPos(this->x(), this->y());      // bomb position
+    int bx = bPos.first, by = bPos.second;
+    for (int index = 0; index < 2; index++){
+        auto player = game->getPlayers().at(index);
+        int bombRadius = player->getBombRadius();
+        pii pPos = game->findPos(player->x(), player->y());  // player position
+        int px = pPos.first, py = pPos.second;
+        if (bx == px and by == py)
+            decreaseLifeCount(index);
+        for (int i = 0; i < 4; i++){
+            for (int j = 1; j <= bombRadius; j++){
+                int x = px + j * dx[i], y = py + j * dy[i];
+                if (game->getBlocked(x, y))
+                    break;
+                if (x == bx and y == by){
+                    decreaseLifeCount(index);
+                    break;
+                }
+            }
         }
-
     }
 }
 
-pii Bomb::findPos() {
-    int x = this->x();
-    int y = this->y();
-    pii pos;
-    pos.first = x / Block::getBlockWidth();
-    pos.second = y / Block::getBlockHeight();
-    qInfo() << pos;
-    return pos;
+void Bomb::decreaseLifeCount (int index){
+    auto player = game->getPlayers().at(index);
+    (*player->getLifeCount())--;
+    if (*player->getLifeCount() == 0){
+        *game->getPlayers().at(1 - index)->getScore() += 50;
+        game->stopGame();
+    }
 }
 
 #pragma clang diagnostic pop

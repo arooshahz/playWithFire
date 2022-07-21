@@ -37,7 +37,8 @@ private:
     QList<QPixmap *> frames{};
     QTimer *animateBombTimer;
     QTimer *removeBombTimer;
-    pii findPos();
+
+    void decreaseLifeCount(int index);
 };
 
 

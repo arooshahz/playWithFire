@@ -8,13 +8,15 @@
 #include "../views/Box.h"
 #include "../views/Label.h"
 
+typedef std::pair<int,int> pii;
+
 class Game : public QGraphicsView {
 private:
 
 //    bool isValid (int, int);
     class Box *boxes[15][15];
     bool isBlocked[15][15];
-    QList<Block *> blocks{};
+//    QList<Block *> blocks{};
     QList<Player *> players{};
     int blockWidth;
     int blockHeight;
@@ -50,6 +52,8 @@ public :
     bool getBlocked(int i, int j);
 
     void showPlayersInformation();
+
+    static pii findPos(int, int);
 };
 
 
