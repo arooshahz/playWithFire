@@ -12,23 +12,8 @@ Home::Home() {
 
     auto scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, width(), height());
-    setBackgroundBrush(QColor("#2c2721"));
+    setBackgroundBrush(QPixmap(":/images/wallpaper"));
     setScene(scene);
-
-
-    QPixmap pixmap1(":/images/playWithFire");
-    pixmap1 = pixmap1.scaled(495, 380);
-    scene->addRect(QRect(500, 10, 510, 370),
-                   QPen(Qt::NoPen), QPixmap(pixmap1));
-
-    QPixmap pixmap2(":/images/Player");
-    pixmap2 = pixmap2.scaled(200, 200);
-    scene->addRect(QRect(400, 200, 200, 200),
-                   QPen(Qt::NoPen), QPixmap(pixmap2));
-
-
-
-
 
 
     QFile file("names.txt");

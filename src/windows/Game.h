@@ -54,6 +54,8 @@ public :
     void showPlayersInformation();
 
     static pii findPos(int, int);
+
+    void setPicture(int i, int j, QString name);
 };
 
 
