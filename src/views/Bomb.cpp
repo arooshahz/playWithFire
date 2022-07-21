@@ -2,6 +2,7 @@
 #pragma ide diagnostic ignored "Simplify"
 
 #include "Bomb.h"
+#include "DamagedPlayer.h"
 
 Bomb::Bomb(int X, int Y, int indexOfPlayer, Game *game, QGraphicsPathItem *parent) : X(X), Y(Y),
                                                                                      indexOfPlayer(indexOfPlayer),
@@ -68,6 +69,7 @@ void Bomb::removeBoxes() {
 }
 
 void Bomb::damagePlayer() {
+
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
     pii bPos = game->findPos(this->x(), this->y());      // bomb position
     int bx = bPos.first, by = bPos.second;
@@ -78,6 +80,10 @@ void Bomb::damagePlayer() {
         int px = pPos.first, py = pPos.second;
         if (bx == px and by == py)
             decreaseLifeCount(index);
+        auto damagedPlayer1 = new DamagedPlayer(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+        game->scene()->addItem(damagedPlayer1);
+        damagedPlayer1->setPos(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+
         for (int i = 0; i < 4; i++){
             for (int j = 1; j <= bombRadius; j++){
                 int x = px + j * dx[i], y = py + j * dy[i];
@@ -85,9 +91,12 @@ void Bomb::damagePlayer() {
                     break;
                 if (x == bx and y == by){
                     decreaseLifeCount(index);
+                    auto damagedPlayer2 = new DamagedPlayer(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+                    game->scene()->addItem(damagedPlayer2);
+                    damagedPlayer2->setPos(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
                     break;
-                }
-            }
+                }}
+
         }
     }
 }
