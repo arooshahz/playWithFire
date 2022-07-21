@@ -14,7 +14,7 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(project main.cpp src/windows/Home.cpp src/windows/Home.h resources.qrc src/views/Label.cpp src/views/Label.h src/views/Button.cpp src/views/Button.h src/views/textField.cpp src/views/textField.h src/windows/Game.cpp src/windows/Game.h src/views/Block.cpp src/views/Block.h src/views/Box.cpp src/views/Box.h src/views/Wall.cpp src/views/Wall.h src/views/Player.cpp src/views/Player.h src/views/Controller.cpp src/views/Controller.h src/views/Bomb.cpp src/views/Bomb.h src/windows/Result.cpp src/windows/Result.h)
+add_executable(project main.cpp src/windows/Home.cpp src/windows/Home.h resources.qrc src/views/Label.cpp src/views/Label.h src/views/Button.cpp src/views/Button.h src/views/textField.cpp src/views/textField.h src/windows/Game.cpp src/windows/Game.h src/views/Block.cpp src/views/Block.h src/views/Box.cpp src/views/Box.h src/views/Wall.cpp src/views/Wall.h src/views/Player.cpp src/views/Player.h src/views/Controller.cpp src/views/Controller.h src/views/Bomb.cpp src/views/Bomb.h src/windows/Result.cpp src/windows/Result.h src/views/DamagedPlayer.cpp src/views/DamagedPlayer.h)
 target_link_libraries(project
         Qt::Core
         Qt::Gui

@@ -17,6 +17,8 @@
         <file alias="bomb3">resources/images/bomb3.png</file>
         <file alias="player2">resources/images/player2.png</file>
         <file alias="player1">resources/images/player1.png</file>
+        <file alias="deadPlayer">resources/images/deadPlayer.png</file>
+        <file alias="Player">resources/images/Player.png</file>
 
 
     </qresource>

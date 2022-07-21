@@ -29,7 +29,6 @@ private:
 public:
     Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent = nullptr);
 
-
     void walking();
 
     void movement(int newX, int newY);

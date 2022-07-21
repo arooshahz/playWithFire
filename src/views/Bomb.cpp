@@ -2,6 +2,7 @@
 #pragma ide diagnostic ignored "Simplify"
 
 #include "Bomb.h"
+#include "DamagedPlayer.h"
 
 Bomb::Bomb(int X, int Y, int indexOfPlayer, Game *game, QGraphicsPathItem *parent) : X(X), Y(Y),
                                                                                      indexOfPlayer(indexOfPlayer),
@@ -84,6 +85,11 @@ void Bomb::damagePlayer() {
             this->y() + this->boundingRect().height() + 3 * player->boundingRect().height())) {
 
         --(*game->getPlayers().at(indexOfPlayer)->getLifeCount());
+        auto damagedPlayer = new DamagedPlayer(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+        game->scene()->addItem(damagedPlayer);
+        damagedPlayer->setPos(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+
+
         if (*game->getPlayers().at(indexOfPlayer)->getLifeCount() == 0) {
             *game->getPlayers().at((indexOfPlayer + 1) % 2)->getScore() += 50;
             game->stopGame();
