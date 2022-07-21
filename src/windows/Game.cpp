@@ -30,14 +30,19 @@ Game::Game() {
                                    {2,  1},
                                    {12, 13},
                                    {13, 12}};
-    for (int i = 0; i < 15; i++)
-        for (int j = 0; j < 15; j++)
+    for (int i = 0; i < 15; i++) {
+        for (int j = 0; j < 15; j++) {
             isBlocked[i][j] = false;
+            QPixmap backgroundPixmap(":/images/bg");
+            backgroundPixmap = backgroundPixmap.scaled(blockWidth, blockHeight);
+            playBackgroundScene->addRect(QRect(i * blockWidth, j * blockHeight, blockWidth, blockHeight),
+                                         QPen(Qt::NoPen), QPixmap(backgroundPixmap));
+        }
+    }
     for (int i = 0; i < 15; i++) {
         for (int j = 0; j < 15; j++) {
             if (temp.contains({i, j})) {
                 boxes[i][j] = nullptr;
-
                 continue;
             }
             if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
@@ -56,17 +61,6 @@ Game::Game() {
                 boxes[i][j] = nullptr;
                 playBackgroundScene->addItem(wall);
                 wall->setPos(i * blockWidth, j * blockHeight);
-            }
-        }
-    }
-
-    for (int i = 0; i < 15; i++) {
-        for (int j = 0; j < 15; j++) {
-            if (!getBlocked(i,j)) {
-                QPixmap backgroundPixmap(":/images/bg");
-                backgroundPixmap = backgroundPixmap.scaled(blockWidth, blockHeight);
-                playBackgroundScene->addRect(QRect(i * blockWidth, j * blockHeight, blockWidth, blockHeight),
-                                             QPen(Qt::NoPen), QPixmap(backgroundPixmap));
             }
         }
     }
