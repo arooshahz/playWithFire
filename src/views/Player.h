@@ -23,6 +23,8 @@ private:
     QPropertyAnimation *heightAnimator;
     QPropertyAnimation *widthAnimator;
     QTimer *walkingTimer;
+    int speed;
+    int bombRadius;
 
 public:
     Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent = nullptr);
@@ -39,6 +41,10 @@ public:
     int *getScore();
 
     int *getLifeCount();
+
+    int getBombRadius();
+
+    void setBombRadius(int bombRadius);
 
 
 };

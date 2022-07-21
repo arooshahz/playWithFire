@@ -4,6 +4,8 @@
 Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent) : X(X), Y(Y), frames(frames),
                                                                                    QGraphicsPixmapItem(parent) {
 
+    speed=60;
+    bombRadius=3;
     lifeCount = 3;
     score = 0;
     setPixmap(*frames.at(0));
@@ -30,13 +32,13 @@ void Player::movement(int newX, int newY) {
     heightAnimator->stop();
     heightAnimator->setStartValue(y());
     heightAnimator->setEndValue(newY);
-    heightAnimator->setDuration(5);
+    heightAnimator->setDuration(speed);
     heightAnimator->start();
 
     widthAnimator->stop();
     widthAnimator->setStartValue(x());
     widthAnimator->setEndValue(newX);
-    widthAnimator->setDuration(5);
+    widthAnimator->setDuration(speed);
     widthAnimator->start();
 
 
@@ -57,4 +59,10 @@ int *Player::getScore() {
 
 int *Player::getLifeCount() {
     return &lifeCount;
+}
+int Player::getBombRadius() {
+    return bombRadius;
+}
+void Player::setBombRadius(int bombRadius) {
+    this->bombRadius=bombRadius;
 }

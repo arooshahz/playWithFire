@@ -50,7 +50,7 @@ void Bomb::removeBoxes() {
     int x = pos.first, y = pos.second;
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
     for (int i = 0; i < 4; i++) {
-        for (int j = 1; j <= 3; j++) {
+        for (int j = 1; j <= game->getPlayers().at(indexOfPlayer)->getBombRadius(); j++) {
             int a = x + j * dx[i], b = y + j * dy[i];
             if (!game->getBlocked(a, b)){
                 continue;
