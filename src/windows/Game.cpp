@@ -44,7 +44,6 @@ Game::Game() {
                     auto box = new class Box(i, j);
                     isBlocked[i][j] = true;
                     boxes[i][j] = box;
-                    blocks.append(box);
                     playBackgroundScene->addItem(box);
                     box->setPos(i * blockWidth, j * blockHeight);
                 }
@@ -53,7 +52,6 @@ Game::Game() {
                 auto wall = new Wall(i, j);
                 isBlocked[i][j] = true;
                 boxes[i][j] = nullptr;
-                blocks.append(wall);
                 playBackgroundScene->addItem(wall);
                 wall->setPos(i * blockWidth, j * blockHeight);
             }
@@ -141,10 +139,6 @@ void Game::unblock (int i, int j){
     isBlocked[i][j] = false;
 }
 
-QList<Block *> *Game::getBlocks() {
-    return &blocks;
-}
-
 void Game::stopGame() {
 
 
@@ -210,4 +204,8 @@ void Game::showPlayersInformation() {
 
 
 count++;
+}
+
+pii Game::findPos(int x, int y) {
+    return {x / Block::getBlockWidth(), y / Block::getBlockHeight()};
 }
