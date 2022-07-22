@@ -2,8 +2,8 @@
 #include "Block.h"
 #include "Item.h"
 
-Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent) : X(X), Y(Y), frames(frames),
-                                                                                   QGraphicsPixmapItem(parent) {
+Player::Player(int X, int Y, QList<QPixmap *> frames,QGraphicsScene* scene, QGraphicsPathItem *parent) : X(X), Y(Y), frames(frames),scene(scene)
+                                                                                   ,QGraphicsPixmapItem(parent) {
 
     bombCount=10;
     speed=60;
@@ -97,8 +97,8 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
         Item *item = dynamic_cast<Item *>(temp);
         if(item!= nullptr){
 
-//            item->controller(this);
-//            item->removeItem();
+          item->controller(this);
+           scene->removeItem(temp);
 
 
 

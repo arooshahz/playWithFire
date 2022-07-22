@@ -63,13 +63,10 @@ void Bomb::removeBoxes() {
                 *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
                 game->deleteBox(a, b);
                 if(temp->hasItem()==0){
-                    temp->setItem(nullptr);
+//                    temp->setItem(nullptr);
                 }
                 else if(temp->hasItem()==1){
-//                    game->addBoxItem(a,b);
-//    auto item = new Item();
-//    game->scene()->addItem(item);
-//    item->setPos(a * Block::getBlockWidth(), b * Block::getBlockHeight());
+                    game->addItem(a,b);
                 }
                 game->showPlayersInformation();
             }

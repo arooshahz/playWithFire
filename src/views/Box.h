@@ -7,7 +7,7 @@
 class Box : public Block {
 private:
 
-    Item* item;
+//    Item* item;
 
 public:
 
@@ -17,7 +17,7 @@ public:
 
     bool hasItem();
 
-    void setItem(Item* item);
+//    void setItem(Item* item);
 };
 
 

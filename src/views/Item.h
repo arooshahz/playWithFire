@@ -1,17 +1,17 @@
 #ifndef PROJECT_ITEM_H
 #define PROJECT_ITEM_H
+
 #include "Player.h"
 #include <QGraphicsPixmapItem>
-class Item  : public QGraphicsPixmapItem {
+
+class Item : public QGraphicsPixmapItem {
 
 private:
-    Player*player;
+    Player *player;
     int type;
 
 public:
     Item();
-
-
 
     void increaseSpeed();
 
@@ -21,9 +21,9 @@ public:
 
     void increaseBombRadius();
 
-    void controller(Player*player);
+    void controller(Player *player);
 
-    void removeItem();
+
 
 
 };

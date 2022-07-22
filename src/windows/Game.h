@@ -1,5 +1,6 @@
 #ifndef TESTPRO_GAME_H
 #define TESTPRO_GAME_H
+
 #include <QObject>
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
@@ -11,6 +12,7 @@
 typedef std::pair<int,int> pii;
 
 class Game :  public QGraphicsView {
+
 Q_OBJECT
 
 
@@ -58,13 +60,11 @@ public :
 
     static pii findPos(int, int);
 
-
-    void addBoxItem(int x,int y);
-
-
-
-
     void setPicture(int i, int j, QString name);
+
+    void addItem(int x,int y);
+
+    void removeBoxItem(Item *item);
 
 };
 

@@ -2,10 +2,12 @@
 #define PROJECT_PLAYER_H
 
 #include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
 #include<QPropertyAnimation>
 #include <QObject>
 #include <QKeyEvent>
 #include <QTimer>
+
 
 
 class Player : public QObject, public QGraphicsPixmapItem {
@@ -29,9 +31,11 @@ private:
     int bombRadius{};
     int bombCount{};
     bool bombLimitation{false};
+    QGraphicsScene* scene;
+
 
 public:
-    Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent = nullptr);
+    Player(int X, int Y, QList<QPixmap *> frames,QGraphicsScene* scene, QGraphicsPathItem *parent = nullptr );
 
     void walking();
 

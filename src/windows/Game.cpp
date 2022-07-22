@@ -20,12 +20,15 @@ Game::Game() {
 
 
 
+
 //    playBackgroundScene->addRect(QRect(10,0,width()-200,height()),QPen(),QPixmap(":/images/bg"));
 
     Block::setBlockWidth((width() - 190) / 15);
     Block::setBlockHeight(height() / 15);
     blockWidth = Block::getBlockWidth();
     blockHeight = Block::getBlockHeight();
+
+
 
     QList<QPair<int, int>> temp = {{1,  1},
                                    {13, 13},
@@ -90,7 +93,7 @@ Game::Game() {
     *pixmap1 = pixmap1->scaled(blockWidth - 25, blockHeight - 15);
     frames1.append(pixmap1);
 
-    auto player1 = new Player(blockWidth, blockHeight, frames1);
+    auto player1 = new Player(blockWidth, blockHeight, frames1,this->scene());
     this->players.append(player1);
     playBackgroundScene->addItem(player1);
     player1->setPos(blockWidth, blockHeight);
@@ -105,7 +108,7 @@ Game::Game() {
     pixmap2 = new QPixmap(":/images/p23");
     *pixmap2 = pixmap2->scaled(blockWidth - 25, blockHeight - 15);
     frames2.append(pixmap2);
-    auto player2 = new Player((blockWidth * 13), blockHeight * 13, frames2);
+    auto player2 = new Player((blockWidth * 13), blockHeight * 13, frames2,this->scene());
     this->players.append(player2);
     playBackgroundScene->addItem(player2);
     player2->setPos((blockWidth * 13), blockHeight * 13);
@@ -239,18 +242,22 @@ pii Game::findPos(int x, int y) {
     return {x / Block::getBlockWidth(), y / Block::getBlockHeight()};
 }
 
-void Game::addBoxItem(int x, int y) {
-//    auto item = new Item();
-//    this->scene()->addItem(item);
-//    item->setPos(x * Block::getBlockWidth(), y * Block::getBlockHeight());
-
-}
-
 
 void Game::setPicture(int i, int j, QString name) {
     QPixmap backgroundPixmap(":/images/" + name);
     backgroundPixmap = backgroundPixmap.scaled(blockWidth, blockHeight);
     playBackgroundScene->addRect(QRect(i * blockWidth, j * blockHeight, blockWidth, blockHeight),
                                  QPen(Qt::NoPen), QPixmap(backgroundPixmap));
+
+}
+void Game::addItem(int x,int y) {
+    auto temp=new Item();
+    this->scene()->addItem(temp);
+    temp->setPos(x*Block::getBlockWidth (), y*Block::getBlockHeight());
+
+}
+void Game::removeBoxItem(Item*item) {
+
+    scene()->removeItem(item);
 
 }

@@ -32,25 +32,22 @@ Item::Item() {
     }
 }
 
-//Item::~Item() {
-//
-//    delete player;
-//}
+
 void Item::controller(Player*player) {
     this->player=player;
 
     if(type==0){
-     addBomb();
+        addBomb();
     }
     else if(type==1){
-      addLifeCount();
+        addLifeCount();
     }
     else if(type==2){
-     increaseSpeed();
+        increaseSpeed();
     }
 
     else if(type==3){
-    increaseBombRadius();
+        increaseBombRadius();
     }
 
 
@@ -74,8 +71,3 @@ void Item::increaseBombRadius() {
 
     player->setBombRadius(player->getBombRadius() + 1);
 }
-void Item::removeItem() {
-
-    delete this;
-}
-
