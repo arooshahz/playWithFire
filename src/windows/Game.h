@@ -10,7 +10,7 @@
 
 typedef std::pair<int,int> pii;
 
-class Game : public QGraphicsView {
+class Game : public QObject,public QGraphicsView {
 Q_OBJECT
 
 
@@ -58,9 +58,13 @@ public :
 
     static pii findPos(int, int);
 
-    void addItem(int x,int y);
+
+    void addBoxItem(int x,int y);
 
 
+
+
+    void setPicture(int i, int j, QString name);
 
 };
 

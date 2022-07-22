@@ -1,6 +1,7 @@
 <RCC>
 
     <qresource prefix="/images">
+        <file alias="wallpaper">resources/images/bg.png</file>
         <file alias="textField">resources/images/textField.png</file>
         <file alias="button">resources/images/startButton.png</file>
         <file alias="box">resources/images/box.png</file>
@@ -11,7 +12,7 @@
         <file alias="p21">resources/images/player21.png</file>
         <file alias="p22">resources/images/player22.png</file>
         <file alias="p23">resources/images/player23.png</file>
-        <file alias="playWithFire">resources/images/playingWithFire2.png</file>
+<!--        <file alias="playWithFire">resources/images/playingWithFire2.png</file>-->
         <file alias="bomb1">resources/images/bomb1.png</file>
         <file alias="bomb2">resources/images/bomb2.png</file>
         <file alias="bomb3">resources/images/bomb3.png</file>
@@ -19,12 +20,18 @@
         <file alias="player1">resources/images/player1.png</file>
         <file alias="deadPlayer">resources/images/deadPlayer.png</file>
         <file alias="Player">resources/images/Player.png</file>
-        <file alias="bg">resources/images/Sans titreA.png</file>
+        <file alias="bg">resources/images/Sans titreB.png</file>
         <file alias="heart1">resources/images/heart1.png</file>
         <file alias="heart2">resources/images/heart2.png</file>
         <file alias="heart3">resources/images/heart3.png</file>
-
-
+        <file alias="lb">resources/images/leftborder.png</file>
+        <file alias="rb">resources/images/rightborder.png</file>
+        <file alias="db">resources/images/downborder.png</file>
+        <file alias="tb">resources/images/topborder.png</file>
+<!--        <file alias="ldb">resources/images/leftdownborder.png</file>-->
+<!--        <file alias="ltb">resources/images/lefttopborder.png</file>-->
+<!--        <file alias="rdb">resources/images/rightdownborder.png</file>-->
+<!--        <file alias="rtb">resources/images/righttopborder.png</file>-->
     </qresource>
 
 

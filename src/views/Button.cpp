@@ -12,15 +12,16 @@ Button::Button(int width, int height) : width(width), height(height), QGraphicsT
     font.setBold(true);
     setFont(font);
 
+
     setTextWidth(width);
 
 
-    document()->setDocumentMargin(10);
+//    document()->setDocumentMargin(10);
 }
 
 void Button::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
     QPixmap pixmap(":/images/button");
-    pixmap = pixmap.scaled(width, height);
+    pixmap = pixmap.scaled(200, 800,Qt::IgnoreAspectRatio);
     painter->setBrush(pixmap);
     painter->drawRect(boundingRect());
 

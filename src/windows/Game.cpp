@@ -30,17 +30,20 @@ Game::Game() {
                                    {2,  1},
                                    {12, 13},
                                    {13, 12}};
-    for (int i = 0; i < 15; i++) {
-        for (int j = 0; j < 15; j++) {
+    for (int x = 1; x < 14; x++){
+        setPicture(0, x, "lb");
+        setPicture(x, 0, "tb");
+        setPicture(14, x, "rb");
+        setPicture(x, 14, "db");
+    }
+    for (int i = 1; i < 14; i++) {
+        for (int j = 1; j < 14; j++) {
             isBlocked[i][j] = false;
-            QPixmap backgroundPixmap(":/images/bg");
-            backgroundPixmap = backgroundPixmap.scaled(blockWidth, blockHeight);
-            playBackgroundScene->addRect(QRect(i * blockWidth, j * blockHeight, blockWidth, blockHeight),
-                                         QPen(Qt::NoPen), QPixmap(backgroundPixmap));
+            setPicture(i, j, "bg");
         }
     }
-    for (int i = 0; i < 15; i++) {
-        for (int j = 0; j < 15; j++) {
+    for (int i = 1; i < 14; i++) {
+        for (int j = 1; j < 14; j++) {
             if (temp.contains({i, j})) {
                 boxes[i][j] = nullptr;
                 continue;
@@ -224,9 +227,19 @@ void Game::showPlayersInformation() {
 pii Game::findPos(int x, int y) {
     return {x / Block::getBlockWidth(), y / Block::getBlockHeight()};
 }
-void Game::addItem(int x,int y) {
-    auto item=new Item();
+
+void Game::addBoxItem(int x,int y) {
+    auto item = new Item();
     this->scene()->addItem(item);
-    item->setPos(x*Block::getBlockWidth (), y*Block::getBlockHeight());
+    item->setPos(x * Block::getBlockWidth(), y * Block::getBlockHeight());
+
+}
+
+
+void Game::setPicture (int i, int j, QString name){
+    QPixmap backgroundPixmap(":/images/" + name);
+    backgroundPixmap = backgroundPixmap.scaled(blockWidth, blockHeight);
+    playBackgroundScene->addRect(QRect(i * blockWidth, j * blockHeight, blockWidth, blockHeight),
+                                 QPen(Qt::NoPen), QPixmap(backgroundPixmap));
 
 }
