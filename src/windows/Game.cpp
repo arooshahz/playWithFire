@@ -15,7 +15,7 @@ Game::Game() {
 
     playBackgroundScene = new QGraphicsScene(this);
     playBackgroundScene->setSceneRect(-200, 0, width(), height());
-    setBackgroundBrush(QColor("#2c2721"));
+    setBackgroundBrush(QPixmap(":/images/wallpaper3"));
     setScene(playBackgroundScene);
 
 
@@ -30,11 +30,19 @@ Game::Game() {
                                    {2,  1},
                                    {12, 13},
                                    {13, 12}};
+    isBlocked[0][0] = true;
+    isBlocked[0][14] = true;
+    isBlocked[14][0] = true;
+    isBlocked[14][14] = true;
     for (int x = 1; x < 14; x++){
         setPicture(0, x, "lb");
         setPicture(x, 0, "tb");
         setPicture(14, x, "rb");
         setPicture(x, 14, "db");
+        isBlocked[0][x] = true;
+        isBlocked[x][0] = true;
+        isBlocked[14][x] = true;
+        isBlocked[x][14] = true;
     }
     for (int i = 1; i < 14; i++) {
         for (int j = 1; j < 14; j++) {

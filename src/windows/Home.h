@@ -18,7 +18,7 @@ public:
 
 public slots:
 
-    void onGameStart();
+    void onInputPage();
 };
 
 
