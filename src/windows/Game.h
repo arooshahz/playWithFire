@@ -39,6 +39,7 @@ private:
 //    int frame1Information{};
 //    int frame2Information{};
     QPixmap* pixmap1;
+    QPixmap* pixmap2;
 
 
 public :

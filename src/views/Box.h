@@ -17,7 +17,6 @@ public:
 
     bool hasItem();
 
-//    void setItem(Item* item);
 };
 
 

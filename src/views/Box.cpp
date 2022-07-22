@@ -19,7 +19,3 @@ void Box::remove() {
 bool Box::hasItem() {
     return (rand() % (2));
 }
-
-//void Box::setItem(Item *item) {
-//    this->item = item;
-//}

@@ -24,9 +24,6 @@
         <file alias="deadPlayer">resources/images/deadPlayer.png</file>
         <file alias="Player">resources/images/Player.png</file>
         <file alias="bg">resources/images/Sans titreB.png</file>
-        <file alias="heart1">resources/images/heart1.png</file>
-        <file alias="heart2">resources/images/heart2.png</file>
-        <file alias="heart3">resources/images/heart3.png</file>
         <file alias="lb">resources/images/leftborder.png</file>
         <file alias="rb">resources/images/rightborder.png</file>
         <file alias="db">resources/images/downborder.png</file>
@@ -38,6 +35,9 @@
         <file alias="start">resources/images/Start.png</file>
         <file alias="GameOver1">resources/images/GameOver1.png</file>
         <file alias="GameOver2">resources/images/GameOver2.png</file>
+        <file alias="bomb4">resources/images/bomb4.png</file>
+        <file alias="lifeCount">resources/images/lifeCount.png</file>
+        <file alias="speed">resources/images/speed.png</file>
 
 
         <file alias="Player 1 Information 0 life">resources/images/Player 1 Information 0 life.png</file>

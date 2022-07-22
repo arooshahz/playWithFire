@@ -5,27 +5,27 @@ Item::Item() {
 
     type = (rand() % (4));
     if(type==0){
-        QPixmap *pixmap = new QPixmap(":/images/wall");
+        QPixmap *pixmap = new QPixmap(":/images/bomb1");
         *pixmap=pixmap->scaled(Block::getBlockWidth (),Block::getBlockHeight());
         setPixmap(*pixmap);
 
     }
 
     else if(type==1){
-        QPixmap *pixmap = new QPixmap(":/images/wall");
+        QPixmap *pixmap = new QPixmap(":/images/lifeCount");
         *pixmap=pixmap->scaled(Block::getBlockWidth (),Block::getBlockHeight());
         setPixmap(*pixmap);
 
     }
     else if(type==2){
-        QPixmap *pixmap = new QPixmap(":/images/wall");
+        QPixmap *pixmap = new QPixmap(":/images/speed");
         *pixmap=pixmap->scaled(Block::getBlockWidth (),Block::getBlockHeight());
         setPixmap(*pixmap);
 
     }
 
     else if(type==3){
-        QPixmap *pixmap = new QPixmap(":/images/wall");
+        QPixmap *pixmap = new QPixmap(":/images/bomb4");
         *pixmap=pixmap->scaled(Block::getBlockWidth (),Block::getBlockHeight());
         setPixmap(*pixmap);
 

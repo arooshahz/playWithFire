@@ -14,12 +14,12 @@ Game::Game() {
     setFrameShape(NoFrame);
 
     playBackgroundScene = new QGraphicsScene(this);
-    playBackgroundScene->setSceneRect(-width()/4.8, 0, width(), height());
-        setBackgroundBrush(QPixmap(":/images/wallpaper3"));
+    playBackgroundScene->setSceneRect(-width() / 4.8, 0, width(), height());
+    setBackgroundBrush(QPixmap(":/images/wallpaper3"));
     setScene(playBackgroundScene);
 
 
-    Block::setBlockWidth((width() - (width()/5)) / 15);
+    Block::setBlockWidth((width() - (width() / 5)) / 15);
     Block::setBlockHeight(height() / 15);
     blockWidth = Block::getBlockWidth();
     blockHeight = Block::getBlockHeight();
@@ -79,13 +79,13 @@ Game::Game() {
 
     QList<QPixmap *> frames1;
     auto pixmap1 = new QPixmap(":/images/p11");
-    *pixmap1 = pixmap1->scaled(blockWidth -( blockWidth/3), blockHeight -( blockHeight/5));
+    *pixmap1 = pixmap1->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames1.append(pixmap1);
     pixmap1 = new QPixmap(":/images/p12");
-    *pixmap1 = pixmap1->scaled(blockWidth - ( blockWidth/3), blockHeight - ( blockHeight/5));
+    *pixmap1 = pixmap1->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames1.append(pixmap1);
     pixmap1 = new QPixmap(":/images/p13");
-    *pixmap1 = pixmap1->scaled(blockWidth - ( blockWidth/3), blockHeight - ( blockHeight/5));
+    *pixmap1 = pixmap1->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames1.append(pixmap1);
 
     auto player1 = new Player(blockWidth, blockHeight, frames1, this->scene());
@@ -95,13 +95,13 @@ Game::Game() {
 
     QList<QPixmap *> frames2;
     auto pixmap2 = new QPixmap(":/images/p21");
-    *pixmap2 = pixmap2->scaled(blockWidth - ( blockWidth/3), blockHeight - ( blockHeight/5));
+    *pixmap2 = pixmap2->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames2.append(pixmap2);
     pixmap2 = new QPixmap(":/images/p22");
-    *pixmap2 = pixmap2->scaled(blockWidth - ( blockWidth/3), blockHeight - ( blockHeight/5));
+    *pixmap2 = pixmap2->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames2.append(pixmap2);
     pixmap2 = new QPixmap(":/images/p23");
-    *pixmap2 = pixmap2->scaled(blockWidth - ( blockWidth/3), blockHeight - ( blockHeight/5));
+    *pixmap2 = pixmap2->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames2.append(pixmap2);
     auto player2 = new Player((blockWidth * 13), blockHeight * 13, frames2, this->scene());
     this->players.append(player2);
@@ -110,47 +110,47 @@ Game::Game() {
 
 
     auto pixmapInformation = new QPixmap(":/images/Player 1 Information 0 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation1.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 1 Information 1 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation1.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 1 Information 2 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation1.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 1 Information 3 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation1.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 1 Information 4 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation1.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 1 Information 5 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation1.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 1 Information 6 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation1.append(pixmapInformation);
 
     pixmapInformation = new QPixmap(":/images/Player 2 Information 0 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation2.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 2 Information 1 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation2.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 2 Information 2 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation2.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 2 Information 3 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation2.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 2 Information 4 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation2.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 2 Information 5 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation2.append(pixmapInformation);
     pixmapInformation = new QPixmap(":/images/Player 2 Information 6 life");
-    *pixmapInformation = pixmapInformation->scaled(width()/4.8, width()/4.8);
+    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
     playerInformation2.append(pixmapInformation);
 
 
@@ -218,18 +218,19 @@ void Game::showPlayersInformation() {
 //        delete labelPlayerName2;
         delete labelPlayerScores2;
         delete labelPlayerBombCount2;
-
+        delete pixmap1;
+        delete pixmap2;
     }
 
 
     pixmap1 = new QPixmap;
     pixmap1 = playerInformation1.at(*getPlayers().at(0)->getLifeCount());
-    playBackgroundScene->addRect(QRect(-width()/4.8, 0, width()/4.8, width()/4.8),
+    playBackgroundScene->addRect(QRect(-width() / 4.8, 0, width() / 4.8, width() / 4.8),
                                  QPen(Qt::NoPen), QPixmap(*pixmap1));
 
-    auto pixmap2 = new QPixmap;
+    pixmap2 = new QPixmap;
     pixmap2 = playerInformation2.at(*getPlayers().at(1)->getLifeCount());
-    playBackgroundScene->addRect(QRect(-width()/4.8, width()/4.8, width()/4.8, width()/4.8),
+    playBackgroundScene->addRect(QRect(-width() / 4.8, width() / 4.8, width() / 4.8, width() / 4.8),
                                  QPen(Qt::NoPen), QPixmap(*pixmap2));
 
 
@@ -246,41 +247,30 @@ void Game::showPlayersInformation() {
 
     QString scores1 = QString::number(*players.at(0)->getScore());
     labelPlayerScores1 = new Label();
-    labelPlayerScores1->setPlainText( scores1);
+    labelPlayerScores1->setPlainText(scores1);
     playBackgroundScene->addItem(labelPlayerScores1);
-    labelPlayerScores1->setPos(-width()/(3.8*4.8), height()/120);
-
+    labelPlayerScores1->setPos(-width() / (3.8 * 4.8), height() / 120);
 
 
     QString scores2 = QString::number(*players.at(1)->getScore());
     labelPlayerScores2 = new Label();
     labelPlayerScores2->setPlainText(scores2);
     playBackgroundScene->addItem(labelPlayerScores2);
-    labelPlayerScores2->setPos(-width()/(3.8*4.8), height()/120+width()/4.8);
-
-
-
-
-
+    labelPlayerScores2->setPos(-width() / (3.8 * 4.8), height() / 120 + width() / 4.8);
 
 
     QString bombCount1 = QString::number(players.at(0)->getBombCount());
     labelPlayerBombCount1 = new Label();
     labelPlayerBombCount1->setPlainText(bombCount1);
     playBackgroundScene->addItem(labelPlayerBombCount1);
-    labelPlayerBombCount1->setPos(-width()/(3.8*4.8), height()/15);
-
-
-
-
-
+    labelPlayerBombCount1->setPos(-width() / (3.8 * 4.8), height() / 15);
 
 
     QString bombCount2 = QString::number(players.at(1)->getBombCount());
     labelPlayerBombCount2 = new Label();
     labelPlayerBombCount2->setPlainText(bombCount2);
     playBackgroundScene->addItem(labelPlayerBombCount2);
-    labelPlayerBombCount2->setPos(-width()/(3.8*4.8), height()/15+width()/4.8);
+    labelPlayerBombCount2->setPos(-width() / (3.8 * 4.8), height() / 15 + width() / 4.8);
 
 
 
