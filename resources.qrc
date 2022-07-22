@@ -36,6 +36,10 @@
         <file alias="name2">resources/images/Name 2.png</file>
         <file alias="counter">resources/images/Counter.png</file>
         <file alias="start">resources/images/Start.png</file>
+        <file alias="GameOver1">resources/images/GameOver1.png</file>
+        <file alias="GameOver2">resources/images/GameOver2.png</file>
+
+
         <file alias="Player 1 Information 0 life">resources/images/Player 1 Information 0 life.png</file>
         <file alias="Player 1 Information 1 life">resources/images/Player 1 Information 1 life.png</file>
         <file alias="Player 1 Information 2 life">resources/images/Player 1 Information 2 life.png</file>

@@ -7,7 +7,7 @@ Label::Label() {
 
     setDefaultTextColor(QColor("white"));
     QFont font;
-    font.setPixelSize(20);
+    font.setPixelSize(35);
     font.setBold(true);
     setFont(font);
 

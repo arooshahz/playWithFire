@@ -31,10 +31,10 @@ Game::Game() {
                                    {2,  1},
                                    {12, 13},
                                    {13, 12}};
-    isBlocked[0][0] = true;
-    isBlocked[0][14] = true;
-    isBlocked[14][0] = true;
-    isBlocked[14][14] = true;
+//    isBlocked[0][0] = true;
+//    isBlocked[0][14] = true;
+//    isBlocked[14][0] = true;
+//    isBlocked[14][14] = true;
     for (int x = 1; x < 14; x++) {
         setPicture(0, x, "lb");
         setPicture(x, 0, "tb");
