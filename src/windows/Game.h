@@ -29,16 +29,16 @@ private:
     QList<QString> names;
     Label* labelPlayerName1;
     Label* labelPlayerScores1;
-    Label* labelPlayerLifeCount1;
+    Label* labelPlayerBombCount1;
     Label* labelPlayerName2;
     Label* labelPlayerScores2;
-    Label* labelPlayerLifeCount2;
+    Label* labelPlayerBombCount2;
     int count=0;
     QList<QPixmap*>playerInformation1{};
     QList<QPixmap*>playerInformation2{};
 //    int frame1Information{};
 //    int frame2Information{};
-
+    QPixmap* pixmap1;
 
 
 public :
