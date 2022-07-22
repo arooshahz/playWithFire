@@ -107,6 +107,7 @@ QRectF Controller::boundingRect() const {
     return QRectF();
 }
 
+
 void Controller::movementPlayer(int index) {
     int x[2] = {newXPlayer[index], newXPlayer[index] + playerWidth}, y[2] = {newYPlayer[index], newYPlayer[index] + playerHeight};
     for (int i = 0; i < 2; i++){
@@ -127,3 +128,4 @@ void Controller::keyReleaseEvent(QKeyEvent *event) {
         pressedKeys -= event->key();
     }
 }
+

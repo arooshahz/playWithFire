@@ -66,7 +66,10 @@ void Bomb::removeBoxes() {
                     temp->setItem(nullptr);
                 }
                 else if(temp->hasItem()==1){
-                    game->addBoxItem(a,b);
+//                    game->addBoxItem(a,b);
+//    auto item = new Item();
+//    game->scene()->addItem(item);
+//    item->setPos(a * Block::getBlockWidth(), b * Block::getBlockHeight());
                 }
                 game->showPlayersInformation();
             }

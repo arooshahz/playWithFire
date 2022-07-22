@@ -10,7 +10,7 @@
 
 typedef std::pair<int,int> pii;
 
-class Game : public QObject,public QGraphicsView {
+class Game :  public QGraphicsView {
 Q_OBJECT
 
 

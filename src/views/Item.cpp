@@ -1,7 +1,7 @@
 #include "Item.h"
 #include "Block.h"
 
-Item::Item()  {
+Item::Item() {
 
     type = (rand() % (4));
     if(type==0){
@@ -32,10 +32,10 @@ Item::Item()  {
     }
 }
 
-Item::~Item() {
-
-    delete player;
-}
+//Item::~Item() {
+//
+//    delete player;
+//}
 void Item::controller(Player*player) {
     this->player=player;
 

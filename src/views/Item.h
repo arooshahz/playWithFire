@@ -11,7 +11,7 @@ private:
 public:
     Item();
 
-    ~Item();
+
 
     void increaseSpeed();
 

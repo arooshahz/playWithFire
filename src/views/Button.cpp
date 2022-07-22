@@ -4,30 +4,35 @@
 
 #include "Button.h"
 
-Button::Button(int width, int height) : width(width), height(height), QGraphicsTextItem() {
+Button::Button(int width, int height, QGraphicsPathItem *parent) : width(width), height(height) ,QGraphicsPixmapItem(parent){
 
-    setDefaultTextColor(QColor("black"));
-    QFont font;
-    font.setPixelSize(20);
-    font.setBold(true);
-    setFont(font);
+    QPixmap pixmap(":/images/start");
+    pixmap = pixmap.scaled(width, height,Qt::IgnoreAspectRatio);
+    setPixmap(pixmap);
 
 
-    setTextWidth(width);
+//    setDefaultTextColor(QColor("black"));
+//    QFont font;
+//    font.setPixelSize(20);
+//    font.setBold(true);
+//    setFont(font);
+//
+//
+//    setTextWidth(width);
 
 
 //    document()->setDocumentMargin(10);
 }
 
-void Button::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
-    QPixmap pixmap(":/images/button");
-    pixmap = pixmap.scaled(200, 800,Qt::IgnoreAspectRatio);
-    painter->setBrush(pixmap);
-    painter->drawRect(boundingRect());
-
-
-    QGraphicsTextItem::paint(painter, option, widget);
-}
+//void Button::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+//    QPixmap pixmap(":/images/start");
+//    pixmap = pixmap.scaled(width, height,Qt::IgnoreAspectRatio);
+//    painter->setBrush(pixmap);
+//    painter->drawRect(boundingRect());
+//
+//
+//    QGraphicsTextItem::paint(painter, option, widget);
+//}
 
 void Button::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     emit onPress();

@@ -97,7 +97,7 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
         Item *item = dynamic_cast<Item *>(temp);
         if(item!= nullptr){
 
-            item->controller(this);
+//            item->controller(this);
 //            item->removeItem();
 
 

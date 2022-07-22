@@ -20,6 +20,7 @@
         <file alias="bomb3">resources/images/bomb3.png</file>
         <file alias="player2">resources/images/player2.png</file>
         <file alias="player1">resources/images/player1.png</file>
+
         <file alias="deadPlayer">resources/images/deadPlayer.png</file>
         <file alias="Player">resources/images/Player.png</file>
         <file alias="bg">resources/images/Sans titreB.png</file>
@@ -30,10 +31,23 @@
         <file alias="rb">resources/images/rightborder.png</file>
         <file alias="db">resources/images/downborder.png</file>
         <file alias="tb">resources/images/topborder.png</file>
+
+        <file alias="name1">resources/images/Name 1.png</file>
+        <file alias="name2">resources/images/Name 2.png</file>
+        <file alias="counter">resources/images/Counter.png</file>
+        <file alias="start">resources/images/Start.png</file>
+
+
+
+
+
+
+
 <!--        <file alias="ldb">resources/images/leftdownborder.png</file>-->
 <!--        <file alias="ltb">resources/images/lefttopborder.png</file>-->
 <!--        <file alias="rdb">resources/images/rightdownborder.png</file>-->
 <!--        <file alias="rtb">resources/images/righttopborder.png</file>-->
+
     </qresource>
 
 

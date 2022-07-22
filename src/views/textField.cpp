@@ -4,11 +4,11 @@
 #include <QStyleOptionGraphicsItem>
 #include <QTextDocument>
 
-textField::textField(int width, int height) : width(width), height(height), QGraphicsTextItem() {
-    setDefaultTextColor(QColor("black"));
+textField::textField(int width, int height,int index) : width(width), height(height),index(index), QGraphicsTextItem() {
+    setDefaultTextColor(QColor("white"));
     QFont font;
-    font.setPixelSize(20);
-    font.setBold(true);
+    font.setPixelSize(30);
+//    font.setBold(true);
     setFont(font);
 
     setTextInteractionFlags(Qt::TextEditorInteraction);
@@ -16,12 +16,29 @@ textField::textField(int width, int height) : width(width), height(height), QGra
 
 
     document()->setDocumentMargin(10);
+
+
+//
+//    pixmapTextField=new QList<QPixmap*>;
+    auto pixmap = new QPixmap(":/images/name1");
+    *pixmap = pixmap->scaled(width, height);
+    pixmapTextField.append(pixmap);
+    pixmap = new QPixmap(":/images/name2");
+    *pixmap = pixmap->scaled(width, height);
+    pixmapTextField.append(pixmap);
+
+    pixmap = new QPixmap(":/images/counter");
+    *pixmap = pixmap->scaled(width, height);
+    pixmapTextField.append(pixmap);
+
+
+
 }
 
 void textField::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
-    QPixmap pixmap(":/images/textField");
-    pixmap = pixmap.scaled(width, height);
-    painter->setBrush(pixmap);
+//    QPixmap pixmap(":/images/textField");
+//    pixmap = pixmapTextField.at(index);
+    painter->setBrush(*pixmapTextField.at(index));
     painter->drawRect(boundingRect());
 
     QStyleOptionGraphicsItem newOption(*option);

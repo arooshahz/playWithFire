@@ -19,6 +19,9 @@ Game::Game() {
     setScene(playBackgroundScene);
 
 
+
+//    playBackgroundScene->addRect(QRect(10,0,width()-200,height()),QPen(),QPixmap(":/images/bg"));
+
     Block::setBlockWidth((width() - 190) / 15);
     Block::setBlockHeight(height() / 15);
     blockWidth = Block::getBlockWidth();
@@ -34,15 +37,15 @@ Game::Game() {
     isBlocked[0][14] = true;
     isBlocked[14][0] = true;
     isBlocked[14][14] = true;
-    for (int x = 1; x < 14; x++){
+    for (int x = 1; x < 14; x++) {
         setPicture(0, x, "lb");
         setPicture(x, 0, "tb");
         setPicture(14, x, "rb");
         setPicture(x, 14, "db");
-        isBlocked[0][x] = true;
-        isBlocked[x][0] = true;
-        isBlocked[14][x] = true;
-        isBlocked[x][14] = true;
+//        isBlocked[0][x] = true;
+//        isBlocked[x][0] = true;
+//        isBlocked[14][x] = true;
+//        isBlocked[x][14] = true;
     }
     for (int i = 1; i < 14; i++) {
         for (int j = 1; j < 14; j++) {
@@ -236,15 +239,15 @@ pii Game::findPos(int x, int y) {
     return {x / Block::getBlockWidth(), y / Block::getBlockHeight()};
 }
 
-void Game::addBoxItem(int x,int y) {
-    auto item = new Item();
-    this->scene()->addItem(item);
-    item->setPos(x * Block::getBlockWidth(), y * Block::getBlockHeight());
+void Game::addBoxItem(int x, int y) {
+//    auto item = new Item();
+//    this->scene()->addItem(item);
+//    item->setPos(x * Block::getBlockWidth(), y * Block::getBlockHeight());
 
 }
 
 
-void Game::setPicture (int i, int j, QString name){
+void Game::setPicture(int i, int j, QString name) {
     QPixmap backgroundPixmap(":/images/" + name);
     backgroundPixmap = backgroundPixmap.scaled(blockWidth, blockHeight);
     playBackgroundScene->addRect(QRect(i * blockWidth, j * blockHeight, blockWidth, blockHeight),

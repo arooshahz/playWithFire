@@ -8,9 +8,11 @@
 class InputPage: public QGraphicsView {
 private:
     QGraphicsScene *playBackgroundScene;
-    textField *textfield1;
-    textField *textfield2;
-    textField *textfield3;
+    textField *textfieldName1;
+    textField *textfieldName2;
+    textField *textfieldLifeCount;
+    textField *textfieldBombRadius;
+
 
 public:
     InputPage();
