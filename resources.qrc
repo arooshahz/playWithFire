@@ -36,6 +36,24 @@
         <file alias="name2">resources/images/Name 2.png</file>
         <file alias="counter">resources/images/Counter.png</file>
         <file alias="start">resources/images/Start.png</file>
+        <file alias="Player 1 Information 0 life">resources/images/Player 1 Information 0 life.png</file>
+        <file alias="Player 1 Information 1 life">resources/images/Player 1 Information 1 life.png</file>
+        <file alias="Player 1 Information 2 life">resources/images/Player 1 Information 2 life.png</file>
+        <file alias="Player 1 Information 3 life">resources/images/Player 1 Information 3 life.png</file>
+        <file alias="Player 1 Information 4 life">resources/images/Player 1 Information 4 life.png</file>
+        <file alias="Player 1 Information 5 life">resources/images/Player 1 Information 5 life.png</file>
+        <file alias="Player 1 Information 6 life">resources/images/Player 1 Information 6 life.png</file>
+
+
+        <file alias="Player 2 Information 0 life">resources/images/Player 2 Information 0 life.png</file>
+        <file alias="Player 2 Information 1 life">resources/images/Player 2 Information 1 life.png</file>
+        <file alias="Player 2 Information 2 life">resources/images/Player 2 Information 2 life.png</file>
+        <file alias="Player 2 Information 3 life">resources/images/Player 2 Information 3 life.png</file>
+        <file alias="Player 2 Information 4 life">resources/images/Player 2 Information 4 life.png</file>
+        <file alias="Player 2 Information 5 life">resources/images/Player 2 Information 5 life.png</file>
+        <file alias="Player 2 Information 6 life">resources/images/Player 2 Information 6 life.png</file>
+
+
 
 
 

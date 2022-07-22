@@ -12,6 +12,7 @@ textField::textField(int width, int height,int index) : width(width), height(hei
     setFont(font);
 
     setTextInteractionFlags(Qt::TextEditorInteraction);
+    setFlags(static_cast<GraphicsItemFlag>(Qt::NoPen));
     setTextWidth(width);
 
 

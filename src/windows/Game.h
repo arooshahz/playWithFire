@@ -34,6 +34,10 @@ private:
     Label* labelPlayerScores2;
     Label* labelPlayerLifeCount2;
     int count=0;
+    QList<QPixmap*>playerInformation1{};
+    QList<QPixmap*>playerInformation2{};
+//    int frame1Information{};
+//    int frame2Information{};
 
 
 
