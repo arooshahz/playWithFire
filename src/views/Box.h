@@ -2,12 +2,22 @@
 #define TESTPRO_BOX_H
 
 #include "Block.h"
+#include "Item.h"
 
 class Box : public Block {
+private:
+
+    Item* item;
+
 public:
+
     Box(int X, int Y);
 
     void remove();
+
+    bool hasItem();
+
+    void setItem(Item* item);
 };
 
 

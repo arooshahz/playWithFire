@@ -7,6 +7,7 @@
 #include <QKeyEvent>
 #include <QTimer>
 
+
 class Player : public QObject, public QGraphicsPixmapItem {
 Q_OBJECT
     Q_PROPERTY(qreal height READ y WRITE setY);
@@ -14,6 +15,7 @@ Q_OBJECT
 
 private:
     QString name;
+
     int X{};
     int Y{};
     int frame{};
@@ -47,6 +49,8 @@ public:
 
     void setBombRadius(int bombRadius);
 
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+
     int getBombCount();
 
     void setBomCount(int bombCount);
@@ -54,6 +58,13 @@ public:
     bool getBombLimitation();
 
     void setBombLimitation(bool bombLimitation);
+
+    void setSpeed(int speed);
+
+    int getSpeed();
+
+
+
 
 };
 

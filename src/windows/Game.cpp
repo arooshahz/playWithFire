@@ -224,3 +224,9 @@ void Game::showPlayersInformation() {
 pii Game::findPos(int x, int y) {
     return {x / Block::getBlockWidth(), y / Block::getBlockHeight()};
 }
+void Game::addItem(int x,int y) {
+    auto item=new Item();
+    this->scene()->addItem(item);
+    item->setPos(x*Block::getBlockWidth (), y*Block::getBlockHeight());
+
+}

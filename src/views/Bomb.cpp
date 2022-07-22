@@ -62,6 +62,12 @@ void Bomb::removeBoxes() {
             if (temp != NULL) {
                 *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
                 game->deleteBox(a, b);
+                if(temp->hasItem()==0){
+                    temp->setItem(nullptr);
+                }
+                else if(temp->hasItem()==1){
+                    game->addItem(a,b);
+                }
                 game->showPlayersInformation();
             }
             break;
@@ -88,6 +94,7 @@ void Bomb::damagePlayer() {
                 int x = px + j * dx[i], y = py + j * dy[i];
                 if (game->getBlocked(x, y))
                     break;
+
                 if (x == bx and y == by){
                     decreaseLifeCount(index);
                     break;

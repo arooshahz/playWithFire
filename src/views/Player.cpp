@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Block.h"
+#include "Item.h"
 
 Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsPathItem *parent) : X(X), Y(Y), frames(frames),
                                                                                    QGraphicsPixmapItem(parent) {
@@ -81,4 +82,28 @@ bool Player::getBombLimitation() {
 
 void Player::setBombLimitation(bool bombLimitation) {
   this->bombLimitation=bombLimitation;
+}
+void Player::setSpeed(int speed) {
+    this->speed=speed;
+}
+int Player::getSpeed() {
+    return speed;
+}
+
+void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+    QGraphicsPixmapItem::paint(painter, option, widget);
+
+    for (QGraphicsItem *temp: collidingItems()) {
+        Item *item = dynamic_cast<Item *>(temp);
+        if(item!= nullptr){
+
+            item->controller(this);
+//            item->removeItem();
+
+
+
+
+
+        }
+    }
 }

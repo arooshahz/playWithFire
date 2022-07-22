@@ -1,6 +1,6 @@
 #ifndef TESTPRO_GAME_H
 #define TESTPRO_GAME_H
-
+#include <QObject>
 #include <QGraphicsView>
 #include <QGraphicsPixmapItem>
 #include "../views/Wall.h"
@@ -11,6 +11,9 @@
 typedef std::pair<int,int> pii;
 
 class Game : public QGraphicsView {
+Q_OBJECT
+
+
 private:
 
 //    bool isValid (int, int);
@@ -54,6 +57,11 @@ public :
     void showPlayersInformation();
 
     static pii findPos(int, int);
+
+    void addItem(int x,int y);
+
+
+
 };
 
 
