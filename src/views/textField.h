@@ -13,6 +13,8 @@ private:
 public:
     textField(int width, int height, int index);
 
+    ~textField();
+
     QRectF boundingRect() const override;
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;

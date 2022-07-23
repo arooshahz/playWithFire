@@ -24,6 +24,7 @@
         <file alias="deadPlayer0">resources/images/deadPlayer0.png</file>
         <file alias="deadPlayer1">resources/images/deadPlayer1.png</file>
         <file alias="Player">resources/images/Player.png</file>
+<!--        <file alias="nameempty">resources/images/Name Empty.png</file>-->
         <file alias="bg">resources/images/Sans titreB.png</file>
         <file alias="lb">resources/images/leftborder.png</file>
         <file alias="rb">resources/images/rightborder.png</file>
@@ -34,7 +35,7 @@
         <file alias="name2">resources/images/Name 2.png</file>
         <file alias="nameempty">resources/images/Name Empty.png</file>
         <file alias="counter">resources/images/Counter.png</file>
-        <file alias="counterempty">resources/images/Counter Empty.png</file>
+<!--        <file alias="counterempty">resources/images/Counter Empty.png</file>-->
         <file alias="start">resources/images/Start.png</file>
         <file alias="GameOver1">resources/images/GameOver1.png</file>
         <file alias="GameOver2">resources/images/GameOver2.png</file>

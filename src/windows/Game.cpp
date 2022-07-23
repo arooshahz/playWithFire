@@ -59,17 +59,39 @@ Game::Game() {
     playBackgroundScene->addItem(player2);
     player2->setPos((blockWidth * 13), blockHeight * 13);
 
-    showPlayersInformation();
+    showInfoTimer = new QTimer();
+    showInfoTimer->setInterval(100);
+    connect(showInfoTimer, &QTimer::timeout, this, &Game::showPlayersInformation);
+    showInfoTimer->start();
+
+
     auto controller = new Controller(this);
     playBackgroundScene->addItem(controller);
 
 
 }
-
 QList<Player *> Game::getPlayers() {
     return players;
 }
+Game::~Game(){
+    qDeleteAll(players);
+    delete showInfoTimer;
+    delete labelPlayerName1;
+    delete labelPlayerScores1;
+    delete labelPlayerBombCount1;
+    delete labelPlayerName2;
+    delete labelPlayerScores2;
+    delete labelPlayerBombCount2;
+  for(int i=0;i<15;i++){
+      for (int j=0;j<15;j++)
+      {
+          delete boxes[i][j];
+      }  }
 
+
+
+
+}
 Box *Game::getBox(int i, int j) {
     if (i <= 0 or 14 <= i or j <= 0 or 14 <= j)
         return nullptr;
@@ -130,42 +152,42 @@ void Game::showPlayersInformation() {
     playerInfo[1] = player1infopixmap;
     playBackgroundScene->addItem(player0infopixmap);
     playBackgroundScene->addItem(player1infopixmap);
-    player0infopixmap->setPos(-370, 50);
-    player1infopixmap->setPos(-370, 50 + h / 2);
+    player0infopixmap->setPos(-w/4.8+player0infopixmap->boundingRect().width()/12, height()/36);
+    player1infopixmap->setPos(-w/4.8+player1infopixmap->boundingRect().width()/12, h/36 + h / 2);
 
     labelPlayerName1 = new Label();
     labelPlayerName1->setPlainText(names[0]);
     playBackgroundScene->addItem(labelPlayerName1);
-    labelPlayerName1->setPos(-w / 5.7, w / (4.3 * 2));
+    labelPlayerName1->setPos(-w / 5.7, w / (4.3 * 2)+h/20);
 
     labelPlayerName2 = new Label();
     labelPlayerName2->setPlainText(names[1]);
     playBackgroundScene->addItem(labelPlayerName2);
-    labelPlayerName2->setPos(-w / 5.7, w / (4.3 * 2) + h / 2);
+    labelPlayerName2->setPos(-w / 4.3, w / (4.3 * 2) + h / 2+h/20);
 
     QString scores1 = QString::number(*players.at(0)->getScore());
     labelPlayerScores1 = new Label();
     labelPlayerScores1->setPlainText(scores1);
     playBackgroundScene->addItem(labelPlayerScores1);
-    labelPlayerScores1->setPos(-w / (2.25 * 4.8), h / 17.6);
+    labelPlayerScores1->setPos(-w / (2.25 * 4.8)+player1infopixmap->boundingRect().width()/4, h / 18);
 
     QString scores2 = QString::number(*players.at(1)->getScore());
     labelPlayerScores2 = new Label();
     labelPlayerScores2->setPlainText(scores2);
     playBackgroundScene->addItem(labelPlayerScores2);
-    labelPlayerScores2->setPos(-w / (2.25 * 4.8), height() / 17.6 + h / 2);
+    labelPlayerScores2->setPos(-w / (2.25 * 4.8)+player1infopixmap->boundingRect().width()/4, height() / 18 + h / 2);
 
     QString bombCount1 = QString::number(players.at(0)->getBombCount());
     labelPlayerBombCount1 = new Label();
     labelPlayerBombCount1->setPlainText(bombCount1);
     playBackgroundScene->addItem(labelPlayerBombCount1);
-    labelPlayerBombCount1->setPos(-w / (2.25 * 4.8), h / 7.7);
+    labelPlayerBombCount1->setPos(-w / (2.25 * 4.8)+player1infopixmap->boundingRect().width()/4, h / 7.7);
 
     QString bombCount2 = QString::number(players.at(1)->getBombCount());
     labelPlayerBombCount2 = new Label();
     labelPlayerBombCount2->setPlainText(bombCount2);
     playBackgroundScene->addItem(labelPlayerBombCount2);
-    labelPlayerBombCount2->setPos(-w / (2.25 * 4.8), h / 7.7 + h / 2);
+    labelPlayerBombCount2->setPos(-w / (2.25 * 4.8)+player1infopixmap->boundingRect().width()/4, h / 7.7 + h / 2);
 
     initialized = true;
 }
@@ -189,10 +211,10 @@ void Game::addItem(int x, int y) {
     temp->setPos(x * Block::getBlockWidth(), y * Block::getBlockHeight());
 
 }
-
-void Game::removeBoxItem(Item *item) {
-    scene()->removeItem(item);
-}
+//
+//void Game::removeBoxItem(Item *item) {
+//    scene()->removeItem(item);
+//}
 
 bool Game::getItem(int i, int j) {
     if (i < 0 or 14 < i or j < 0 or 14 < j)

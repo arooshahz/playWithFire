@@ -16,7 +16,6 @@ Q_OBJECT
 
 private:
     QString name;
-
     int X{};
     int Y{};
     int frame{};
@@ -36,6 +35,8 @@ private:
 
 public:
     Player(int X, int Y, QList<QPixmap *> frames, QGraphicsScene *scene, QGraphicsPathItem *parent = nullptr);
+
+    ~Player();
 
     void walking();
 
@@ -66,6 +67,8 @@ public:
     void setSpeed(int speed);
 
     int getSpeed();
+
+
 
 
 };

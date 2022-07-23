@@ -14,8 +14,8 @@ public:
     Box(int X, int Y);
 
     void remove();
-
-    bool hasItem();
+//
+//    bool hasItem();
 
 };
 

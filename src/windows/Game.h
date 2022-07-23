@@ -10,9 +10,9 @@
 #include "../views/Label.h"
 #include "../views/playerInformation.h"
 
-typedef std::pair<int,int> pii;
+typedef std::pair<int, int> pii;
 
-class Game :  public QGraphicsView {
+class Game : public QGraphicsView {
 
 Q_OBJECT
 
@@ -20,29 +20,33 @@ Q_OBJECT
 private:
 
     class Box *boxes[15][15];
+
     bool isBlocked[15][15];
     bool hasItem[15][15];
     QList<Player *> players{};
     int blockWidth;
     int blockHeight;
     QGraphicsScene *playBackgroundScene;
+    QTimer *showInfoTimer;
     QList<QString> names;
-    Label* labelPlayerName1;
-    Label* labelPlayerScores1;
-    Label* labelPlayerBombCount1;
-    Label* labelPlayerName2;
-    Label* labelPlayerScores2;
-    Label* labelPlayerBombCount2;
+    Label *labelPlayerName1;
+    Label *labelPlayerScores1;
+    Label *labelPlayerBombCount1;
+    Label *labelPlayerName2;
+    Label *labelPlayerScores2;
+    Label *labelPlayerBombCount2;
     bool initialized = false;
-    playerInformation* playerInfo[2];
+    playerInformation *playerInfo[2];
 //    QList<QPixmap*>playerInformation[2];
 //    int frame1Information{};
 //    int frame2Information{};
-    QPixmap* pixmap[2];
+    QPixmap *pixmap[2];
 
 
 public :
     Game();
+
+    ~Game();
 
     QList<Player *> getPlayers();
 
@@ -54,7 +58,7 @@ public :
 
     void deleteBox(int i, int j);
 
-    void unblock (int i, int j);
+    void unblock(int i, int j);
 
     bool getBlocked(int i, int j);
 
@@ -64,9 +68,9 @@ public :
 
     void setPicture(int i, int j, QString name);
 
-    void addItem(int x,int y);
+    void addItem(int x, int y);
 
-    void removeBoxItem(Item *item);
+//    void removeBoxItem(Item *item);
 
     bool getItem(int i, int j);
 

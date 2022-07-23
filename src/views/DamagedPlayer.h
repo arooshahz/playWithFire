@@ -21,6 +21,8 @@ private:
 public:
     DamagedPlayer(int X, int Y, int index, QGraphicsPathItem *parent = nullptr);
 
+    ~DamagedPlayer();
+
     void movement();
 
     void removeDamagedPlayer();

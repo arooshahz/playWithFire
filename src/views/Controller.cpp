@@ -15,7 +15,9 @@ Controller::Controller(Game *game) : game(game) {
 
     this->installEventFilter(this);
 }
-
+Controller::~Controller() {
+    delete game;
+}
 void Controller::keyPressEvent(QKeyEvent *event) {
     playerWidth = game->getPlayers().at(0)->boundingRect().width();
     playerHeight = game->getPlayers().at(0)->boundingRect().height();

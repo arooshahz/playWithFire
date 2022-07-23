@@ -11,6 +11,8 @@ private:
 public:
     Result(Game *game);
 
+    ~Result();
+
     void chooseWinner();
 };
 

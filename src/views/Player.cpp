@@ -2,6 +2,8 @@
 #include "Player.h"
 #include "Block.h"
 #include "Item.h"
+#include "../windows/Game.h"
+
 
 Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsScene *scene, QGraphicsPathItem *parent) : X(X), Y(Y),
                                                                                                           frames(frames),
@@ -36,7 +38,14 @@ Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsScene *scene, QGr
     walkingTimer->start();
 
 }
+Player::~Player(){
+    delete heightAnimator;
+    delete widthAnimator;
+    delete walkingTimer;
+    qDeleteAll(frames);
+    delete scene;
 
+}
 
 void Player::walking() {
     setPixmap(*frames.at(frame));
@@ -118,6 +127,7 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 
             item->controller(this);
             scene->removeItem(temp);
+
 
 
         }

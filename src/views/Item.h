@@ -13,6 +13,8 @@ private:
 public:
     Item();
 
+    ~Item();
+
     void increaseSpeed();
 
     void addBomb();

@@ -17,6 +17,8 @@ private:
 public:
     InputPage();
 
+    ~InputPage();
+
     void onGameStart();
 
     void WriteNamesToFile();

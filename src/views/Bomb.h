@@ -16,6 +16,8 @@ Q_OBJECT
 public:
     Bomb(int X, int Y, int indexOfPlayer, Game *game, QGraphicsPathItem *parent = nullptr);
 
+    ~Bomb();
+
     void removeBoxes();
 
     void damagePlayer();

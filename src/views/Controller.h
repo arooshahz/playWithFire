@@ -14,17 +14,18 @@ private:
     int newXPlayer[2];
     int newYPlayer[2];
     int playerWidth;
+    int playerHeight;
+    QSet<int> pressedKeys{};
 protected:
     void keyReleaseEvent(QKeyEvent *event) override;
 
     void keyPressEvent(QKeyEvent *event) override;
 
-private:
-    int playerHeight;
-    QSet<int> pressedKeys{};
 
 public:
     Controller(Game *game);
+
+    ~Controller();
 
     void movementPlayer(int);
 

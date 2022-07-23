@@ -67,7 +67,13 @@ InputPage::InputPage() {
 
     connect(button, &Button::onPress, this, &InputPage::onGameStart);
 }
+InputPage::~InputPage() {
+    delete textfieldName1;
+    delete textfieldName2;
+    delete textfieldLifeCount;
+    delete textfieldBombRadius;
 
+}
 void InputPage::onGameStart() {
     QList<QString> available = {"1", "2", "3", "4", "5", "6"};
     if (available.contains(textfieldLifeCount->toPlainText())) {

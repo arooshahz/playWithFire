@@ -49,7 +49,9 @@ Result::Result(Game *game) : game(game) {
     labelScores2->setPos(width() - (width() / 2 - width() / 3 + labelScores2->boundingRect().width()),
                          (height() / 2) + labelScores1->boundingRect().height());
 }
-
+Result::~Result(){
+    delete game;
+}
 void Result::chooseWinner() {
 
     QFile file("names.txt");

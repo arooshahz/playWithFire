@@ -23,13 +23,16 @@ textField::textField(int width, int height, int index) : width(width), height(he
     *pixmap = pixmap->scaled(width, height);
     pixmapTextField.append(pixmap);
 
-    pixmap = new QPixmap(":/images/counterempty");
+    pixmap = new QPixmap(":/images/nameempty");
     *pixmap = pixmap->scaled(width, height);
     pixmapTextField.append(pixmap);
 
 
 }
+textField::~textField(){
+    qDeleteAll(pixmapTextField);
 
+}
 void textField::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
     painter->setBrush(*pixmapTextField.at(index));
     painter->drawRect(boundingRect());

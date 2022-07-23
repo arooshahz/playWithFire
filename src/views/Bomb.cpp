@@ -34,7 +34,12 @@ Bomb::Bomb(int X, int Y, int indexOfPlayer, Game *game, QGraphicsPathItem *paren
     removeBombTimer->start();
 
 }
+Bomb::~Bomb(){
+    qDeleteAll(frames);
+    delete animateBombTimer;
+    delete removeBombTimer;
 
+}
 void Bomb::animateBomb() {
     setPixmap(*frames.at(frame));
     frame = (frame + 1) % 3;
@@ -76,7 +81,7 @@ void Bomb::removeBoxes() {
 //                }
                 if (game->getItem(a, b))
                     game->addItem(a, b);
-                game->showPlayersInformation();
+
             }
             break;
         }
@@ -122,7 +127,8 @@ void Bomb::decreaseLifeCount(int index) {
         *game->getPlayers().at(1 - index)->getScore() += 50;
         game->stopGame();
     }
-    game->showPlayersInformation();
+
+
 }
 
 #pragma clang diagnostic pop

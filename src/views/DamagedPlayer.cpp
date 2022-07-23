@@ -24,7 +24,11 @@ DamagedPlayer::DamagedPlayer(int X, int Y, int index, QGraphicsPathItem *parent)
     removeDamagedPlayerTimer->start();
 
 }
+DamagedPlayer::~DamagedPlayer(){
+    delete heightAnimator;
+    delete removeDamagedPlayerTimer;
 
+}
 void DamagedPlayer::movement() {
     heightAnimator->stop();
     heightAnimator->setStartValue(Y);
