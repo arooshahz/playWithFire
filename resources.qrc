@@ -4,7 +4,7 @@
         <file alias="wallpaper">resources/images/bg.png</file>
         <file alias="wallpaper2">resources/images/bg3 copy.png</file>
         <file alias="wallpaper3">resources/images/bg4.png</file>
-        <file alias="textField">resources/images/textField.png</file>
+<!--        <file alias="textField">resources/images/textField.png</file>-->
         <file alias="box">resources/images/box.png</file>
         <file alias="wall">resources/images/wall.png</file>
         <file alias="p11">resources/images/player11.png</file>
