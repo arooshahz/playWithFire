@@ -7,7 +7,7 @@
 #include "../windows/Game.h"
 
 
-class Controller : public QObject,public QGraphicsItem {
+class Controller : public QObject, public QGraphicsItem {
 Q_OBJECT
 private:
     Game *game{};
@@ -16,15 +16,12 @@ private:
     int playerWidth;
 protected:
     void keyReleaseEvent(QKeyEvent *event) override;
+
     void keyPressEvent(QKeyEvent *event) override;
+
 private:
     int playerHeight;
     QSet<int> pressedKeys{};
-
-//    protected:
-//    bool eventFilter(QObject * obj, QEvent * event);
-
-
 
 public:
     Controller(Game *game);

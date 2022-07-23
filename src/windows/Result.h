@@ -4,12 +4,13 @@
 #include <QGraphicsView>
 #include "Game.h"
 
-class Result: public QGraphicsView {
+class Result : public QGraphicsView {
 private:
-    Game* game;
+    Game *game;
     int indexOfWinnerPlayer;
 public:
-    Result(Game* game);
+    Result(Game *game);
+
     void chooseWinner();
 };
 

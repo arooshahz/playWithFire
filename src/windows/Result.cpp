@@ -22,53 +22,32 @@ Result::Result(Game *game) : game(game) {
 
     auto scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, width(), height());
-    if(indexOfWinnerPlayer==0) {
-        auto pixmap =new QPixmap (":/images/GameOver1");
+    if (indexOfWinnerPlayer == 0) {
+        auto pixmap = new QPixmap(":/images/GameOver1");
         *pixmap = pixmap->scaled(width(), height(), Qt::IgnoreAspectRatio);
         setBackgroundBrush(QPixmap(*pixmap));
         setScene(scene);
     }
-  if(indexOfWinnerPlayer==1){
-      auto pixmap =new QPixmap (":/images/GameOver2");
-      *pixmap = pixmap->scaled(width(), height(), Qt::IgnoreAspectRatio);
-      setBackgroundBrush(QPixmap(*pixmap));
-      setScene(scene);}
-
-
-
-
-
-
-
-
-//
-//    auto label1 = new Label();
-//    label1->setPlainText(names[0] );
-//    scene->addItem(label1);
-//    label1->setPos(width() / 2 - width()/3, (height() / 2) + label1->boundingRect().height() );
-
+    if (indexOfWinnerPlayer == 1) {
+        auto pixmap = new QPixmap(":/images/GameOver2");
+        *pixmap = pixmap->scaled(width(), height(), Qt::IgnoreAspectRatio);
+        setBackgroundBrush(QPixmap(*pixmap));
+        setScene(scene);
+    }
 
     QString scores1 = QString::number(*game->getPlayers().at(0)->getScore());
     auto labelScores1 = new Label();
     labelScores1->setPlainText(scores1);
     scene->addItem(labelScores1);
-    labelScores1->setPos(width() / 2 - width()/3,
-                         (height() / 2) +labelScores1->boundingRect().height());
-
-
-
-//    auto label2 = new Label();
-//    label2->setPlainText(names[1] );
-//    scene->addItem(label2);
-//    label2->setPos(width() -(width() / 2 - width()/3),
-//                   (height() / 2) + label1->boundingRect().height());
+    labelScores1->setPos(width() / 2 - width() / 3,
+                         (height() / 2) + labelScores1->boundingRect().height());
 
     QString scores2 = QString::number(*game->getPlayers().at(1)->getScore());
     auto labelScores2 = new Label();
     labelScores2->setPlainText(scores2);
     scene->addItem(labelScores2);
-    labelScores2->setPos(width() -(width() / 2 - width()/3+labelScores2->boundingRect().width()),
-                         (height() / 2) +labelScores1->boundingRect().height());
+    labelScores2->setPos(width() - (width() / 2 - width() / 3 + labelScores2->boundingRect().width()),
+                         (height() / 2) + labelScores1->boundingRect().height());
 }
 
 void Result::chooseWinner() {
@@ -88,22 +67,4 @@ void Result::chooseWinner() {
     } else if (*game->getPlayers().at(1)->getScore() < *game->getPlayers().at(0)->getScore()) {
         indexOfWinnerPlayer = 0;
     } else { indexOfWinnerPlayer = -1; }
-//
-//    auto winnerLabel = new Label();
-//    winnerLabel->setPlainText("Winner:");
-//    this->scene()->addItem(winnerLabel);
-//    winnerLabel->setPos(width() / 2 - 100, height() / 2 - 300);
-//
-//    if (indexOfWinnerPlayer == 0) {
-//        auto label = new Label();
-//        label->setPlainText(names[0]);
-//        this->scene()->addItem(label);
-//        label->setPos(width() / 2 - 100 + winnerLabel->boundingRect().width(), height() / 2 - 300);
-//    } else if (indexOfWinnerPlayer == 1) {
-//        auto label = new Label();
-//        label->setPlainText(names[1]);
-//        this->scene()->addItem(label);
-//        label->setPos(width() / 2 - 100 + winnerLabel->boundingRect().width(), height() / 2 - 300);
-//    }
-
 }

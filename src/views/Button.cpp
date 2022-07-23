@@ -4,35 +4,14 @@
 
 #include "Button.h"
 
-Button::Button(int width, int height, QGraphicsPathItem *parent) : width(width), height(height) ,QGraphicsPixmapItem(parent){
+Button::Button(int width, int height, QGraphicsPathItem *parent) : width(width), height(height),
+                                                                   QGraphicsPixmapItem(parent) {
 
     QPixmap pixmap(":/images/start");
-    pixmap = pixmap.scaled(width, height,Qt::IgnoreAspectRatio);
+    pixmap = pixmap.scaled(width, height, Qt::IgnoreAspectRatio);
     setPixmap(pixmap);
 
-
-//    setDefaultTextColor(QColor("black"));
-//    QFont font;
-//    font.setPixelSize(20);
-//    font.setBold(true);
-//    setFont(font);
-//
-//
-//    setTextWidth(width);
-
-
-//    document()->setDocumentMargin(10);
 }
-
-//void Button::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
-//    QPixmap pixmap(":/images/start");
-//    pixmap = pixmap.scaled(width, height,Qt::IgnoreAspectRatio);
-//    painter->setBrush(pixmap);
-//    painter->drawRect(boundingRect());
-//
-//
-//    QGraphicsTextItem::paint(painter, option, widget);
-//}
 
 void Button::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     emit onPress();

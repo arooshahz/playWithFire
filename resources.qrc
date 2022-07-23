@@ -2,7 +2,7 @@
 
     <qresource prefix="/images">
         <file alias="wallpaper">resources/images/bg.png</file>
-        <file alias="wallpaper2">resources/images/bg3.png</file>
+        <file alias="wallpaper2">resources/images/bg3 copy.png</file>
         <file alias="wallpaper3">resources/images/bg4.png</file>
         <file alias="textField">resources/images/textField.png</file>
 <!--        <file alias="button">resources/images/startButton.png</file>-->
@@ -21,7 +21,8 @@
         <file alias="player2">resources/images/player2.png</file>
         <file alias="player1">resources/images/player1.png</file>
 
-        <file alias="deadPlayer">resources/images/deadPlayer.png</file>
+        <file alias="deadPlayer0">resources/images/deadPlayer0.png</file>
+        <file alias="deadPlayer1">resources/images/deadPlayer1.png</file>
         <file alias="Player">resources/images/Player.png</file>
         <file alias="bg">resources/images/Sans titreB.png</file>
         <file alias="lb">resources/images/leftborder.png</file>
@@ -31,7 +32,9 @@
 
         <file alias="name1">resources/images/Name 1.png</file>
         <file alias="name2">resources/images/Name 2.png</file>
+        <file alias="nameempty">resources/images/Name Empty.png</file>
         <file alias="counter">resources/images/Counter.png</file>
+        <file alias="counterempty">resources/images/Counter Empty.png</file>
         <file alias="start">resources/images/Start.png</file>
         <file alias="GameOver1">resources/images/GameOver1.png</file>
         <file alias="GameOver2">resources/images/GameOver2.png</file>
@@ -40,22 +43,21 @@
         <file alias="speed">resources/images/speed.png</file>
 
 
-        <file alias="Player 1 Information 0 life">resources/images/Player 1 Information 0 life.png</file>
-        <file alias="Player 1 Information 1 life">resources/images/Player 1 Information 1 life.png</file>
-        <file alias="Player 1 Information 2 life">resources/images/Player 1 Information 2 life.png</file>
-        <file alias="Player 1 Information 3 life">resources/images/Player 1 Information 3 life.png</file>
-        <file alias="Player 1 Information 4 life">resources/images/Player 1 Information 4 life.png</file>
-        <file alias="Player 1 Information 5 life">resources/images/Player 1 Information 5 life.png</file>
-        <file alias="Player 1 Information 6 life">resources/images/Player 1 Information 6 life.png</file>
+        <file alias="p10l">resources/images/Player1Information0life.png</file>
+        <file alias="p11l">resources/images/Player1Information1life.png</file>
+        <file alias="p12l">resources/images/Player1Information2life.png</file>
+        <file alias="p13l">resources/images/Player1Information3life.png</file>
+        <file alias="p14l">resources/images/Player1Information4life.png</file>
+        <file alias="p15l">resources/images/Player1Information5life.png</file>
+        <file alias="p16l">resources/images/Player1Information6life.png</file>
 
-
-        <file alias="Player 2 Information 0 life">resources/images/Player 2 Information 0 life.png</file>
-        <file alias="Player 2 Information 1 life">resources/images/Player 2 Information 1 life.png</file>
-        <file alias="Player 2 Information 2 life">resources/images/Player 2 Information 2 life.png</file>
-        <file alias="Player 2 Information 3 life">resources/images/Player 2 Information 3 life.png</file>
-        <file alias="Player 2 Information 4 life">resources/images/Player 2 Information 4 life.png</file>
-        <file alias="Player 2 Information 5 life">resources/images/Player 2 Information 5 life.png</file>
-        <file alias="Player 2 Information 6 life">resources/images/Player 2 Information 6 life.png</file>
+        <file alias="p20l">resources/images/Player2Information0life.png</file>
+        <file alias="p21l">resources/images/Player2Information1life.png</file>
+        <file alias="p22l">resources/images/Player2Information2life.png</file>
+        <file alias="p23l">resources/images/Player2Information3life.png</file>
+        <file alias="p24l">resources/images/Player2Information4life.png</file>
+        <file alias="p25l">resources/images/Player2Information5life.png</file>
+        <file alias="p26l">resources/images/Player2Information6life.png</file>
 
 
 

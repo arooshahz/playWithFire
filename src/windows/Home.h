@@ -9,6 +9,7 @@
 
 class Home : public QGraphicsView {
 Q_OBJECT
+
 protected:
     void keyPressEvent(QKeyEvent *event) override;
 
@@ -16,14 +17,11 @@ private:
     textField *textfield1;
     textField *textfield2;
     textField *textfield3;
+
 public:
     Home();
+
     ~Home();
-//signals:
-//    void onInputPage();
-//public slots:
-//
-//    void showInputPage();
 };
 
 

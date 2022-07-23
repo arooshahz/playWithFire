@@ -8,6 +8,7 @@
 #include "../views/Player.h"
 #include "../views/Box.h"
 #include "../views/Label.h"
+#include "../views/playerInformation.h"
 
 typedef std::pair<int,int> pii;
 
@@ -18,10 +19,9 @@ Q_OBJECT
 
 private:
 
-//    bool isValid (int, int);
     class Box *boxes[15][15];
     bool isBlocked[15][15];
-//    QList<Block *> blocks{};
+    bool hasItem[15][15];
     QList<Player *> players{};
     int blockWidth;
     int blockHeight;
@@ -33,21 +33,18 @@ private:
     Label* labelPlayerName2;
     Label* labelPlayerScores2;
     Label* labelPlayerBombCount2;
-    int count=0;
-    QList<QPixmap*>playerInformation1{};
-    QList<QPixmap*>playerInformation2{};
+    bool initialized = false;
+    playerInformation* playerInfo[2];
+//    QList<QPixmap*>playerInformation[2];
 //    int frame1Information{};
 //    int frame2Information{};
-    QPixmap* pixmap1;
-    QPixmap* pixmap2;
+    QPixmap* pixmap[2];
 
 
 public :
     Game();
 
     QList<Player *> getPlayers();
-
-    QList<Block *> *getBlocks();
 
     class Box *getBox(int, int);
 
@@ -71,6 +68,9 @@ public :
 
     void removeBoxItem(Item *item);
 
+    bool getItem(int i, int j);
+
+    void MakeMap();
 };
 
 

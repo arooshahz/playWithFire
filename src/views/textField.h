@@ -10,8 +10,8 @@ private:
     int height{};
     int index{};
     QList<QPixmap *> pixmapTextField{};
-public :
-    textField(int width, int height,int index);
+public:
+    textField(int width, int height, int index);
 
     QRectF boundingRect() const override;
 

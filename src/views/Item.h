@@ -24,8 +24,6 @@ public:
     void controller(Player *player);
 
 
-
-
 };
 
 

@@ -5,7 +5,7 @@
 #include <QGraphicsView>
 #include "../views/textField.h"
 
-class InputPage: public QGraphicsView {
+class InputPage : public QGraphicsView {
 private:
     QGraphicsScene *playBackgroundScene;
     textField *textfieldName1;
@@ -18,6 +18,10 @@ public:
     InputPage();
 
     void onGameStart();
+
+    void WriteNamesToFile();
+
+    void WriteInfoToFile();
 };
 
 

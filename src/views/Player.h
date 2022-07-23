@@ -9,7 +9,6 @@
 #include <QTimer>
 
 
-
 class Player : public QObject, public QGraphicsPixmapItem {
 Q_OBJECT
     Q_PROPERTY(qreal height READ y WRITE setY);
@@ -31,11 +30,12 @@ private:
     int bombRadius{};
     int bombCount{};
     bool bombLimitation{false};
-    QGraphicsScene* scene;
+    QGraphicsScene *scene;
 
+    static int toInteger(QString s);
 
 public:
-    Player(int X, int Y, QList<QPixmap *> frames,QGraphicsScene* scene, QGraphicsPathItem *parent = nullptr );
+    Player(int X, int Y, QList<QPixmap *> frames, QGraphicsScene *scene, QGraphicsPathItem *parent = nullptr);
 
     void walking();
 
@@ -66,8 +66,6 @@ public:
     void setSpeed(int speed);
 
     int getSpeed();
-
-
 
 
 };

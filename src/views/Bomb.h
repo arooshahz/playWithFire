@@ -7,7 +7,7 @@
 #include "Box.h"
 #include "../windows/Game.h"
 
-typedef std::pair<int,int> pii;
+typedef std::pair<int, int> pii;
 
 class Bomb : public QObject, public QGraphicsPixmapItem {
 Q_OBJECT

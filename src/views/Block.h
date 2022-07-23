@@ -2,7 +2,10 @@
 #define TESTPRO_BLOCK_H
 
 #include <QGraphicsPixmapItem>
-enum blockTypes{box,wall};
+
+enum blockTypes {
+    box, wall
+};
 
 class Block : public QGraphicsPixmapItem {
 protected:
@@ -11,7 +14,6 @@ protected:
     static int blockWidth;
     static int blockHeight;
     blockTypes blockType;
-
 
 
 public:

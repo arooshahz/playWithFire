@@ -41,9 +41,13 @@ void Bomb::animateBomb() {
 }
 
 void Bomb::explode() {
-    damagePlayer();
-    removeBoxes();
+    qInfo() << "explosion";
     game->getPlayers().at(indexOfPlayer)->setBombLimitation(0);
+    qInfo() << "limitation set";
+    removeBoxes();
+    qInfo() << "boxes removed";
+    damagePlayer();
+    qInfo() << "player damaged";
     delete this;
 }
 
@@ -55,19 +59,23 @@ void Bomb::removeBoxes() {
         int bombRadius = game->getPlayers().at(indexOfPlayer)->getBombRadius();
         for (int j = 1; j <= bombRadius; j++) {
             int a = x + j * dx[i], b = y + j * dy[i];
-            if (!game->getBlocked(a, b)){
+            if (!game->getBlocked(a, b)) {
                 continue;
             }
             Box *temp = (*game).getBox(a, b);
             if (temp != NULL) {
                 *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
+                qInfo() << "box" << a << b << "found";
                 game->deleteBox(a, b);
-                if(temp->hasItem()==0){
-//                    temp->setItem(nullptr);
-                }
-                else if(temp->hasItem()==1){
-                    game->addItem(a,b);
-                }
+                qInfo() << a << b << "deleted";
+//                if(game->getItem(a, b)==0){
+//                    game->setItem(nullptr);
+//                }
+//                else if(temp->hasItem()==1){
+//                    game->addItem(a,b);
+//                }
+                if (game->getItem(a, b))
+                    game->addItem(a, b);
                 game->showPlayersInformation();
             }
             break;
@@ -80,7 +88,7 @@ void Bomb::damagePlayer() {
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, +1, 0, -1};
     pii bPos = game->findPos(this->x(), this->y());      // bomb position
     int bx = bPos.first, by = bPos.second;
-    for (int index = 0; index < 2; index++){
+    for (int index = 0; index < 2; index++) {
         auto player = game->getPlayers().at(index);
         int bombRadius = player->getBombRadius();
         pii pPos = game->findPos(player->x(), player->y());  // player position
@@ -88,32 +96,33 @@ void Bomb::damagePlayer() {
         if (bx == px and by == py)
             decreaseLifeCount(index);
 
-
-        for (int i = 0; i < 4; i++){
-            for (int j = 1; j <= bombRadius; j++){
+        for (int i = 0; i < 4; i++) {
+            for (int j = 1; j <= bombRadius; j++) {
                 int x = px + j * dx[i], y = py + j * dy[i];
                 if (game->getBlocked(x, y))
                     break;
 
-                if (x == bx and y == by){
+                if (x == bx and y == by) {
                     decreaseLifeCount(index);
                     break;
-                }}
-
+                }
+            }
         }
     }
 }
 
-void Bomb::decreaseLifeCount (int index){
+void Bomb::decreaseLifeCount(int index) {
+    *(game->getPlayers().at(index)->getLifeCount()) -= 1;
     auto player = game->getPlayers().at(index);
-    (*player->getLifeCount())--;
-    auto damagedPlayer1 = new DamagedPlayer(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
+    auto damagedPlayer1 = new DamagedPlayer(game->getPlayers().at(index)->x(), game->getPlayers().at(index)->y(),
+                                            index);
     game->scene()->addItem(damagedPlayer1);
-    damagedPlayer1->setPos(game->getPlayers().at(indexOfPlayer)->x(), game->getPlayers().at(indexOfPlayer)->y());
-    if (*player->getLifeCount() == 0){
+    damagedPlayer1->setPos(game->getPlayers().at(index)->x(), game->getPlayers().at(index)->y());
+    if (*player->getLifeCount() == 0) {
         *game->getPlayers().at(1 - index)->getScore() += 50;
         game->stopGame();
     }
+    game->showPlayersInformation();
 }
 
 #pragma clang diagnostic pop

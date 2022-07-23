@@ -3,6 +3,7 @@
 #include "../views/Controller.h"
 #include "Result.h"
 #include "../views/Label.h"
+#include "../views/playerInformation.h"
 
 
 Game::Game() {
@@ -24,60 +25,11 @@ Game::Game() {
     blockWidth = Block::getBlockWidth();
     blockHeight = Block::getBlockHeight();
 
+    MakeMap();
 
-    QList<QPair<int, int>> temp = {{1,  1},
-                                   {13, 13},
-                                   {1,  2},
-                                   {2,  1},
-                                   {12, 13},
-                                   {13, 12}};
-//    isBlocked[0][0] = true;
-//    isBlocked[0][14] = true;
-//    isBlocked[14][0] = true;
-//    isBlocked[14][14] = true;
-    for (int x = 1; x < 14; x++) {
-        setPicture(0, x, "lb");
-        setPicture(x, 0, "tb");
-        setPicture(14, x, "rb");
-        setPicture(x, 14, "db");
-//        isBlocked[0][x] = true;
-//        isBlocked[x][0] = true;
-//        isBlocked[14][x] = true;
-//        isBlocked[x][14] = true;
-    }
-    for (int i = 1; i < 14; i++) {
-        for (int j = 1; j < 14; j++) {
-            isBlocked[i][j] = false;
-            setPicture(i, j, "bg");
-        }
-    }
-    for (int i = 1; i < 14; i++) {
-        for (int j = 1; j < 14; j++) {
-            if (temp.contains({i, j})) {
-                boxes[i][j] = nullptr;
-                continue;
-            }
-            if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
-                int num = (rand() % (2));
-                if (num == 1) {
-                    auto box = new class Box(i, j);
-                    isBlocked[i][j] = true;
-                    boxes[i][j] = box;
-                    playBackgroundScene->addItem(box);
-                    box->setPos(i * blockWidth, j * blockHeight);
-                }
+    QList<QPixmap *> frames1, frames2;
+    QString name = ":/images/p";
 
-            } else {
-                auto wall = new Wall(i, j);
-                isBlocked[i][j] = true;
-                boxes[i][j] = nullptr;
-                playBackgroundScene->addItem(wall);
-                wall->setPos(i * blockWidth, j * blockHeight);
-            }
-        }
-    }
-
-    QList<QPixmap *> frames1;
     auto pixmap1 = new QPixmap(":/images/p11");
     *pixmap1 = pixmap1->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames1.append(pixmap1);
@@ -93,7 +45,6 @@ Game::Game() {
     playBackgroundScene->addItem(player1);
     player1->setPos(blockWidth, blockHeight);
 
-    QList<QPixmap *> frames2;
     auto pixmap2 = new QPixmap(":/images/p21");
     *pixmap2 = pixmap2->scaled(blockWidth - (blockWidth / 3), blockHeight - (blockHeight / 5));
     frames2.append(pixmap2);
@@ -108,65 +59,7 @@ Game::Game() {
     playBackgroundScene->addItem(player2);
     player2->setPos((blockWidth * 13), blockHeight * 13);
 
-
-    auto pixmapInformation = new QPixmap(":/images/Player 1 Information 0 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation1.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 1 Information 1 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation1.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 1 Information 2 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation1.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 1 Information 3 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation1.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 1 Information 4 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation1.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 1 Information 5 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation1.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 1 Information 6 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation1.append(pixmapInformation);
-
-    pixmapInformation = new QPixmap(":/images/Player 2 Information 0 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation2.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 2 Information 1 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation2.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 2 Information 2 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation2.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 2 Information 3 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation2.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 2 Information 4 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation2.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 2 Information 5 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation2.append(pixmapInformation);
-    pixmapInformation = new QPixmap(":/images/Player 2 Information 6 life");
-    *pixmapInformation = pixmapInformation->scaled(width() / 4.8, width() / 4.8);
-    playerInformation2.append(pixmapInformation);
-
-
-    QFile file("names.txt");
-    names = {"", ""};
-    int cnt = 0;
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QTextStream in(&file);
-        while (!in.atEnd()) {
-            names[cnt++] = in.readLine();
-        }
-    }
-
-
     showPlayersInformation();
-
     auto controller = new Controller(this);
     playBackgroundScene->addItem(controller);
 
@@ -178,7 +71,7 @@ QList<Player *> Game::getPlayers() {
 }
 
 Box *Game::getBox(int i, int j) {
-    if (i < 0 or 14 < i or j < 0 or 14 < j)
+    if (i <= 0 or 14 <= i or j <= 0 or 14 <= j)
         return nullptr;
     return boxes[i][j];
 }
@@ -198,91 +91,83 @@ bool Game::getBlocked(int i, int j) {
 }
 
 void Game::unblock(int i, int j) {
-    qInfo() << i << j << "unblocked";
     isBlocked[i][j] = false;
 }
 
 void Game::stopGame() {
-
-
     close();
     (new Result(this))->show();
 
 }
 
 void Game::showPlayersInformation() {
-    if (count > 0) {
-//        delete labelPlayerName1;
-        delete labelPlayerScores1;
-        delete labelPlayerBombCount1;
-//        delete labelPlayerName2;
-        delete labelPlayerScores2;
-        delete labelPlayerBombCount2;
-        delete pixmap1;
-        delete pixmap2;
+
+    QFile file("names.txt");
+    QString names[2] = {"", ""};
+    int num = 0;
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            names[num++] = in.readLine();
+        }
     }
 
+    if (initialized) {
+        delete labelPlayerName1;
+        delete labelPlayerScores1;
+        delete labelPlayerBombCount1;
+        delete labelPlayerName2;
+        delete labelPlayerScores2;
+        delete labelPlayerBombCount2;
+        playerInfo[0]->remove();
+        playerInfo[1]->remove();
+    }
 
-    pixmap1 = new QPixmap;
-    pixmap1 = playerInformation1.at(*getPlayers().at(0)->getLifeCount());
-    playBackgroundScene->addRect(QRect(-width() / 4.8, 0, width() / 4.8, width() / 4.8),
-                                 QPen(Qt::NoPen), QPixmap(*pixmap1));
+    double w = width(), h = height();
+    auto player0infopixmap = new playerInformation(1, *getPlayers().at(0)->getLifeCount(), w);
+    auto player1infopixmap = new playerInformation(2, *getPlayers().at(1)->getLifeCount(), w);
+    playerInfo[0] = player0infopixmap;
+    playerInfo[1] = player1infopixmap;
+    playBackgroundScene->addItem(player0infopixmap);
+    playBackgroundScene->addItem(player1infopixmap);
+    player0infopixmap->setPos(-370, 50);
+    player1infopixmap->setPos(-370, 50 + h / 2);
 
-    pixmap2 = new QPixmap;
-    pixmap2 = playerInformation2.at(*getPlayers().at(1)->getLifeCount());
-    playBackgroundScene->addRect(QRect(-width() / 4.8, width() / 4.8, width() / 4.8, width() / 4.8),
-                                 QPen(Qt::NoPen), QPixmap(*pixmap2));
+    labelPlayerName1 = new Label();
+    labelPlayerName1->setPlainText(names[0]);
+    playBackgroundScene->addItem(labelPlayerName1);
+    labelPlayerName1->setPos(-w / 5.7, w / (4.3 * 2));
 
-
-
-//
-//    labelPlayerName1 = new Label();
-//    labelPlayerName1->setPlainText(names[0]);
-//    playBackgroundScene->addItem(labelPlayerName1);
-//    labelPlayerName1->setPos(-width()/4.8, width()/(4.8*2));
-
-
-
-    ////////////////////////////////////////////////////////////////////////////////
+    labelPlayerName2 = new Label();
+    labelPlayerName2->setPlainText(names[1]);
+    playBackgroundScene->addItem(labelPlayerName2);
+    labelPlayerName2->setPos(-w / 5.7, w / (4.3 * 2) + h / 2);
 
     QString scores1 = QString::number(*players.at(0)->getScore());
     labelPlayerScores1 = new Label();
     labelPlayerScores1->setPlainText(scores1);
     playBackgroundScene->addItem(labelPlayerScores1);
-    labelPlayerScores1->setPos(-width() / (3.8 * 4.8), height() / 120);
-
+    labelPlayerScores1->setPos(-w / (2.25 * 4.8), h / 17.6);
 
     QString scores2 = QString::number(*players.at(1)->getScore());
     labelPlayerScores2 = new Label();
     labelPlayerScores2->setPlainText(scores2);
     playBackgroundScene->addItem(labelPlayerScores2);
-    labelPlayerScores2->setPos(-width() / (3.8 * 4.8), height() / 120 + width() / 4.8);
-
+    labelPlayerScores2->setPos(-w / (2.25 * 4.8), height() / 17.6 + h / 2);
 
     QString bombCount1 = QString::number(players.at(0)->getBombCount());
     labelPlayerBombCount1 = new Label();
     labelPlayerBombCount1->setPlainText(bombCount1);
     playBackgroundScene->addItem(labelPlayerBombCount1);
-    labelPlayerBombCount1->setPos(-width() / (3.8 * 4.8), height() / 15);
-
+    labelPlayerBombCount1->setPos(-w / (2.25 * 4.8), h / 7.7);
 
     QString bombCount2 = QString::number(players.at(1)->getBombCount());
     labelPlayerBombCount2 = new Label();
     labelPlayerBombCount2->setPlainText(bombCount2);
     playBackgroundScene->addItem(labelPlayerBombCount2);
-    labelPlayerBombCount2->setPos(-width() / (3.8 * 4.8), height() / 15 + width() / 4.8);
+    labelPlayerBombCount2->setPos(-w / (2.25 * 4.8), h / 7.7 + h / 2);
 
-
-
-
-//    labelPlayerName2 = new Label();
-//    labelPlayerName2->setPlainText(names[1]);
-//    playBackgroundScene->addItem(labelPlayerName2);
-//    labelPlayerName2->setPos(-150, 450);
-//
-
-
-    count++;
+    initialized = true;
 }
 
 pii Game::findPos(int x, int y) {
@@ -306,7 +191,76 @@ void Game::addItem(int x, int y) {
 }
 
 void Game::removeBoxItem(Item *item) {
-
     scene()->removeItem(item);
+}
 
+bool Game::getItem(int i, int j) {
+    if (i < 0 or 14 < i or j < 0 or 14 < j)
+        return false;
+    return hasItem[i][j];
+}
+
+void Game::MakeMap() {
+    QList<QPair<int, int>> temp = {{1,  1},
+                                   {13, 13},
+                                   {1,  2},
+                                   {2,  1},
+                                   {12, 13},
+                                   {13, 12}};
+    for (int i = 1; i < 14; i++) {
+        for (int j = 1; j < 14; j++) {
+            isBlocked[i][j] = false;
+            setPicture(i, j, "bg");
+        }
+    }
+    isBlocked[0][0] = true;
+    isBlocked[0][14] = true;
+    isBlocked[14][0] = true;
+    isBlocked[14][14] = true;
+    boxes[0][0] = nullptr;
+    boxes[0][14] = nullptr;
+    boxes[14][0] = nullptr;
+    boxes[14][14] = nullptr;
+    for (int x = 1; x < 14; x++) {
+        setPicture(0, x, "lb");
+        setPicture(x, 0, "tb");
+        setPicture(14, x, "rb");
+        setPicture(x, 14, "db");
+        isBlocked[0][x] = true;
+        isBlocked[x][0] = true;
+        isBlocked[14][x] = true;
+        isBlocked[x][14] = true;
+        boxes[0][x] = nullptr;
+        boxes[x][0] = nullptr;
+        boxes[14][x] = nullptr;
+        boxes[x][14] = nullptr;
+    }
+    for (int i = 1; i < 14; i++) {
+        for (int j = 1; j < 14; j++) {
+            if (temp.contains({i, j})) {
+                boxes[i][j] = nullptr;
+                continue;
+            }
+            if (i != 0 && i != 14 && j != 0 && j != 14 && (i % 2 != 0 || j % 2 != 0)) {
+                int num = (rand() % (2));
+                if (num == 1) {
+                    auto box = new class Box(i, j);
+                    isBlocked[i][j] = true;
+                    int test = rand() % 10;
+                    if (test < 3)
+                        hasItem[i][j] = true;
+                    boxes[i][j] = box;
+                    playBackgroundScene->addItem(box);
+                    box->setPos(i * blockWidth, j * blockHeight);
+                }
+
+            } else {
+                auto wall = new Wall(i, j);
+                isBlocked[i][j] = true;
+                boxes[i][j] = nullptr;
+                playBackgroundScene->addItem(wall);
+                wall->setPos(i * blockWidth, j * blockHeight);
+            }
+        }
+    }
 }

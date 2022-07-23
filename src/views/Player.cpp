@@ -1,14 +1,28 @@
+#include <QFile>
 #include "Player.h"
 #include "Block.h"
 #include "Item.h"
 
-Player::Player(int X, int Y, QList<QPixmap *> frames,QGraphicsScene* scene, QGraphicsPathItem *parent) : X(X), Y(Y), frames(frames),scene(scene)
-                                                                                   ,QGraphicsPixmapItem(parent) {
+Player::Player(int X, int Y, QList<QPixmap *> frames, QGraphicsScene *scene, QGraphicsPathItem *parent) : X(X), Y(Y),
+                                                                                                          frames(frames),
+                                                                                                          scene(scene),
+                                                                                                          QGraphicsPixmapItem(
+                                                                                                                  parent) {
 
-    bombCount=10;
-    speed=60;
-    bombRadius=3;
-    lifeCount = 3;
+    QFile file2("info.txt");
+    QString info[2] = {"3", "3"};
+    int cnt = 0;
+    if (file2.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file2);
+        while (!in.atEnd()) {
+            info[cnt++] = in.readLine();
+        }
+    }
+
+    bombCount = 10;
+    speed = 60;
+    bombRadius = Player::toInteger(info[0]);
+    lifeCount = Player::toInteger(info[1]);
     score = 0;
     setPixmap(*frames.at(0));
 
@@ -61,19 +75,22 @@ int *Player::getScore() {
 int *Player::getLifeCount() {
     return &lifeCount;
 }
+
 int Player::getBombRadius() {
     return bombRadius;
 }
+
 void Player::setBombRadius(int bombRadius) {
-    this->bombRadius=bombRadius;
+    this->bombRadius = bombRadius;
 }
 
 int Player::getBombCount() {
     return bombCount;
 
 }
+
 void Player::setBomCount(int bombCount) {
-    this->bombCount=bombCount;
+    this->bombCount = bombCount;
 }
 
 bool Player::getBombLimitation() {
@@ -81,11 +98,13 @@ bool Player::getBombLimitation() {
 }
 
 void Player::setBombLimitation(bool bombLimitation) {
-  this->bombLimitation=bombLimitation;
+    this->bombLimitation = bombLimitation;
 }
+
 void Player::setSpeed(int speed) {
-    this->speed=speed;
+    this->speed = speed;
 }
+
 int Player::getSpeed() {
     return speed;
 }
@@ -95,15 +114,27 @@ void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 
     for (QGraphicsItem *temp: collidingItems()) {
         Item *item = dynamic_cast<Item *>(temp);
-        if(item!= nullptr){
+        if (item != nullptr) {
 
-          item->controller(this);
-           scene->removeItem(temp);
-
-
-
+            item->controller(this);
+            scene->removeItem(temp);
 
 
         }
     }
+}
+
+int Player::toInteger(QString s) {
+    int ret = 0;
+    QString Char[10] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    for (int i = 0; i < s.size(); i++) {
+        ret = ret * 10;
+        for (int j = 0; j < 10; j++) {
+            if (Char[j] == s[i]) {
+                ret += j;
+                break;
+            }
+        }
+    }
+    return ret;
 }
