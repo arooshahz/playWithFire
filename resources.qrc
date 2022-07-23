@@ -20,6 +20,8 @@
         <file alias="deadPlayer1">resources/images/deadPlayer1.png</file>
 
         <file alias="bg">resources/images/Sans titreB.png</file>
+        <file alias="UnderRadar">resources/images/Sans titreC.png</file>
+        <file alias="BoxUnderRadar">resources/images/boxunderradar.png</file>
         <file alias="lb">resources/images/leftborder.png</file>
         <file alias="rb">resources/images/rightborder.png</file>
         <file alias="db">resources/images/downborder.png</file>
