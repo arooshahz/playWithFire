@@ -46,13 +46,13 @@ void Bomb::animateBomb() {
 }
 
 void Bomb::explode() {
-    qInfo() << "explosion";
+
     game->getPlayers().at(indexOfPlayer)->setBombLimitation(0);
-    qInfo() << "limitation set";
+
     removeBoxes();
-    qInfo() << "boxes removed";
+
     damagePlayer();
-    qInfo() << "player damaged";
+
     delete this;
 }
 
@@ -70,15 +70,10 @@ void Bomb::removeBoxes() {
             Box *temp = (*game).getBox(a, b);
             if (temp != NULL) {
                 *game->getPlayers().at(indexOfPlayer)->getScore() += 5;
-                qInfo() << "box" << a << b << "found";
+
                 game->deleteBox(a, b);
-                qInfo() << a << b << "deleted";
-//                if(game->getItem(a, b)==0){
-//                    game->setItem(nullptr);
-//                }
-//                else if(temp->hasItem()==1){
-//                    game->addItem(a,b);
-//                }
+
+
                 if (game->getItem(a, b))
                     game->addItem(a, b);
 

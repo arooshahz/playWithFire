@@ -7,15 +7,13 @@
 class Box : public Block {
 private:
 
-//    Item* item;
 
 public:
 
     Box(int X, int Y);
 
     void remove();
-//
-//    bool hasItem();
+
 
 };
 

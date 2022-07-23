@@ -70,7 +70,6 @@ public :
 
     void addItem(int x, int y);
 
-//    void removeBoxItem(Item *item);
 
     bool getItem(int i, int j);
 

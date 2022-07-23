@@ -58,8 +58,10 @@ void Item::addBomb() {
 }
 
 void Item::addLifeCount() {
-
+if(*player->getLifeCount()<6) {
     ++(*player->getLifeCount());
+}
+
 }
 
 void Item::increaseBombRadius() {

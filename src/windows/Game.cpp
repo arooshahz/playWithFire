@@ -211,10 +211,7 @@ void Game::addItem(int x, int y) {
     temp->setPos(x * Block::getBlockWidth(), y * Block::getBlockHeight());
 
 }
-//
-//void Game::removeBoxItem(Item *item) {
-//    scene()->removeItem(item);
-//}
+
 
 bool Game::getItem(int i, int j) {
     if (i < 0 or 14 < i or j < 0 or 14 < j)
